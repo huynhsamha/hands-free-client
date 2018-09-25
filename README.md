@@ -21,7 +21,7 @@ npm install
 npm start
 ```
 
-Open [localhost:3000](http://localhost:3000).
+Open [localhost:4200](http://localhost:4200).
 
 
 ### Build production
