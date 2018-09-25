@@ -1,5 +1,5 @@
 {
-  "name": "webpack-setup-multiple-pages",
+  "name": "cse-assignment-web-programming",
   "version": "1.0.0",
   "description": "Multiple Pages Setup with Webpack and apply a template.",
   "scripts": {
@@ -39,12 +39,12 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huynhsamha/webpack-setup-multiple-pages.git"
+    "url": "git+https://github.com/huynhsamha/cse-assignment-web-programming.git"
   },
-  "homepage": "https://github.com/huynhsamha/webpack-setup-multiple-pages#readme",
+  "homepage": "https://github.com/huynhsamha/cse-assignment-web-programming#readme",
   "author": "huynhsamha",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/huynhsamha/webpack-setup-multiple-pages/issues"
+    "url": "https://github.com/huynhsamha/cse-assignment-web-programming/issues"
   }
 }
