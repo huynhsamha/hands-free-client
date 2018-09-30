@@ -153,3 +153,18 @@ div {
 ```
 
 Vào [đây](https://browserl.ist/?q=last+2+versions%2C+%3E+0.1%25%2C+ie+%3E%3D+6%2C+Firefox+ESR) để thay đổi các trình duyệt và các phiên bản khác nhau hỗ trợ.
+
+
+
+## Danh sách các framework và plugins
+
++ Bootstrap v4.0 (https://getbootstrap.com/docs/4.0/getting-started/introduction/)
++ jQuery 3.3.1 (https://api.jquery.com/)
++ FontAwesome 5 (https://fontawesome.com/icons?d=gallery&m=free)
++ jQuery UI 1.12.1 (http://jqueryui.com/)
++ jQuery Easing v1.3 (http://gsgd.co.uk/sandbox/jquery/easing/)
++ Owl Carosuel 2 v2.2.1 (https://owlcarousel2.github.io/OwlCarousel2/)
++ parallax.js v1.5.0 (http://pixelcog.github.io/parallax.js/)
++ ScrollMagic v2.5.0 (http://scrollmagic.io/)
++ Slick (http://kenwheeler.github.io/slick/)
++ Isotope (https://isotope.metafizzy.co/)
