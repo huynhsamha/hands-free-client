@@ -1,0 +1,150 @@
+/*********************************
+14. Recently Viewed
+*********************************/
+
+.viewed {
+  padding-top: 51px;
+  padding-bottom: 60px;
+  background: #eff6fa;
+}
+
+.viewed_title_container {
+  border-bottom: solid 1px #dadada;
+}
+
+.viewed_title {
+  margin-bottom: 14px;
+}
+
+.viewed_nav_container {
+  position: absolute;
+  right: -5px;
+  bottom: 14px;
+}
+
+.viewed_nav {
+  display: inline-block;
+  cursor: pointer;
+  i {
+    color: #dadada;
+    font-size: 18px;
+    padding: 5px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+  }
+  &:hover i {
+    color: #606264;
+  }
+}
+
+.viewed_prev {
+  margin-right: 15px;
+}
+
+.viewed_slider_container {
+  padding-top: 50px;
+}
+
+.viewed_item {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.viewed_image {
+  width: 115px;
+  height: 115px;
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.viewed_content {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.viewed_price {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.viewed_item.discount .viewed_price {
+  color: #df3b3b;
+}
+
+.viewed_price span {
+  position: relative;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 8px;
+  &::after {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: 1px;
+    background: #8d8d8d;
+    content: '';
+  }
+}
+
+.viewed_name {
+  margin-top: 3px;
+  a {
+    font-size: 14px;
+    color: #000000;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    &:hover {
+      color: #0e8ce4;
+    }
+  }
+}
+
+.item_marks {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
+
+.item_mark {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+}
+
+.item_discount {
+  background: #df3b3b;
+  margin-right: 5px;
+}
+
+.item_new {
+  background: #0e8ce4;
+}
+
+.viewed_item {
+  &.discount .item_discount, &.is_new .item_new {
+    display: inline-block;
+  }
+}
