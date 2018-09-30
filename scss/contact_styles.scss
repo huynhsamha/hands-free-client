@@ -1,4 +1,3 @@
-@charset "utf-8";
 @import './include/common.scss';
 
 @import './include/header.scss';
@@ -9,17 +8,19 @@
 
 
 /******************************
-1. Fonts
-2. Body and some general stuff
-3. Header
-4. Contact
-5. Newsletter
-6. Footer
+Common
+Header
+Contact
+Newsletter
+Footer
 ******************************/
 
 
+
 /*********************************
-4. Contact
+Contact
+	Form
+	Map
 *********************************/
 
 .contact_info {
@@ -59,7 +60,7 @@
 }
 
 /*********************************
-4.1 Contact Form
+Contact Form
 *********************************/
 
 .contact_form {
@@ -107,12 +108,7 @@
 }
 
 .text_field {
-  &::input-placeholder {
-    font-size: 16px;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.3);
-  }
-  width: 100%;
+	width: 100%;
   height: 160px;
   padding-left: 25px;
   padding-top: 15px;
@@ -125,6 +121,11 @@
   -ms-transition: all 200ms ease;
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
+  &::input-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .contact_submit_button {
@@ -146,7 +147,7 @@
 }
 
 /*********************************
-4.2 Contact Map
+Contact Map
 *********************************/
 
 .contact_map {

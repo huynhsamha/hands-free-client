@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 @import './include/common.scss';
 
 @import './include/header.scss';
@@ -16,22 +14,22 @@
 
 
 /******************************
-1. Fonts
-2. Body and some general stuff
-3. Header
-4. Home
-5. Shop
-	5.1 Shop Products
-	5.2 Shop Page Navigation
-6. Shop Sidebar
-7. Recently Viewed
-8. Brands
-9. Newsletter
-10. Footer
+Common
+Header
+Home
+Shop
+	Shop Products
+	Shop Page Navigation
+Shop Sidebar
+Recently Viewed
+Brands
+Newsletter
+Footer
 ******************************/
 
+
 /*********************************
-5. Shop
+Shop
 *********************************/
 
 .shop {
@@ -127,7 +125,7 @@
 }
 
 /*********************************
-5.1 Shop Products
+Shop Products
 *********************************/
 
 .product_grid {
@@ -336,7 +334,7 @@
 }
 
 /*********************************
-5.2 Shop Page Navigation
+Shop Page Navigation
 *********************************/
 
 .shop_page_nav {
@@ -404,7 +402,7 @@
 }
 
 /*********************************
-6. Shop Sidebar
+Shop Sidebar
 *********************************/
 
 .shop_sidebar {

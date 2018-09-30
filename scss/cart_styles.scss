@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 @import './include/common.scss';
 
 @import './include/header.scss';
@@ -9,19 +7,17 @@
 @import './include/footer.scss';
 
 
-/* CSS Document */
-
 /******************************
-1. Fonts
-2. Body and some general stuff
-3. Header
-4. Cart
-5. Newsletter
-6. Footer
+1. Common
+2. Header
+3. Cart
+4. Newsletter
+5. Footer
 ******************************/
 
+
 /*********************************
-4. Cart
+Cart
 *********************************/
 
 .cart_section {
