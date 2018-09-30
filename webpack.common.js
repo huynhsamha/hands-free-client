@@ -19,7 +19,6 @@ module.exports = {
     contact: './src/contact.js',
     index: './src/index.js',
     product: './src/product.js',
-    regular: './src/regular.js',
     shop: './src/shop.js'
   },
   output: {

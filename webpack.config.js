@@ -30,11 +30,6 @@ module.exports.Pages = [
     js: ['product']
   },
   {
-    template: './views/regular.html',
-    filename: 'regular.html',
-    js: ['regular']
-  },
-  {
     template: './views/shop.html',
     filename: 'shop.html',
     js: ['shop']

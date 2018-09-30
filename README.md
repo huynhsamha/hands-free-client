@@ -45,7 +45,6 @@ Chứa các giao diện màn hình khác nhau cho trang web
 ├── contact.html
 ├── index.html
 ├── product.html
-├── regular.html
 └── shop.html
 ```
 Mỗi file là tương ứng cho 1 giao diện màn hình cho web.
