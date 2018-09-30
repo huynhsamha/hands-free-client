@@ -1,5 +1,5 @@
-import '../scss/contact_styles.scss';
-import '../scss/contact_responsive.scss';
+import '../scss/contact.scss';
+import '../scss/responsive/contact.scss';
 
 /* JS Document */
 

@@ -1,5 +1,5 @@
-import '../scss/shop_styles.scss';
-import '../scss/shop_responsive.scss';
+import '../scss/shop.scss';
+import '../scss/responsive/shop.scss';
 
 /* JS Document */
 

@@ -1,5 +1,5 @@
-import '../scss/blog_styles.scss';
-import '../scss/blog_responsive.scss';
+import '../scss/blog.scss';
+import '../scss/responsive/blog.scss';
 
 /* JS Document */
 

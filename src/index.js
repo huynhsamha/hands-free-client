@@ -1,5 +1,5 @@
-import '../scss/index_styles.scss';
-import '../scss/index_responsive.scss';
+import '../scss/index.scss';
+import '../scss/responsive/index.scss';
 
 /* JS Document */
 

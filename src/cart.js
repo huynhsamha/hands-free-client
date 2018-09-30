@@ -1,5 +1,5 @@
-import '../scss/cart_styles.scss';
-import '../scss/cart_responsive.scss';
+import '../scss/cart.scss';
+import '../scss/responsive/cart.scss';
 
 /* JS Document */
 
@@ -111,7 +111,7 @@ $(document).ready(() => {
     $('select').on('change', function (e) {
       placeholder.text(this.value);
 
-      $(this).animate({ width: `${placeholder.width() }px` });
+      $(this).animate({ width: `${placeholder.width()}px` });
     });
   }
 
