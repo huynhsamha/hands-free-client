@@ -1,3 +1,5 @@
+@import '../variable';
+
 /******************************
 1. 1600px
 2. 1440px
@@ -97,7 +99,7 @@
     height: 125px;
   }
   .main_nav_content {
-    background: #0e8ce4;
+    background: $color-primary;
   }
   .menu_trigger_container {
     display: block;
@@ -384,7 +386,7 @@
     transform: translateX(-50%);
     width: 113px;
     height: 40px;
-    background: #0e8ce4;
+    background: $color-primary;
     color: #FFFFFF;
     line-height: 40px;
     font-size: 12px;

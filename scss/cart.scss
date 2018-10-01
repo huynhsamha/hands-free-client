@@ -137,8 +137,8 @@ Cart
   cursor: pointer;
   margin-right: 26px;
   &:hover {
-    border-color: #0e8ce4;
-    color: #0e8ce4;
+    border-color: $color-primary;
+    color: $color-primary;
   }
 }
 

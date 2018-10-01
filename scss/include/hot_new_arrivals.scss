@@ -86,7 +86,7 @@
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
     &:hover, &.slick-active {
-      background: #0e8ce4;
+      background: $color-primary;
     }
     &:last-child {
       margin-right: 0px;
@@ -138,7 +138,7 @@
   left: 0px;
   width: 100%;
   height: 48px;
-  background: #0e8ce4;
+  background: $color-primary;
   border: none;
   outline: none;
   font-size: 18px;
@@ -153,7 +153,7 @@
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
   &:hover {
-    background: rgba(14, 140, 228, 0.8);
+    background: $color-primary-hover;
   }
 }
 
@@ -168,7 +168,7 @@
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
     &:hover {
-      color: #0e8ce4;
+      color: $color-primary;
     }
   }
 }
@@ -189,7 +189,7 @@
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
     &:hover {
-      color: #0e8ce4;
+      color: $color-primary;
     }
   }
 }
@@ -226,7 +226,7 @@
   }
   .product_new {
     display: block;
-    background: #0e8ce4;
+    background: $color-primary;
     visibility: visible;
     opacity: 1;
   }

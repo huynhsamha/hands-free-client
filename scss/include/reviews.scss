@@ -22,7 +22,7 @@
   bottom: 14px;
   a {
     font-size: 10px;
-    color: #0e8ce4;
+    color: $color-primary;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     &:hover {
@@ -106,7 +106,7 @@
       margin-right: 0px;
     }
     &.active {
-      background: #0e8ce4;
+      background: $color-primary;
       box-shadow: none;
     }
   }

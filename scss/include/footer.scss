@@ -28,7 +28,7 @@
 .footer_phone {
   font-size: 18px;
   font-weight: 500;
-  color: #0e8ce4;
+  color: $color-primary;
   margin-top: 13px;
 }
 
@@ -61,7 +61,7 @@
       transition: all 200ms ease;
     }
     &:hover i {
-      color: #0e8ce4;
+      color: $color-primary;
     }
   }
 }
@@ -90,7 +90,7 @@
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
     &:hover {
-      color: #0e8ce4;
+      color: $color-primary;
     }
   }
 }

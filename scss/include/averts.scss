@@ -30,14 +30,14 @@
   font-weight: 500;
   color: #000000;
   &:hover {
-    color: #0e8ce4;
+    color: $color-primary;
   }
 }
 
 .advert_title_2 a {
   font-size: 18px;
   font-weight: 500;
-  color: #0e8ce4;
+  color: $color-primary;
   &:hover {
     opacity: 0.8;
   }

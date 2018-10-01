@@ -111,7 +111,7 @@
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
     &:hover {
-      color: #0e8ce4;
+      color: $color-primary;
     }
   }
 }
@@ -140,7 +140,7 @@
 }
 
 .item_new {
-  background: #0e8ce4;
+  background: $color-primary;
 }
 
 .viewed_item {
