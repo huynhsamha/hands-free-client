@@ -1,0 +1,112 @@
+[
+  {
+      "brand": "Apple",
+      "model": "iPhone 2018",
+      "url": "https://cellphones.com.vn/mobile/apple/iphone-2018.html"
+  },
+  {
+      "brand": "Apple",
+      "model": "iPhone XS",
+      "url": "https://cellphones.com.vn/mobile/apple/iphone-xs.html"
+  },
+  {
+      "brand": "Apple",
+      "model": "iPhone XS Max",
+      "url": "https://cellphones.com.vn/mobile/apple/iphone-xs-max.html"
+  },
+  {
+      "brand": "Apple",
+      "model": "iPhone XR",
+      "url": "https://cellphones.com.vn/mobile/apple/iphone-xr.html"
+  },
+  {
+      "brand": "Apple",
+      "model": "iPhone X",
+      "url": "https://cellphones.com.vn/mobile/apple/iphone-x.html"
+  },
+  {
+      "brand": "Apple",
+      "model": "iPhone 8 | 8 Plus",
+      "url": "https://cellphones.com.vn/mobile/apple/iphone-8-8-plus.html"
+  },
+  {
+      "brand": "Apple",
+      "model": "iPhone 8 | 8 Plus Red",
+      "url": "https://cellphones.com.vn/mobile/apple/iphone-8-8-plus-red.html"
+  },
+  {
+      "brand": "Apple",
+      "model": "iPhone 7 | 7 Plus",
+      "url": "https://cellphones.com.vn/mobile/apple/iphone-7-7-plus.html"
+  },
+  {
+      "brand": "Apple",
+      "model": "iPhone 6S | 6S Plus",
+      "url": "https://cellphones.com.vn/mobile/apple/iphone-6s-6s-plus.html"
+  },
+  {
+      "brand": "Apple",
+      "model": "iPhone 6 | 6 Plus",
+      "url": "https://cellphones.com.vn/mobile/apple/iphone-6-6-plus.html"
+  },
+  {
+      "brand": "Apple",
+      "model": "iPhone 5S | SE",
+      "url": "https://cellphones.com.vn/mobile/apple/iphone-5-5c-5s-se.html"
+  },
+  {
+      "brand": "Samsung",
+      "model": "Galaxy Note",
+      "url": "https://cellphones.com.vn/mobile/samsung/galaxy-note.html"
+  },
+  {
+      "brand": "Samsung",
+      "model": "Galaxy S",
+      "url": "https://cellphones.com.vn/mobile/samsung/galaxy-s.html"
+  },
+  {
+      "brand": "Samsung",
+      "model": "Galaxy A",
+      "url": "https://cellphones.com.vn/mobile/samsung/galaxy-a.html"
+  },
+  {
+      "brand": "Samsung",
+      "model": "Galaxy J",
+      "url": "https://cellphones.com.vn/mobile/samsung/galaxy-j.html"
+  },
+  {
+      "brand": "Sony",
+      "url": "https://cellphones.com.vn/mobile/sony.html"
+  },
+  {
+      "brand": "OPPO",
+      "url": "https://cellphones.com.vn/mobile/oppo.html"
+  },
+  {
+      "brand": "Xiaomi",
+      "url": "https://cellphones.com.vn/mobile/xiaomi.html"
+  },
+  {
+      "brand": "Huawei",
+      "url": "https://cellphones.com.vn/mobile/huawei.html"
+  },
+  {
+      "brand": "Nokia",
+      "url": "https://cellphones.com.vn/mobile/nokia.html"
+  },
+  {
+      "brand": "Hãng khác",
+      "model": "Honor",
+      "url": "https://cellphones.com.vn/mobile/hang-khac/honor.html"
+  },
+  {
+      "brand": "Hãng khác",
+      "model": "Vivo",
+      "url": "https://cellphones.com.vn/mobile/hang-khac/vivo.html"
+  },
+  {
+      "brand": "Hãng khác",
+      "model": "Sharp",
+      "url": "https://cellphones.com.vn/mobile/hang-khac/sharp-1.html"
+  }
+]
