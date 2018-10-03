@@ -1,7 +1,9 @@
 import '../scss/index.scss';
 import '../scss/responsive/index.scss';
 
-import { dealProducts, renderDealProducts } from './database/deal_products';
+import DealProduct from './components/DealProduct';
+import products from './database/shortProducts.json';
+import ShortProduct from './components/ShortProduct';
 
 /* JS Document */
 
@@ -220,8 +222,9 @@ $(document).ready(() => {
 
   function loadDealProducts() {
     const $dealsSlider = $('.deals_slider');
+    const dealProducts = products.filter(item => item.hotDeal);
     dealProducts.forEach((item) => {
-      $dealsSlider.append(renderDealProducts(item));
+      $dealsSlider.append(DealProduct(item));
     });
   }
 
@@ -340,9 +343,30 @@ $(document).ready(() => {
 
 	8. Init Featured Slider
 
-	*/
+  */
+
+  function loadFeaturedProducts() {
+    const $bestSellProducts = $('.best-sell-products');
+    const $bestGiftProducts = $('.best-gift-products');
+    const $bestPriceProducts = $('.best-price-products');
+
+    products.filter(item => item.bestSell)
+      .sort((a, b) => b.price - a.price).forEach((item) => {
+        $bestSellProducts.append(ShortProduct(item));
+      });
+    products.filter(item => item.bestGift)
+      .sort((a, b) => b.price - a.price).forEach((item) => {
+        $bestGiftProducts.append(ShortProduct(item));
+      });
+    products.filter(item => item.bestPrice)
+      .sort((a, b) => b.price - a.price).forEach((item) => {
+        $bestPriceProducts.append(ShortProduct(item));
+      });
+  }
 
   function initFeaturedSlider() {
+    loadFeaturedProducts();
+
     if ($('.featured_slider').length) {
       var featuredSliders = $('.featured_slider');
       featuredSliders.each(function () {
