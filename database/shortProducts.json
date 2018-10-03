@@ -1359,8 +1359,7 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s10-chinh-hang.html",
-      "bestSell": true
+      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s10-chinh-hang.html"
   },
   {
       "brand": "Samsung",
@@ -2117,24 +2116,14 @@
   },
   {
       "brand": "Nokia",
-      "name": "Nokia 8110 4G Chính hãng",
-      "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/8/1/8110-4g-yellow_1.jpg",
-      "price": 1580000,
-      "priceText": "1.580.000 ₫",
-      "ceilPrice": 1680000,
-      "ceilPriceText": "1.680.000 ₫",
-      "detailURL": "https://cellphones.com.vn/nokia-8110-4g-chinh-hang.html",
-      "hotDeal": true
-  },
-  {
-      "brand": "Nokia",
       "name": "Nokia 6 Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/6/-/6-black_1.jpg",
       "price": 3090000,
       "priceText": "3.090.000 ₫",
       "ceilPrice": 3990000,
       "ceilPriceText": "3.990.000 ₫",
-      "detailURL": "https://cellphones.com.vn/nokia-6-cty.html"
+      "detailURL": "https://cellphones.com.vn/nokia-6-cty.html",
+      "bestGift": true
   },
   {
       "brand": "Nokia",
@@ -2144,7 +2133,8 @@
       "priceText": "2.990.000 ₫",
       "ceilPrice": 3390000,
       "ceilPriceText": "3.390.000 ₫",
-      "detailURL": "https://cellphones.com.vn/nokia-3-1-16-gb-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/nokia-3-1-16-gb-chinh-hang.html",
+      "bestGift": true
   },
   {
       "brand": "Nokia",
@@ -2164,7 +2154,8 @@
       "priceText": "6.590.000 ₫",
       "ceilPrice": 7190000,
       "ceilPriceText": "7.190.000 ₫",
-      "detailURL": "https://cellphones.com.vn/nokia-7-plus-chinh-hang-at.html"
+      "detailURL": "https://cellphones.com.vn/nokia-7-plus-chinh-hang-at.html",
+      "bestGift": true
   },
   {
       "brand": "Nokia",
@@ -2184,19 +2175,7 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/nokia-5-1-plus-32-gb-chinh-hang.html",
-      "bestSell": true
-  },
-  {
-      "brand": "Nokia",
-      "name": "Nokia 3310 Chính hãng(2017)",
-      "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/3/3/3310-2017-red.jpg",
-      "price": 990000,
-      "priceText": "990.000 ₫",
-      "ceilPrice": 1060000,
-      "ceilPriceText": "1.060.000 ₫",
-      "detailURL": "https://cellphones.com.vn/nokia-3310-2017-cty.html",
-      "bestPrice": true
+      "detailURL": "https://cellphones.com.vn/nokia-5-1-plus-32-gb-chinh-hang.html"
   },
   {
       "brand": "Nokia",
@@ -2206,7 +2185,8 @@
       "priceText": "1.290.000 ₫",
       "ceilPrice": 1590000,
       "ceilPriceText": "1.590.000 ₫",
-      "detailURL": "https://cellphones.com.vn/nokia-1-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/nokia-1-chinh-hang.html",
+      "bestGift": true
   },
   {
       "brand": "Nokia",
@@ -2216,17 +2196,7 @@
       "priceText": "3.250.000 ₫",
       "ceilPrice": 3860000,
       "ceilPriceText": "3.860.000 ₫",
-      "detailURL": "https://cellphones.com.vn/nokia-5-cty.html"
-  },
-  {
-      "brand": "Nokia",
-      "name": "Nokia 105 (2017) 2 SIM Chính hãng",
-      "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/1/0/105-2017-blue.jpg",
-      "price": 359000,
-      "priceText": "359.000 ₫",
-      "ceilPrice": null,
-      "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/nokia-105-2017-2-sim-chinh-hang.html",
+      "detailURL": "https://cellphones.com.vn/nokia-5-cty.html",
       "bestSell": true
   },
   {
@@ -2268,7 +2238,8 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/nokia-5-1-32-gb-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/nokia-5-1-32-gb-chinh-hang.html",
+      "bestSell": true
   },
   {
       "brand": "Nokia",
@@ -2279,7 +2250,7 @@
       "ceilPrice": null,
       "ceilPriceText": null,
       "detailURL": "https://cellphones.com.vn/nokia-2-chinh-hang-at.html",
-      "bestGift": true
+      "bestSell": true
   },
   {
       "brand": "Nokia",
@@ -2289,18 +2260,7 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/nokia-x5-64-gb-chinh-hang.html",
-      "bestGift": true
-  },
-  {
-      "brand": "Nokia",
-      "name": "Nokia 8110 4G Chính hãng(Đã kích hoạt)",
-      "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/8/1/8110-4g-yellow_2.jpg",
-      "price": 980000,
-      "priceText": "980.000 ₫",
-      "ceilPrice": null,
-      "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/nokia-8110-4g-chinh-hang-at.html"
+      "detailURL": "https://cellphones.com.vn/nokia-x5-64-gb-chinh-hang.html"
   },
   {
       "brand": "Hãng khác",
@@ -2311,7 +2271,8 @@
       "priceText": "3.490.000 ₫",
       "ceilPrice": 4290000,
       "ceilPriceText": "4.290.000 ₫",
-      "detailURL": "https://cellphones.com.vn/honor-9-lite-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/honor-9-lite-chinh-hang.html",
+      "bestSell": true
   },
   {
       "brand": "Hãng khác",
@@ -2358,8 +2319,7 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/honor-8x-64-gb-chinh-hang.html",
-      "bestSell": true
+      "detailURL": "https://cellphones.com.vn/honor-8x-64-gb-chinh-hang.html"
   },
   {
       "brand": "Hãng khác",
@@ -2370,8 +2330,7 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/honor-8x-128-gb-chinh-hang.html",
-      "bestSell": true
+      "detailURL": "https://cellphones.com.vn/honor-8x-128-gb-chinh-hang.html"
   },
   {
       "brand": "Hãng khác",
