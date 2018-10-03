@@ -356,10 +356,12 @@
 }
 
 .product_name {
-  margin-top: 4px;
-  overflow: hidden;
+	margin-top: 4px;
+	overflow: hidden;
   div {
-    width: 100%;
+		width: 72%;
+		margin: auto;
+		overflow: hidden;
     a {
       font-size: 14px;
       font-weight: 400;
@@ -369,7 +371,10 @@
       -moz-transition: all 200ms ease;
       -ms-transition: all 200ms ease;
       -o-transition: all 200ms ease;
-      transition: all 200ms ease;
+			transition: all 200ms ease;
+			overflow: hidden;
+			white-space: nowrap;
+    	text-overflow: ellipsis;
       &:hover {
         color: $color-primary;
       }

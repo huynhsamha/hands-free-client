@@ -1,0 +1,495 @@
+[
+    {
+        "brand": "Apple",
+        "model": "iPhone 2018",
+        "name": "Apple iPhone XS Max 64GB 2 SIM",
+        "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/x/s/xs_1_7.png",
+        "price": 31100000,
+        "priceText": "31.100.000 ₫",
+        "ceilPrice": null,
+        "ceilPriceText": null,
+        "detailURL": "https://cellphones.com.vn/apple-iphone-xs-max-64-gb-2-sim.html",
+        "galleryImages": [
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/9df78eab33525d08d6e5fb8d27136e95/x/s/xs_1_7.png",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/s/xs-back_1_7.png",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/s/xs-1_8_5.png",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/s/xs_1_7.png"
+        ],
+        "status": "Máy mới nguyên hộp, IMEI trùng hộp",
+        "warranty": "Bảo hành 1 đổi 1 trong 12 tháng (lỗi nguồn, ổ cứng, mainboard)",
+        "technicalInfo": [
+            {
+                "name": "Hãng sản xuất:",
+                "value": "Apple"
+            },
+            {
+                "name": "3G:",
+                "value": "HSPA 42.2/5.76 Mbps"
+            },
+            {
+                "name": "4G:",
+                "value": "LTE-A (6CA) Cat18 1200/200 Mbps"
+            },
+            {
+                "name": "Kích thước:",
+                "value": "157.5 - 77.4 - 7.7 mm"
+            },
+            {
+                "name": "Trọng lượng:",
+                "value": "208 g"
+            },
+            {
+                "name": "Loại SIM:",
+                "value": "2 SIM (Nano-SIM)"
+            },
+            {
+                "name": "Loại màn hình:",
+                "value": "OLED"
+            },
+            {
+                "name": "Kích thước màn hình:",
+                "value": "6.5 inches"
+            },
+            {
+                "name": "Độ phân giải màn hình:",
+                "value": "1242 x 2688 pixel"
+            },
+            {
+                "name": "Hệ điều hành:",
+                "value": "iOS"
+            },
+            {
+                "name": "Phiên bản hệ điều hành:",
+                "value": "12"
+            },
+            {
+                "name": "Chipset:",
+                "value": "Apple A12 Bionic 6 nhân"
+            },
+            {
+                "name": "GPU:",
+                "value": "Apple GPU 4 nhân"
+            },
+            {
+                "name": "Khe cắm thẻ nhớ:",
+                "value": "Không"
+            },
+            {
+                "name": "Bộ nhớ đệm / Ram:",
+                "value": "64 GB, 4 GB RAM"
+            },
+            {
+                "name": "Camera sau:",
+                "value": "12 MP"
+            },
+            {
+                "name": "Camera trước:",
+                "value": "7 MP"
+            },
+            {
+                "name": "Quay video:",
+                "value": "Quay phim FullHD 1080p@30fps, Quay phim FullHD 1080p@60fps, Quay phim FullHD 1080p@120fps, Quay phim FullHD 1080p@240fps, Quay phim 4K 2160p@24fps, Quay phim 4K 2160p@30fps, Quay phim 4K 2160p@60fps"
+            },
+            {
+                "name": "WLAN:",
+                "value": "Wi-Fi 802.11 a/b/g/n/ac, Dual-band, Wi-Fi hotspot"
+            },
+            {
+                "name": "Bluetooth:",
+                "value": "LE, A2DP, v5.0"
+            },
+            {
+                "name": "GPS:",
+                "value": "A-GPS, GLONASS"
+            },
+            {
+                "name": "NFC:",
+                "value": "Yes"
+            },
+            {
+                "name": "Pin:",
+                "value": "Li-ion"
+            }
+        ]
+    },
+    {
+        "brand": "OPPO",
+        "name": "OPPO Find X Chính hãng",
+        "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/o/p/oppo-find-x_1.jpg",
+        "price": 20990000,
+        "priceText": "20.990.000 ₫",
+        "ceilPrice": null,
+        "ceilPriceText": null,
+        "detailURL": "https://cellphones.com.vn/oppo-find-x-chinh-hang.html",
+        "galleryImages": [
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/9df78eab33525d08d6e5fb8d27136e95/o/p/oppo-find-x_1.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-find-x_1.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/f/i/find-x-red_1.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/f/i/find-x-blue-back.png",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/f/i/find-x-red-back.png",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/f/i/find-x-3.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/f/i/find-x-4.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/f/i/find-x-5.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/f/i/find-x-6.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/f/i/find-x-1_1.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/f/i/find-x-2.jpg"
+        ],
+        "status": "Máy mới nguyên hộp, IMEI trùng hộp",
+        "warranty": "Bảo hành 12 tháng tại các trung tâm chính hãng được ủy quyền, đổi mới 30 ngày đầu tiên, 1 đổi 1 phụ kiện đi kèm 12 tháng nếu lỗi do nhà sản xuất",
+        "technicalInfo": [
+            {
+                "name": "Hãng sản xuất:",
+                "value": "OPPO"
+            },
+            {
+                "name": "3G:",
+                "value": "HSPA 42.2/5.76 Mbps"
+            },
+            {
+                "name": "4G:",
+                "value": "LTE-A (6CA) Cat18 1200/200 Mbps"
+            },
+            {
+                "name": "Kích thước:",
+                "value": "156.7 x 74.2 x 9.6 mm (6.17 x 2.92 x 0.38 in)"
+            },
+            {
+                "name": "Trọng lượng:",
+                "value": "186 g (6.56 oz)"
+            },
+            {
+                "name": "Loại SIM:",
+                "value": "2 SIM (Nano-SIM)"
+            },
+            {
+                "name": "Loại màn hình:",
+                "value": "Cảm ứng điện dung AMOLED, 16 triệu màu"
+            },
+            {
+                "name": "Kích thước màn hình:",
+                "value": "6.42 inches"
+            },
+            {
+                "name": "Độ phân giải màn hình:",
+                "value": "1080 x 2340 pixels"
+            },
+            {
+                "name": "Hệ điều hành:",
+                "value": "Android"
+            },
+            {
+                "name": "Phiên bản hệ điều hành:",
+                "value": "8.1 (Oreo)"
+            },
+            {
+                "name": "Chipset:",
+                "value": "Qualcomm SDM845 Snapdragon 845"
+            },
+            {
+                "name": "CPU:",
+                "value": "4x 2.8 GHz Kryo 385 Gold & 4x 1.7 GHz Kryo 385 Silver"
+            },
+            {
+                "name": "GPU:",
+                "value": "Adreno 630"
+            },
+            {
+                "name": "Khe cắm thẻ nhớ:",
+                "value": "microSD, lên đến 400 GB"
+            },
+            {
+                "name": "Bộ nhớ đệm / Ram:",
+                "value": "256 GB, 8 GB RAM"
+            },
+            {
+                "name": "Camera sau:",
+                "value": "16 MP (f/2.0, PDAF, OIS) + 20 MP (f/2.0), tự động lấy nét nhận diện theo giai đoạn, LED flash kép (2 tone)"
+            },
+            {
+                "name": "Camera trước:",
+                "value": "2160p@30fps"
+            },
+            {
+                "name": "Quay video:",
+                "value": "25 MP (f/2.0)"
+            },
+            {
+                "name": "WLAN:",
+                "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, WiFi Direct, hotspot"
+            },
+            {
+                "name": "Bluetooth:",
+                "value": "5.0, A2DP, LE"
+            },
+            {
+                "name": "GPS:",
+                "value": "A-GPS, GLONASS, BDS"
+            },
+            {
+                "name": "NFC:",
+                "value": "Yes"
+            },
+            {
+                "name": "USB:",
+                "value": "2.0, Type-C 1.0, USB On-The-Go"
+            },
+            {
+                "name": "Cảm biến:",
+                "value": "Face ID, gia tốc, con quay hồi chuyển, khoảng cách, la bàn"
+            },
+            {
+                "name": "Pin:",
+                "value": "Li-ion 3730 mAh"
+            }
+        ]
+    },
+    {
+        "brand": "Nokia",
+        "name": "Nokia 1 Chính hãng",
+        "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/1/-/1-red.jpg",
+        "price": 1290000,
+        "priceText": "1.290.000 ₫",
+        "ceilPrice": 1590000,
+        "ceilPriceText": "1.590.000 ₫",
+        "detailURL": "https://cellphones.com.vn/nokia-1-chinh-hang.html",
+        "galleryImages": [
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/9df78eab33525d08d6e5fb8d27136e95/1/-/1-red.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/-/1-blue.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/-/1-red.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/-/1-blue-back.png",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/-/1-red-back.png",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/-/1-1.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/-/1-2.jpg"
+        ],
+        "status": "Máy mới nguyên hộp, IMEI trùng hộp",
+        "warranty": "Bảo hành 12 tháng tại các trung tâm chính hãng được ủy quyền, đổi mới 30 ngày đầu tiên, 1 đổi 1 phụ kiện đi kèm 12 tháng nếu lỗi do nhà sản xuất",
+        "technicalInfo": [
+            {
+                "name": "Hãng sản xuất:",
+                "value": "Nokia"
+            },
+            {
+                "name": "3G:",
+                "value": "HSPA 42.2/5.76 Mbps"
+            },
+            {
+                "name": "4G:",
+                "value": "LTE Cat4 150/50 Mbps"
+            },
+            {
+                "name": "Kích thước:",
+                "value": "133.6 x 67.8 x 9.5 mm (5.26 x 2.67 x 0.37 in)"
+            },
+            {
+                "name": "Trọng lượng:",
+                "value": "131 g (4.62 oz)"
+            },
+            {
+                "name": "Loại SIM:",
+                "value": "2 SIM (Micro-SIM/Nano-SIM)"
+            },
+            {
+                "name": "Loại màn hình:",
+                "value": "Cảm ứng điện dung IPS LCD, 16 triệu màu"
+            },
+            {
+                "name": "Kích thước màn hình:",
+                "value": "4.5 inches"
+            },
+            {
+                "name": "Độ phân giải màn hình:",
+                "value": "480 x 854 pixels"
+            },
+            {
+                "name": "Hệ điều hành:",
+                "value": "Android"
+            },
+            {
+                "name": "Phiên bản hệ điều hành:",
+                "value": "8.0 (Oreo Go)"
+            },
+            {
+                "name": "Chipset:",
+                "value": "Mediatek MT6737M"
+            },
+            {
+                "name": "CPU:",
+                "value": "4x 1.1 GHz Cortex-A53"
+            },
+            {
+                "name": "GPU:",
+                "value": "Mali-T720MP1"
+            },
+            {
+                "name": "Khe cắm thẻ nhớ:",
+                "value": "microSD, lên đến 128 GB"
+            },
+            {
+                "name": "Bộ nhớ đệm / Ram:",
+                "value": "8 GB, 1 GB RAM"
+            },
+            {
+                "name": "Camera sau:",
+                "value": "5 MP, LED flash"
+            },
+            {
+                "name": "Camera trước:",
+                "value": "2 MP"
+            },
+            {
+                "name": "Quay video:",
+                "value": "480p"
+            },
+            {
+                "name": "WLAN:",
+                "value": "Wi-Fi 802.11 b/g/n, hotspot"
+            },
+            {
+                "name": "Bluetooth:",
+                "value": "4.2, A2DP"
+            },
+            {
+                "name": "GPS:",
+                "value": "A-GPS"
+            },
+            {
+                "name": "USB:",
+                "value": "microUSB 2.0"
+            },
+            {
+                "name": "Cảm biến:",
+                "value": "Gia tốc, khoảng cách"
+            },
+            {
+                "name": "Pin:",
+                "value": "Li-ion 2150 mAh"
+            }
+        ]
+    },
+    {
+        "brand": "Hãng khác",
+        "model": "Sharp",
+        "name": "Sharp Aquos S3 Chính hãng",
+        "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/p/h/photo-1-15284412752231548130066.png",
+        "price": 4500000,
+        "priceText": "4.500.000 ₫",
+        "ceilPrice": 8990000,
+        "ceilPriceText": "8.990.000 ₫",
+        "detailURL": "https://cellphones.com.vn/sharp-aquos-s3-chinh-hang.html",
+        "galleryImages": [
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/9df78eab33525d08d6e5fb8d27136e95/p/h/photo-1-15284412752231548130066.png",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/p/h/photo-1-15284412752231548130066.png",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/h/sharp-aquos-s3-e1522251002774.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/t/r/tren-tay-sharp-aqous-s3-hnam_11_.jpg",
+            "https://cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/e/new_project_1__2.jpg"
+        ],
+        "status": "Máy mới nguyên hộp, IMEI trùng hộp",
+        "warranty": "Bảo hành 12 tháng tại các trung tâm chính hãng được ủy quyền, đổi mới 30 ngày đầu tiên, 1 đổi 1 phụ kiện đi kèm 12 tháng nếu lỗi do nhà sản xuất",
+        "technicalInfo": [
+            {
+                "name": "Hãng sản xuất:",
+                "value": "Sharp"
+            },
+            {
+                "name": "3G:",
+                "value": "HSPA 42.2/5.76 Mbps"
+            },
+            {
+                "name": "4G:",
+                "value": "LTE-A (2CA) Cat6 300/50 Mbps"
+            },
+            {
+                "name": "Kích thước:",
+                "value": "141.8 x 74.0 x 7.9 mm"
+            },
+            {
+                "name": "Trọng lượng:",
+                "value": "165.4 g"
+            },
+            {
+                "name": "Loại SIM:",
+                "value": "2 SIM (Nano-SIM)"
+            },
+            {
+                "name": "Loại màn hình:",
+                "value": "Cảm ứng điện dung IPS LCD, 16 triệu màu"
+            },
+            {
+                "name": "Kích thước màn hình:",
+                "value": "6.0 inches"
+            },
+            {
+                "name": "Độ phân giải màn hình:",
+                "value": "1080 x 2160 pixels"
+            },
+            {
+                "name": "Hệ điều hành:",
+                "value": "Android"
+            },
+            {
+                "name": "Phiên bản hệ điều hành:",
+                "value": "Android 8 (Oreo)"
+            },
+            {
+                "name": "Chipset:",
+                "value": "Qualcomm Snapdragon 630 SDM630"
+            },
+            {
+                "name": "CPU:",
+                "value": "Cortex-A53, 8 nhân x 2.2GHz"
+            },
+            {
+                "name": "GPU:",
+                "value": "Adreno 508"
+            },
+            {
+                "name": "Khe cắm thẻ nhớ:",
+                "value": "micro SD hỗ trợ đến 256GB"
+            },
+            {
+                "name": "Bộ nhớ đệm / Ram:",
+                "value": "64 GB, 4 GB RAM"
+            },
+            {
+                "name": "Camera sau:",
+                "value": "12 MP, f/1.8 + 13 MP, Zoom quang học 2x, Flash Led dual tone, Chụp ảnh HDR, Toàn cảnh Padorama"
+            },
+            {
+                "name": "Camera trước:",
+                "value": "16 MP, f/2.0"
+            },
+            {
+                "name": "Quay video:",
+                "value": "Full HD 1080p@30fps"
+            },
+            {
+                "name": "WLAN:",
+                "value": "Wi-Fi 802.11 a/b/g/n/ac, dual-band, WiFi Direct, hotspot"
+            },
+            {
+                "name": "Bluetooth:",
+                "value": "Bluetooth 5.0"
+            },
+            {
+                "name": "GPS:",
+                "value": "A-GPS, GLONASS"
+            },
+            {
+                "name": "NFC:",
+                "value": "Yes"
+            },
+            {
+                "name": "USB:",
+                "value": "Type-C 2.0, USB OTG"
+            },
+            {
+                "name": "Cảm biến:",
+                "value": "Cảm biến vân tay, Cảm biến gia tốc, Con quay hồi chuyển, Cảm biến tiệm cận"
+            },
+            {
+                "name": "Pin:",
+                "value": "3200mAh, hỗ trợ Quick charge 3.0"
+            }
+        ]
+    }
+]
