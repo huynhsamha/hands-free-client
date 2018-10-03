@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "moment": "^2.22.2",
     "numeral": "^2.0.6"
   },
   "devDependencies": {
