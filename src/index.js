@@ -1,8 +1,9 @@
 import '../scss/index.scss';
 import '../scss/responsive/index.scss';
 
+import products from '../database/shortProducts.json';
+
 import DealProduct from './components/DealProduct';
-import products from './database/shortProducts.json';
 import ShortProduct from './components/ShortProduct';
 
 /* JS Document */
