@@ -387,9 +387,6 @@
   .page_menu_item > a, .page_menu_selection li a {
     font-size: 12px;
   }
-  .banner_product_image {
-    right: 15px;
-  }
   .button {
     height: 32px;
     a {
@@ -404,28 +401,6 @@
     height: 310px;
     padding-top: 0px;
     padding-bottom: 0px;
-  }
-  .banner_content {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .banner_text {
-    font-size: 24px;
-  }
-  .banner_price {
-    font-size: 18px;
-    margin-top: 23px;
-    span::after {
-      top: 13px;
-    }
-  }
-  .banner_product_name {
-    font-size: 13px;
-  }
-  .banner_button {
-    margin-top: 35px;
   }
   .deals {
     padding-left: 15px;
