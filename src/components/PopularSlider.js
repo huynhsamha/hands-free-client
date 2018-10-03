@@ -1,3 +1,5 @@
+/** Popular Slider */
+
 export function initPopularSlider() {
   if ($('.popular_categories_slider').length) {
     var popularSlider = $('.popular_categories_slider');

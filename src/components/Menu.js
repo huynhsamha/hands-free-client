@@ -1,3 +1,5 @@
+/** Menu Page */
+
 import { openMenu, closeMenu, getMenuActive } from '../utils';
 
 export function initPageMenu() {
@@ -6,7 +8,7 @@ export function initPageMenu() {
     var menuContent = $('.page_menu_content');
     var menuTrigger = $('.menu_trigger');
 
-    // Open / close page menu
+    // open / close page menu
     menuTrigger.on('click', () => {
       if (!getMenuActive()) {
         openMenu();
