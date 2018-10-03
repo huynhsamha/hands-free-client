@@ -55,9 +55,6 @@
       font-size: 16px;
     }
   }
-  .char_item {
-    padding-left: 25px;
-  }
   .newsletter_form {
     width: 456px;
   }
@@ -144,9 +141,6 @@
   .char_col:not(:last-child):not(:nth-child(3)) {
     margin-bottom: 30px;
   }
-  .char_item {
-    padding-left: 36px;
-  }
   .blog_post {
     width: calc((100% - 30px) / 2);
   }
@@ -199,9 +193,6 @@
   }
   .char_col:nth-child(3) {
     margin-bottom: 30px;
-  }
-  .char_item {
-    padding-left: 36px;
   }
   .blog_post {
     width: 100%;
