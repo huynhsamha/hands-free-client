@@ -89,7 +89,7 @@ module.exports = {
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {
-      chunks: 'all',
+      // chunks: 'all',
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
