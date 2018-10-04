@@ -1,34 +1,42 @@
 [
     {
         "brand": "Apple",
-        "url": "https://cellphones.com.vn/mobile/apple.html"
+        "url": "https://cellphones.com.vn/mobile/apple.html",
+        "icon": "images/brands/apple-icon.jpg"
     },
     {
         "brand": "Samsung",
-        "url": "https://cellphones.com.vn/mobile/samsung.html"
+        "url": "https://cellphones.com.vn/mobile/samsung.html",
+        "icon": "images/brands/samsung-icon.png"
     },
     {
         "brand": "Sony",
-        "url": "https://cellphones.com.vn/mobile/sony.html"
+        "url": "https://cellphones.com.vn/mobile/sony.html",
+        "icon": "images/brands/sony-icon.png"
     },
     {
         "brand": "OPPO",
-        "url": "https://cellphones.com.vn/mobile/oppo.html"
+        "url": "https://cellphones.com.vn/mobile/oppo.html",
+        "icon": "images/brands/oppo-icon.png"
     },
     {
         "brand": "Xiaomi",
-        "url": "https://cellphones.com.vn/mobile/xiaomi.html"
+        "url": "https://cellphones.com.vn/mobile/xiaomi.html",
+        "icon": "images/brands/xiaomi-icon.png"
     },
     {
         "brand": "Huawei",
-        "url": "https://cellphones.com.vn/mobile/huawei.html"
+        "url": "https://cellphones.com.vn/mobile/huawei.html",
+        "icon": "images/brands/huawei-icon.png"
     },
     {
         "brand": "Nokia",
-        "url": "https://cellphones.com.vn/mobile/nokia.html"
+        "url": "https://cellphones.com.vn/mobile/nokia.html",
+        "icon": "images/brands/nokia-icon.png"
     },
     {
         "brand": "Hãng khác",
-        "url": "https://cellphones.com.vn/mobile/hang-khac.html"
+        "url": "https://cellphones.com.vn/mobile/hang-khac.html",
+        "icon": "images/brands/vivo-icon.png"
     }
 ]

@@ -1,5 +1,23 @@
 /** Popular Slider */
 
+export const PopularCategoryBrand = item => `
+<div class="owl-item">
+  <div class="popular_category d-flex flex-column align-items-center justify-content-center">
+    <div class="popular_category_image">
+      <img src="${item.icon}" alt="${item.brand}">
+    </div>
+    <div class="popular_category_text">${item.brand}</div>
+  </div>
+</div>
+`;
+
+
+export function loadPopularSlider(brands) {
+  const $popularSlider = $('.popular_categories_slider');
+
+  brands.forEach(item => $popularSlider.append(PopularCategoryBrand(item)));
+}
+
 export function initPopularSlider() {
   if ($('.popular_categories_slider').length) {
     var popularSlider = $('.popular_categories_slider');
