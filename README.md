@@ -105,11 +105,11 @@ Chứa các file public của trang web, khi build production, các file trong `
 |   └── popper.js
 └── plugins
 |   ├── Isotope
-|   ├── OwlCarousel2-2.2.1
+|   ├── OwlCarousel2
 |   ├── easing
-|   ├── fontawesome-free-5.0.1
+|   ├── FontAwesome5
 |   ├── greensock
-|   ├── jquery-ui-1.12.1.custom
+|   ├── jquery-ui
 |   ├── parallax-js-master
 |   ├── scrollmagic
 |   └── slick-1.8.0
