@@ -22,6 +22,7 @@ import { initDealsSlider, loadDealProducts } from './components/DealProduct';
 import { initArrivalsSlider, setArrivalsSliderZIndex, loadArrivalsProducts } from './components/ArrivalsSlider';
 import { initFeaturedSlider, loadFeaturedProducts, setFeaturedSliderZIndex } from './components/FeaturedSlider';
 import { initBestsellersSlider } from './components/BestSellersSlider';
+import { initFavs } from './utils/favorites';
 
 
 /** ****************************
@@ -48,8 +49,6 @@ import { initBestsellersSlider } from './components/BestSellersSlider';
 ******************************/
 
 (() => {
-
-  // var menuActive = false;
 
   setHeader();
 
@@ -80,7 +79,6 @@ import { initBestsellersSlider } from './components/BestSellersSlider';
 
   initFavs();
 
-
   // Hot New Arrivals Products
   loadArrivalsProducts(products);
   initArrivalsSlider();
@@ -104,19 +102,5 @@ import { initBestsellersSlider } from './components/BestSellersSlider';
     setFeaturedSliderZIndex();
     initTabLines();
   });
-
-
-  /* Favorites */
-
-  function initFavs() {
-  // Handle Favorites
-    var items = document.getElementsByClassName('product_fav');
-    for (var x = 0; x < items.length; x++) {
-      var item = items[x];
-      item.addEventListener('click', (fn) => {
-        fn.target.classList.toggle('active');
-      });
-    }
-  }
 
 })();

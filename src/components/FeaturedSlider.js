@@ -3,7 +3,8 @@
 export const FeaturedSliderShortProduct = item => `
 <div class="featured_slider_item">
   <div class="border_active"></div>
-  <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+  <div class="product_item d-flex flex-column align-items-center justify-content-center text-center
+  ${item.ceilPriceText ? 'discount' : `${item.hotNew ? 'is_new' : ''}`}">
     <div class="product_image d-flex flex-column align-items-center justify-content-center">
       <img src="${item.thumbnail}" alt="${item.name}">
     </div>
@@ -22,11 +23,17 @@ export const FeaturedSliderShortProduct = item => `
     </div>
     <div class="product_fav"><i class="fas fa-heart"></i></div>
     <ul class="product_marks">
+
     ${item.ceilPriceText
     ? `<li class="product_mark product_discount">
-        -${Math.ceil((item.ceilPrice - item.price) / item.price * 100)}%
-      </li>`
+          -${Math.ceil((item.ceilPrice - item.price) / item.ceilPrice * 100)}%
+        </li>`
     : ''}
+
+    ${item.hotNew
+    ? '<li class="product_mark product_new">new</li>'
+    : ''}
+
     </ul>
   </div>
 </div>

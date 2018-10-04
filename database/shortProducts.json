@@ -37,7 +37,8 @@
       "ceilPrice": null,
       "ceilPriceText": null,
       "detailURL": "https://cellphones.com.vn/apple-iphone-xs-64-gb.html",
-      "bestGift": true
+      "bestGift": true,
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -1607,7 +1608,8 @@
       "priceText": "6.590.000 ₫",
       "ceilPrice": 7190000,
       "ceilPriceText": "7.190.000 ₫",
-      "detailURL": "https://cellphones.com.vn/sony-xperia-xa2-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/sony-xperia-xa2-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "Sony",
@@ -1618,7 +1620,8 @@
       "ceilPrice": 9690000,
       "ceilPriceText": "9.690.000 ₫",
       "detailURL": "https://cellphones.com.vn/sony-xperia-xa2-ultra-chinh-hang.html",
-      "bestPrice": true
+      "bestPrice": true,
+      "hotNew": true
   },
   {
       "brand": "Sony",
@@ -1714,7 +1717,8 @@
       "ceilPrice": null,
       "ceilPriceText": null,
       "detailURL": "https://cellphones.com.vn/oppo-a83-2018-16-gb-chinh-hang.html",
-      "bestSell": true
+      "bestSell": true,
+      "hotNew": true
   },
   {
       "brand": "OPPO",
@@ -2171,7 +2175,8 @@
       "ceilPrice": 3390000,
       "ceilPriceText": "3.390.000 ₫",
       "detailURL": "https://cellphones.com.vn/nokia-3-1-16-gb-chinh-hang.html",
-      "bestGift": true
+      "bestGift": true,
+      "hotNew": true
   },
   {
       "brand": "Nokia",
@@ -2181,7 +2186,8 @@
       "priceText": "4.450.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/nokia-6-2018-chinh-hang-at.html"
+      "detailURL": "https://cellphones.com.vn/nokia-6-2018-chinh-hang-at.html",
+      "hotNew": true
   },
   {
       "brand": "Nokia",
@@ -2404,6 +2410,7 @@
       "ceilPrice": 8990000,
       "ceilPriceText": "8.990.000 ₫",
       "detailURL": "https://cellphones.com.vn/sharp-aquos-s3-chinh-hang.html",
-      "bestSell": true
+      "bestSell": true,
+      "hotNew": true
   }
 ]
