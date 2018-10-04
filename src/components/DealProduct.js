@@ -2,7 +2,9 @@
 
 export const DealProduct = item => `
   <div class="owl-item deals_item">
-    <div class="deals_image"><img src=${item.thumbnail} alt="" /></div>
+    <div class="deals_image">
+      <img src="${item.thumbnail}" alt="${item.name}" />
+    </div>
     <div class="deals_content">
       <div class="deals_info_line d-flex flex-row justify-content-start">
         <div class="deals_item_category"><a href="#">${item.brand}</a></div>

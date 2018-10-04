@@ -5,10 +5,11 @@ export const FeaturedSliderShortProduct = item => `
   <div class="border_active"></div>
   <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
     <div class="product_image d-flex flex-column align-items-center justify-content-center">
-    <img src="${item.thumbnail}" alt=""></div>
+      <img src="${item.thumbnail}" alt="${item.name}">
+    </div>
     <div class="product_content">
       <div class="product_price discount">${item.priceText}
-        ${item.ceilPriceText
+    ${item.ceilPriceText
     ? `<span>${item.ceilPriceText}</span>` : ''}
       </div>
       <div class="product_name">
@@ -16,12 +17,12 @@ export const FeaturedSliderShortProduct = item => `
       </div>
       <div class="product_extras">
 
-        <button class="product_cart_button">Add to Cart</button>
+        <button class="product_cart_button">Thêm vào giỏ</button>
       </div>
     </div>
     <div class="product_fav"><i class="fas fa-heart"></i></div>
     <ul class="product_marks">
-        ${item.ceilPriceText
+    ${item.ceilPriceText
     ? `<li class="product_mark product_discount">
         -${Math.ceil((item.ceilPrice - item.price) / item.price * 100)}%
       </li>`
@@ -31,11 +32,13 @@ export const FeaturedSliderShortProduct = item => `
 </div>
 `;
 
-/* <div class="product_color">
+/**
+<div class="product_color">
   <input type="radio" checked name="product_color" style="background:#b19c83">
   <input type="radio" name="product_color" style="background:#000000">
   <input type="radio" name="product_color" style="background:#999999">
-</div> */
+</div>
+*/
 
 
 export function loadFeaturedProducts(products) {

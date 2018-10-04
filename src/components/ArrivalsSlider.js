@@ -1,5 +1,61 @@
 /* Arrivals Slider */
 
+export const ArrivalsSliderShortProduct = item => `
+<div class="arrivals_slider_item">
+  <div class="border_active"></div>
+  <div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+    <div class="product_image d-flex flex-column align-items-center justify-content-center">
+      <img src="${item.thumbnail}" alt="${item.name}">
+    </div>
+    <div class="product_content">
+      <div class="product_price">${item.priceText}</div>
+      <div class="product_name">
+        <div><a href="product.html">${item.name}</a></div>
+      </div>
+      <div class="product_extras">
+
+        <button class="product_cart_button">Thêm vào giỏ</button>
+      </div>
+    </div>
+    <div class="product_fav"><i class="fas fa-heart"></i></div>
+    <ul class="product_marks">
+      <li class="product_mark product_new">new</li>
+    </ul>
+  </div>
+</div>
+`;
+
+/**
+<div class="product_color">
+  <input type="radio" checked name="product_color" style="background:#b19c83">
+  <input type="radio" name="product_color" style="background:#000000">
+  <input type="radio" name="product_color" style="background:#999999">
+</div>
+*/
+
+
+export function loadArrivalsProducts(products) {
+  const $hotNewApple = $('.hot-new-apple');
+  const $hotNewSamsung = $('.hot-new-samsung');
+  const $hotNewXiaomiOPPO = $('.hot-new-xiaomi-oppo');
+
+  products.filter(item => item.hotNew && item.brand == 'Apple')
+    .sort((a, b) => b.price - a.price).forEach((item) => {
+      $hotNewApple.append(ArrivalsSliderShortProduct(item));
+    });
+
+  products.filter(item => item.hotNew && item.brand == 'Samsung')
+    .sort((a, b) => b.price - a.price).forEach((item) => {
+      $hotNewSamsung.append(ArrivalsSliderShortProduct(item));
+    });
+
+  products.filter(item => item.hotNew && (item.brand == 'Xiaomi' || item.brand == 'OPPO'))
+    .sort((a, b) => b.price - a.price).forEach((item) => {
+      $hotNewXiaomiOPPO.append(ArrivalsSliderShortProduct(item));
+    });
+}
+
+
 export function initArrivalsSlider() {
   if ($('.arrivals_slider').length) {
     var arrivalsSliders = $('.arrivals_slider');
@@ -7,7 +63,6 @@ export function initArrivalsSlider() {
       var arrivalsSlider = $(this);
       initASlider(arrivalsSlider);
     });
-
   }
 }
 
@@ -37,46 +92,43 @@ export function initASlider(as) {
       }
     }
   )
-    .slick(
-      {
-        rows: 2,
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        infinite: false,
-        arrows: false,
-        dots: true,
-        responsive:
-          [
-            {
-              breakpoint: 768, settings:
+    .slick({
+      rows: 2,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      infinite: false,
+      arrows: false,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 768, settings:
               {
                 rows: 2,
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 dots: true
               }
-            },
-            {
-              breakpoint: 575, settings:
+        },
+        {
+          breakpoint: 575, settings:
               {
                 rows: 2,
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 dots: false
               }
-            },
-            {
-              breakpoint: 480, settings:
+        },
+        {
+          breakpoint: 480, settings:
               {
                 rows: 1,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: false
               }
-            }
-          ]
-      }
-    );
+        }
+      ]
+    });
 }
 
 /* Init Arrivals Slider ZIndex */

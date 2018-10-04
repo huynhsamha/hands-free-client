@@ -11,7 +11,8 @@
       "detailURL": "https://cellphones.com.vn/apple-iphone-xs-max-64-gb-2-sim.html",
       "bestSell": true,
       "bestGift": true,
-      "bestPrice": true
+      "bestPrice": true,
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -23,7 +24,8 @@
       "ceilPrice": null,
       "ceilPriceText": null,
       "detailURL": "https://cellphones.com.vn/apple-iphone-xs-max-256-gb-2-sim.html",
-      "bestSell": true
+      "bestSell": true,
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -59,7 +61,8 @@
       "ceilPrice": null,
       "ceilPriceText": null,
       "detailURL": "https://cellphones.com.vn/apple-iphone-xr-64-gb.html",
-      "bestGift": true
+      "bestGift": true,
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -71,7 +74,8 @@
       "ceilPrice": null,
       "ceilPriceText": null,
       "detailURL": "https://cellphones.com.vn/apple-iphone-xs-max-64-gb.html",
-      "bestPrice": true
+      "bestPrice": true,
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -83,7 +87,8 @@
       "ceilPrice": null,
       "ceilPriceText": null,
       "detailURL": "https://cellphones.com.vn/apple-iphone-xs-max-256-gb.html",
-      "bestPrice": true
+      "bestPrice": true,
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -118,7 +123,8 @@
       "priceText": "32.500.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/apple-iphone-xs-256-gb.html"
+      "detailURL": "https://cellphones.com.vn/apple-iphone-xs-256-gb.html",
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -129,7 +135,8 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/apple-iphone-xs-max-256-gb-chinh-hang-vn.html"
+      "detailURL": "https://cellphones.com.vn/apple-iphone-xs-max-256-gb-chinh-hang-vn.html",
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -140,7 +147,8 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/apple-iphone-xs-max-64-gb-chinh-hang-vn.html"
+      "detailURL": "https://cellphones.com.vn/apple-iphone-xs-max-64-gb-chinh-hang-vn.html",
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -151,7 +159,8 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/apple-iphone-xs-64-gb-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/apple-iphone-xs-64-gb-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -162,7 +171,8 @@
       "priceText": "40.000.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/apple-iphone-xs-max-512-gb.html"
+      "detailURL": "https://cellphones.com.vn/apple-iphone-xs-max-512-gb.html",
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -1092,7 +1102,8 @@
       "priceText": "4.000.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/iphone-6-64-gb-95-cu.html"
+      "detailURL": "https://cellphones.com.vn/iphone-6-64-gb-95-cu.html",
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -1103,7 +1114,8 @@
       "priceText": "11.199.000 ₫",
       "ceilPrice": 12399000,
       "ceilPriceText": "12.399.000 ₫",
-      "detailURL": "https://cellphones.com.vn/iphone-6-plus-16-gb-rfb.html"
+      "detailURL": "https://cellphones.com.vn/iphone-6-plus-16-gb-rfb.html",
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -1114,7 +1126,8 @@
       "priceText": "6.999.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/iphone-6-32-gb-at.html"
+      "detailURL": "https://cellphones.com.vn/iphone-6-32-gb-at.html",
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -1125,7 +1138,8 @@
       "priceText": "3.100.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/iphone-se-16-gb-cu.html"
+      "detailURL": "https://cellphones.com.vn/iphone-se-16-gb-cu.html",
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -1136,7 +1150,8 @@
       "priceText": "1.900.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/iphone-5s-64-gb-95-cu.html"
+      "detailURL": "https://cellphones.com.vn/iphone-5s-64-gb-95-cu.html",
+      "hotNew": true
   },
   {
       "brand": "Apple",
@@ -1159,7 +1174,8 @@
       "ceilPrice": 19990000,
       "ceilPriceText": "19.990.000 ₫",
       "detailURL": "https://cellphones.com.vn/samsung-galaxy-note-8-chinh-hang.html",
-      "hotDeal": true
+      "hotDeal": true,
+      "hotNew": true
   },
   {
       "brand": "Samsung",
@@ -1215,7 +1231,8 @@
       "priceText": "15.390.000 ₫",
       "ceilPrice": 17990000,
       "ceilPriceText": "17.990.000 ₫",
-      "detailURL": "https://cellphones.com.vn/galaxy-s8plus-cty.html"
+      "detailURL": "https://cellphones.com.vn/galaxy-s8plus-cty.html",
+      "hotNew": true
   },
   {
       "brand": "Samsung",
@@ -1226,7 +1243,8 @@
       "priceText": "19.990.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s9-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s9-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "Samsung",
@@ -1237,7 +1255,8 @@
       "priceText": "23.490.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s9plus-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s9plus-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "Samsung",
@@ -1304,7 +1323,8 @@
       "priceText": "24.490.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/galaxy-s9plus-128-gb-chinh-hang-gold.html"
+      "detailURL": "https://cellphones.com.vn/galaxy-s9plus-128-gb-chinh-hang-gold.html",
+      "hotNew": true
   },
   {
       "brand": "Samsung",
@@ -1315,7 +1335,8 @@
       "priceText": "16.790.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s9plus-chinh-hang-at.html"
+      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s9plus-chinh-hang-at.html",
+      "hotNew": true
   },
   {
       "brand": "Samsung",
@@ -1337,7 +1358,8 @@
       "priceText": "19.490.000 ₫",
       "ceilPrice": 24490000,
       "ceilPriceText": "24.490.000 ₫",
-      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s9plus-128-gb-chinh-hang-citi.html"
+      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s9plus-128-gb-chinh-hang-citi.html",
+      "hotNew": true
   },
   {
       "brand": "Samsung",
@@ -1348,7 +1370,8 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s10plus-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s10plus-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "Samsung",
@@ -1359,7 +1382,8 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s10-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/samsung-galaxy-s10-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "Samsung",
@@ -1370,7 +1394,8 @@
       "priceText": "5.090.000 ₫",
       "ceilPrice": 5490000,
       "ceilPriceText": "5.490.000 ₫",
-      "detailURL": "https://cellphones.com.vn/samsung-galaxy-a6-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/samsung-galaxy-a6-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "Samsung",
@@ -1394,7 +1419,8 @@
       "ceilPrice": null,
       "ceilPriceText": null,
       "detailURL": "https://cellphones.com.vn/samsung-galaxy-a8plus-2018-chinh-hang.html",
-      "bestSell": true
+      "bestSell": true,
+      "hotNew": true
   },
   {
       "brand": "Samsung",
@@ -1612,7 +1638,8 @@
       "priceText": "3.690.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/oppo-a3s-16-gb-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/oppo-a3s-16-gb-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "OPPO",
@@ -1622,7 +1649,8 @@
       "priceText": "7.690.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/oppo-f9-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/oppo-f9-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "OPPO",
@@ -1632,7 +1660,8 @@
       "priceText": "4.990.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/oppo-a3s-32-gb-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/oppo-a3s-32-gb-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "OPPO",
@@ -1642,7 +1671,8 @@
       "priceText": "20.990.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/oppo-find-x-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/oppo-find-x-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "OPPO",
@@ -1810,7 +1840,8 @@
       "ceilPrice": 4990000,
       "ceilPriceText": "4.990.000 ₫",
       "detailURL": "https://cellphones.com.vn/xiaomi-redmi-note-6-pro-32gb-chinh-hang.html",
-      "bestSell": true
+      "bestSell": true,
+      "hotNew": true
   },
   {
       "brand": "Xiaomi",
@@ -1821,7 +1852,8 @@
       "ceilPrice": 6499000,
       "ceilPriceText": "6.499.000 ₫",
       "detailURL": "https://cellphones.com.vn/xiaomi-mi-max-3-64-gb-chinh-hang.html",
-      "bestSell": true
+      "bestSell": true,
+      "hotNew": true
   },
   {
       "brand": "Xiaomi",
@@ -1832,7 +1864,8 @@
       "ceilPrice": 4799000,
       "ceilPriceText": "4.799.000 ₫",
       "detailURL": "https://cellphones.com.vn/xiaomi-redmi-note-5-pro-chinh-hang.html",
-      "bestSell": true
+      "bestSell": true,
+      "hotNew": true
   },
   {
       "brand": "Xiaomi",
@@ -1842,7 +1875,8 @@
       "priceText": "7.750.000 ₫",
       "ceilPrice": 8990000,
       "ceilPriceText": "8.990.000 ₫",
-      "detailURL": "https://cellphones.com.vn/xiaomi-mi-mix-2-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/xiaomi-mi-mix-2-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "Xiaomi",
@@ -1852,7 +1886,8 @@
       "priceText": "4.550.000 ₫",
       "ceilPrice": 5299000,
       "ceilPriceText": "5.299.000 ₫",
-      "detailURL": "https://cellphones.com.vn/xiaomi-mi-a2-lite-64-gb-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/xiaomi-mi-a2-lite-64-gb-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "Xiaomi",
@@ -1862,7 +1897,8 @@
       "priceText": "3.290.000 ₫",
       "ceilPrice": 4190000,
       "ceilPriceText": "4.190.000 ₫",
-      "detailURL": "https://cellphones.com.vn/xiaomi-redmi-6-64-gb-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/xiaomi-redmi-6-64-gb-chinh-hang.html",
+      "hotNew": true
   },
   {
       "brand": "Xiaomi",
@@ -1873,7 +1909,8 @@
       "ceilPrice": 12990000,
       "ceilPriceText": "12.990.000 ₫",
       "detailURL": "https://cellphones.com.vn/xiaomi-mi-8-64-gb-chinh-hang.html",
-      "bestPrice": true
+      "bestPrice": true,
+      "hotNew": true
   },
   {
       "brand": "Xiaomi",

@@ -18,7 +18,7 @@ import { initPopularSlider } from './components/PopularSlider';
 import { initTabLines, initTabs } from './components/Tab';
 
 import { initDealsSlider, loadDealProducts } from './components/DealProduct';
-import { initArrivalsSlider, setArrivalsSliderZIndex } from './components/ArrivalsSlider';
+import { initArrivalsSlider, setArrivalsSliderZIndex, loadArrivalsProducts } from './components/ArrivalsSlider';
 import { initFeaturedSlider, loadFeaturedProducts, setFeaturedSliderZIndex } from './components/FeaturedSlider';
 import { initBestsellersSlider } from './components/BestSellersSlider';
 
@@ -78,6 +78,8 @@ import { initBestsellersSlider } from './components/BestSellersSlider';
   initFavs();
 
 
+  // Hot New Arrivals Products
+  loadArrivalsProducts(products);
   initArrivalsSlider();
   setArrivalsSliderZIndex();
 
