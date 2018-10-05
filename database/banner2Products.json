@@ -1,0 +1,27 @@
+[
+  {
+    "brand": "Apple",
+    "model": "iPhone 2018",
+    "name": "Apple iPhone XS Max",
+    "thumbnail": "images/banner2/iPhoneXS.png",
+    "description": "Màn hình Super Retina mới trên iPhone XS Max với độ phân giải được nâng lên tới 1.242 x 2.688 pixel, mang lại trải nghiệm chạm, vuốt nhanh và mượt..."
+  },
+  {
+    "brand": "Xiaomi",
+    "name": "Xiaomi Redmi Note 6 Pro",
+    "thumbnail": "images/banner2/Xiaomi.png",
+    "description": "Xiaomi Redmi Note 6 Pro, một thành viên mới của nhà Xiaomi, với một chút thay đổi nhẹ trong thiết kế, được trang bị đến 4 camera, điều mà nhiều đối thủ của nó không có được..."
+  },
+  {
+    "brand": "OPPO",
+    "name": "OPPO Find X",
+    "thumbnail": "images/banner2/OPPOFindX.png",
+    "description": "OPPO Find X sở hữu cấu hình ấn tượng như bộ vi xử lý Qualcomm Snapdragon 845, RAM 8 GB, ROM 256 GB và dung lượng pin 3.730 mAh, sạc nhanh VOOC, nhận dạng gương mặt với ánh sáng cấu trúc 3D, hệ thống AI trực quan…"
+  },
+  {
+    "brand": "Honor",
+    "name": "Honor 8X 64GB",
+    "thumbnail": "images/banner2/honor.png",
+    "description": "Honor 8X có màn hình 6.5 inch, độ phân giải 2340 x 1080 pixel, chip Kirin 710. Phía sau máy có cụm camera kép 20 MP + 2 MP và cảm biến vân tay, phía trước là camera 16 MP. Máy có pin 3.750 mAh, hỗ trợ thẻ microSD."
+  }
+]

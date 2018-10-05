@@ -3,6 +3,7 @@ import '../scss/responsive/index.scss';
 
 import products from '../database/shortProducts.json';
 import brands from '../database/brands.json';
+import banner2Products from '../database/banner2Products.json';
 
 import { setHeader } from './utils';
 
@@ -13,7 +14,7 @@ import { initTrendsSlider } from './components/TrendSlider';
 import { initReviewsSlider } from './components/ReviewSlider';
 import { initViewedSlider } from './components/RecentlyViewedSlider';
 import { initBrandsSlider } from './components/BrandSlider';
-import { initBanner2Slider } from './components/Banner2Slider';
+import { initBanner2Slider, loadBanner2Products } from './components/Banner2Slider';
 import { initPopularSlider, loadPopularSlider } from './components/PopularSlider';
 
 import { initTabLines, initTabs } from './components/Tab';
@@ -74,6 +75,10 @@ import { initFavs } from './utils/favorites';
   // Popular Brands
   loadPopularSlider(brands);
   initPopularSlider();
+
+
+  // Banner 2
+  loadBanner2Products(banner2Products);
   initBanner2Slider();
 
 
