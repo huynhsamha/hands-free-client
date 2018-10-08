@@ -43,7 +43,6 @@ import { initFavs } from './utils/favorites';
 16. Init Trends Slider
 18. Init Recently Viewed Slider
 19. Init Brands Slider
-20. Init Timer
 ******************************/
 
 (() => {

@@ -13,6 +13,9 @@
 }
 
 .viewed_title {
+	@include fontQuicksand;
+	font-weight: 900;
+	font-size: 28px;
   margin-bottom: 14px;
 }
 
