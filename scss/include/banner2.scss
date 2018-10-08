@@ -52,8 +52,9 @@
 }
 
 .banner_2_title {
-  font-size: 30px;
-  font-weight: 500;
+	@include fontQuicksand;
+  font-size: 36px;
+  font-weight: 900;
   color: #000000;
   margin-top: 11px;
 }
@@ -61,7 +62,7 @@
 .banner_2_text {
   font-size: 16px;
   font-weight: 300;
-  color: #828282;
+  color: $color-dark;
   line-height: 1.5;
   margin-top: 9px;
 }

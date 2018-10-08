@@ -9,11 +9,12 @@
 }
 
 .new_arrivals_title {
+	@include fontQuicksand;
   position: absolute;
   left: 0;
   top: -7px;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 28px;
+  font-weight: 900;
   margin-bottom: -29px;
 }
 
