@@ -1,5 +1,45 @@
 /** Recently Viewed Slider */
 
+export const RecentlyViewedProduct = item => `
+<div class="owl-item">
+<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center
+  ${item.ceilPriceText ? 'discount' : `${item.hotNew ? 'is_new' : ''}`}">
+
+  <div class="viewed_image">
+    <img src="${item.thumbnail}" alt="${item.name}">
+  </div>
+
+  <div class="viewed_content text-center">
+    <div class="viewed_price">${item.priceText}
+    ${item.ceilPriceText
+    ? `<span>${item.ceilPriceText}</span>` : ''}
+    </div>
+    <div class="viewed_name"><a href="#">${item.name}</a></div>
+  </div>
+  <ul class="item_marks">
+
+  ${item.ceilPriceText
+    ? `<li class="item_mark item_discount">
+          -${Math.ceil((item.ceilPrice - item.price) / item.ceilPrice * 100)}%
+        </li>`
+    : ''}
+
+    ${item.hotNew
+    ? '<li class="item_mark item_new">new</li>'
+    : ''}
+
+  </ul>
+</div>
+</div>
+`;
+
+export const loadRecentlyViewedSlider = (products) => {
+  const $viewedSlider = $('.viewed_slider');
+  products.filter(i => i.recentlyViewed).forEach((item) => {
+    $viewedSlider.append(RecentlyViewedProduct(item));
+  });
+};
+
 export function initViewedSlider() {
   if ($('.viewed_slider').length) {
     var viewedSlider = $('.viewed_slider');
