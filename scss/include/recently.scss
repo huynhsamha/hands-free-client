@@ -29,7 +29,7 @@
   display: inline-block;
   cursor: pointer;
   i {
-    color: #dadada;
+    color: $color-gray;
     font-size: 18px;
     padding: 5px;
     -webkit-transition: all 200ms ease;
@@ -58,7 +58,9 @@
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 15px;
-  padding-right: 15px;
+	padding-right: 15px;
+	min-height: 300px;
+	overflow: hidden;
 }
 
 .viewed_image {

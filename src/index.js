@@ -11,7 +11,7 @@ import { initPageMenu } from './components/Menu';
 import { initCustomDropdown } from './components/CustomDropdown';
 
 import { initTrendsSlider, laodTrendsSlider } from './components/TrendSlider';
-import { initViewedSlider } from './components/RecentlyViewedSlider';
+import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
 import { initBrandsSlider } from './components/BrandSlider';
 import { initBanner2Slider, loadBanner2Products } from './components/Banner2Slider';
 import { initPopularSlider, loadPopularSlider } from './components/PopularSlider';
@@ -93,6 +93,8 @@ import { initFavs } from './utils/favorites';
   initTrendsSlider();
 
 
+  // Recently Viewed Products
+  loadRecentlyViewedSlider(products);
   initViewedSlider();
 
   initBrandsSlider();
