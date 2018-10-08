@@ -59,7 +59,6 @@ Chứa các đoạn mã HTML cho các thành phần của trang web, sẽ đư�
 ├── adverts.html
 ├── banner.html
 ├── banner2.html
-├── best_sellers.html
 ├── brands.html
 ├── characteristics.html
 ├── copyright.html
@@ -70,7 +69,6 @@ Chứa các đoạn mã HTML cho các thành phần của trang web, sẽ đư�
 ├── newsletter.html
 ├── popular_categories.html
 ├── recently.html
-├── reviews.html
 └── trends.html
 ├── include
 │   ├── meta.html
