@@ -38,14 +38,17 @@
 }
 
 .trends_title {
-  padding-right: 50px;
+  padding-right: 20px;
 }
 
 .trends_text {
-  margin-top: 17px;
-  p:last-child {
-    margin-bottom: 0px;
-  }
+	margin-top: 17px;
+	p {
+		font-size: 1.1em;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
 }
 
 .trends_slider_nav {
@@ -66,7 +69,7 @@
   }
   i {
     line-height: 36px;
-    color: #e5e5e5;
+    color: $color-gray;
     font-size: 18px;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
@@ -107,8 +110,14 @@
 }
 
 .trends_name {
-  float: left;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 100%;
   a {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
     font-size: 16px;
     color: #000000;
     &:hover {
@@ -120,7 +129,12 @@
 .trends_price {
   font-size: 16px;
   font-weight: 500;
-  float: right;
+	text-align: center;
+	margin-top: 15px;
+	color: $color-primary;
+	&:hover {
+		color: $color-primary-hover;
+	}
 }
 
 .trends_fav {

@@ -10,7 +10,7 @@ import { setHeader } from './utils';
 import { initPageMenu } from './components/Menu';
 import { initCustomDropdown } from './components/CustomDropdown';
 
-import { initTrendsSlider } from './components/TrendSlider';
+import { initTrendsSlider, laodTrendsSlider } from './components/TrendSlider';
 import { initViewedSlider } from './components/RecentlyViewedSlider';
 import { initBrandsSlider } from './components/BrandSlider';
 import { initBanner2Slider, loadBanner2Products } from './components/Banner2Slider';
@@ -89,8 +89,13 @@ import { initFavs } from './utils/favorites';
   initTabs();
 
 
+  // Trend Slider Products
+  laodTrendsSlider(products);
   initTrendsSlider();
+
+
   initViewedSlider();
+
   initBrandsSlider();
 
 
