@@ -10,9 +10,8 @@ import { setHeader } from './utils';
 import { initPageMenu } from './components/Menu';
 import { initCustomDropdown } from './components/CustomDropdown';
 
-import { initTrendsSlider } from './components/TrendSlider';
-import { initReviewsSlider } from './components/ReviewSlider';
-import { initViewedSlider } from './components/RecentlyViewedSlider';
+import { initTrendsSlider, laodTrendsSlider } from './components/TrendSlider';
+import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
 import { initBrandsSlider } from './components/BrandSlider';
 import { initBanner2Slider, loadBanner2Products } from './components/Banner2Slider';
 import { initPopularSlider, loadPopularSlider } from './components/PopularSlider';
@@ -22,7 +21,6 @@ import { initTabLines, initTabs } from './components/Tab';
 import { initDealsSlider, loadDealProducts } from './components/DealProduct';
 import { initArrivalsSlider, setArrivalsSliderZIndex, loadArrivalsProducts } from './components/ArrivalsSlider';
 import { initFeaturedSlider, loadFeaturedProducts, setFeaturedSliderZIndex } from './components/FeaturedSlider';
-import { initBestsellersSlider } from './components/BestSellersSlider';
 import { initFavs } from './utils/favorites';
 
 
@@ -43,10 +41,8 @@ import { initFavs } from './utils/favorites';
 14. Init Arrivals Slider ZIndex
 15. Init Best Sellers Slider
 16. Init Trends Slider
-17. Init Reviews Slider
 18. Init Recently Viewed Slider
 19. Init Brands Slider
-20. Init Timer
 ******************************/
 
 (() => {
@@ -89,16 +85,18 @@ import { initFavs } from './utils/favorites';
   initArrivalsSlider();
   setArrivalsSliderZIndex();
 
-
-  initBestsellersSlider();
-
-
   initTabs();
 
 
+  // Trend Slider Products
+  laodTrendsSlider(products);
   initTrendsSlider();
-  initReviewsSlider();
+
+
+  // Recently Viewed Products
+  loadRecentlyViewedSlider(products);
   initViewedSlider();
+
   initBrandsSlider();
 
 

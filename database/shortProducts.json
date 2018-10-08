@@ -613,7 +613,7 @@
   {
       "brand": "Apple",
       "model": "iPhone X",
-      "name": "Apple iPhone X 64GB(Đã kích hoạt)",
+      "name": "Apple iPhone X 64GB",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/x/-/x-gray.png",
       "price": 21400000,
       "priceText": "21.400.000 ₫",
@@ -734,7 +734,7 @@
   {
       "brand": "Apple",
       "model": "iPhone 8 | 8 Plus",
-      "name": "Apple iPhone 8 64GB(Đã kích hoạt)",
+      "name": "Apple iPhone 8 64GB",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/8/-/8-gold_1_4.jpg",
       "price": 14400000,
       "priceText": "14.400.000 ₫",
@@ -745,7 +745,7 @@
   {
       "brand": "Apple",
       "model": "iPhone 8 | 8 Plus",
-      "name": "Apple iPhone 8 64GB Chính hãng(Đã kích hoạt)",
+      "name": "Apple iPhone 8 64GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/8/-/8-gold_1_17.jpg",
       "price": 15000000,
       "priceText": "15.000.000 ₫",
@@ -756,7 +756,7 @@
   {
       "brand": "Apple",
       "model": "iPhone 8 | 8 Plus",
-      "name": "Apple iPhone 8 Plus 256GB(Đã kích hoạt)",
+      "name": "Apple iPhone 8 Plus 256GB",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/8/-/8-plus-gold_9.jpg",
       "price": 21000000,
       "priceText": "21.000.000 ₫",
@@ -844,7 +844,7 @@
   {
       "brand": "Apple",
       "model": "iPhone 7 | 7 Plus",
-      "name": "Apple iPhone 7 Plus 128GB(Đã kích hoạt)",
+      "name": "Apple iPhone 7 Plus 128GB",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-7-plus-black_32.png",
       "price": 14400000,
       "priceText": "14.400.000 ₫",
@@ -1121,7 +1121,7 @@
   {
       "brand": "Apple",
       "model": "iPhone 6 | 6 Plus",
-      "name": "Apple iPhone 6 32GB(Đã kích hoạt)",
+      "name": "Apple iPhone 6 32GB",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-6-gold_1_17.png",
       "price": 6999000,
       "priceText": "6.999.000 ₫",
@@ -1192,7 +1192,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy Note",
-      "name": "Samsung Galaxy Note 9 Chính hãng(Đã kích hoạt)",
+      "name": "Samsung Galaxy Note 9 Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/g/a/galaxy-note-9-bronze_2.jpg",
       "price": 18490000,
       "priceText": "18.490.000 ₫",
@@ -1214,7 +1214,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy Note",
-      "name": "Samsung Galaxy Note 9 512GB Chính hãng(Đã kích hoạt)",
+      "name": "Samsung Galaxy Note 9 512GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/g/a/galaxy-note-9-blue_5_1.jpg",
       "price": 23390000,
       "priceText": "23.390.000 ₫",
@@ -1262,7 +1262,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy S",
-      "name": "Samsung Galaxy S9 Chính hãng(Đã kích hoạt)",
+      "name": "Samsung Galaxy S9 Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/s/9/s9-blue_1_1.jpg",
       "price": 14190000,
       "priceText": "14.190.000 ₫",
@@ -1273,7 +1273,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy S",
-      "name": "Samsung Galaxy S8+ Chính hãng(Đã kích hoạt)",
+      "name": "Samsung Galaxy S8+ Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/s/8/s8plus-black_1_2.jpg",
       "price": 13890000,
       "priceText": "13.890.000 ₫",
@@ -1295,7 +1295,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy S",
-      "name": "Samsung Galaxy S9 Chính hãng(Citibank)",
+      "name": "Samsung Galaxy S9 Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/s/9/s9-citi-blue.jpg",
       "price": 15190000,
       "priceText": "15.190.000 ₫",
@@ -1307,7 +1307,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy S",
-      "name": "Samsung Galaxy S9+ (Plus) 64GB Chính hãng(Citibank)",
+      "name": "Samsung Galaxy S9+ (Plus) 64GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/s/9/s9plus-purple_8.jpg",
       "price": 18490000,
       "priceText": "18.490.000 ₫",
@@ -1330,7 +1330,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy S",
-      "name": "Samsung Galaxy S9+ 64GB Chính hãng(Đã kích hoạt)",
+      "name": "Samsung Galaxy S9+ 64GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/s/9/s9plus-purple_1_1.jpg",
       "price": 16790000,
       "priceText": "16.790.000 ₫",
@@ -1342,7 +1342,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy S",
-      "name": "Samsung Galaxy S9+ 128GB Chính hãng(Đã kích hoạt)",
+      "name": "Samsung Galaxy S9+ 128GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/s/9/s9plus-black_6_1.jpg",
       "price": 17390000,
       "priceText": "17.390.000 ₫",
@@ -1353,7 +1353,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy S",
-      "name": "Samsung Galaxy S9+ (Plus) 128GB Chính hãng(Citibank)",
+      "name": "Samsung Galaxy S9+ (Plus) 128GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/s/9/s9plus-black_13.jpg",
       "price": 19490000,
       "priceText": "19.490.000 ₫",
@@ -1365,7 +1365,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy S",
-      "name": "Samsung Galaxy S10+ (Plus) Chính hãng(Tin đồn)",
+      "name": "Samsung Galaxy S10+ (Plus) Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/s/1/s10_1.jpg",
       "price": null,
       "priceText": "Giá liên hệ",
@@ -1377,7 +1377,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy S",
-      "name": "Samsung Galaxy S10 Chính hãng(Tin đồn)",
+      "name": "Samsung Galaxy S10 Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/s/1/s10.jpg",
       "price": null,
       "priceText": "Giá liên hệ",
@@ -1437,7 +1437,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy A",
-      "name": "Samsung Galaxy A7 (2018) Chính hãng(Tin đồn)",
+      "name": "Samsung Galaxy A7 (2018) Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/6/3/636429688091654144_800.jpg",
       "price": null,
       "priceText": "Giá liên hệ",
@@ -1448,7 +1448,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy A",
-      "name": "Samsung Galaxy A8 (2018) Chính hãng(Đã kích hoạt)",
+      "name": "Samsung Galaxy A8 (2018) Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/a/8/a8-2018-black_4.jpg",
       "price": 8490000,
       "priceText": "8.490.000 ₫",
@@ -1459,7 +1459,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy A",
-      "name": "Samsung Galaxy A8+ (2018) Chính hãng(Đã kích hoạt)",
+      "name": "Samsung Galaxy A8+ (2018) Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/a/8/a8-2018-black_6.jpg",
       "price": 10590000,
       "priceText": "10.590.000 ₫",
@@ -1470,7 +1470,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy A",
-      "name": "Samsung Galaxy A8 Star Chính hãng(Đã kích hoạt)",
+      "name": "Samsung Galaxy A8 Star Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/a/8/a8-star-black_1_1.jpg",
       "price": 10290000,
       "priceText": "10.290.000 ₫",
@@ -1537,7 +1537,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy J",
-      "name": "Samsung Galaxy J8 Chính hãng(Đã kích hoạt)",
+      "name": "Samsung Galaxy J8 Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/j/8/j8-purple_2.jpg",
       "price": 5190000,
       "priceText": "5.190.000 ₫",
@@ -1548,7 +1548,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy J",
-      "name": "Samsung Galaxy J6 Prime Chính hãng(Tin đồn)",
+      "name": "Samsung Galaxy J6 Prime Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung-galaxy-j6-plus-2018-didongviet_2.jpg",
       "price": null,
       "priceText": "Giá liên hệ",
@@ -1559,7 +1559,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy J",
-      "name": "Samsung Galaxy J7+ Chính hãng(Đã kích hoạt)",
+      "name": "Samsung Galaxy J7+ Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/j/7/j7plus-black_2.jpg",
       "price": 4690000,
       "priceText": "4.690.000 ₫",
@@ -1571,7 +1571,7 @@
   {
       "brand": "Samsung",
       "model": "Galaxy J",
-      "name": "Samsung Galaxy J4 Prime Chính hãng(Tin đồn)",
+      "name": "Samsung Galaxy J4 Prime Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/6/3/636680538968722717_j4lavender-1_1.jpg",
       "price": null,
       "priceText": "Giá liên hệ",
@@ -1592,7 +1592,7 @@
   },
   {
       "brand": "Sony",
-      "name": "Sony Xperia XA1 Plus Chính hãng(Đã kích hoạt)",
+      "name": "Sony Xperia XA1 Plus Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/x/a/xa1-plus-black_1.jpg",
       "price": 3090000,
       "priceText": "3.090.000 ₫",
@@ -1625,7 +1625,7 @@
   },
   {
       "brand": "Sony",
-      "name": "Sony Xperia XZs Chính hãng(Đã kích hoạt)",
+      "name": "Sony Xperia XZs Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/x/z/xzs-black_1.png",
       "price": 9090000,
       "priceText": "9.090.000 ₫",
@@ -1706,7 +1706,8 @@
       "priceText": "3.190.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/oppo-a3s-16-gb-chinh-hang-at.html"
+      "detailURL": "https://cellphones.com.vn/oppo-a3s-16-gb-chinh-hang-at.html",
+      "recentlyViewed": true
   },
   {
       "brand": "OPPO",
@@ -1754,7 +1755,7 @@
   },
   {
       "brand": "OPPO",
-      "name": "OPPO F7 Youth Chính hãng(Đã kích hoạt)",
+      "name": "OPPO F7 Youth Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/f/7/f7-youth-black_2.jpg",
       "price": 4950000,
       "priceText": "4.950.000 ₫",
@@ -1796,7 +1797,7 @@
   },
   {
       "brand": "OPPO",
-      "name": "OPPO F7 Chính hãng(Đã kích hoạt)",
+      "name": "OPPO F7 Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/f/7/f7-red_8.jpg",
       "price": 5550000,
       "priceText": "5.550.000 ₫",
@@ -1807,7 +1808,7 @@
   },
   {
       "brand": "OPPO",
-      "name": "OPPO F7 128GB Chính hãng(Đã kích hoạt)",
+      "name": "OPPO F7 128GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/f/7/f7-128-black.jpg",
       "price": 7200000,
       "priceText": "7.200.000 ₫",
@@ -1827,13 +1828,14 @@
   },
   {
       "brand": "OPPO",
-      "name": "Oppo F9 Pro Chính hãng(Tin đồn)",
+      "name": "Oppo F9 Pro Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/o/p/oppo-f9_1.jpg",
       "price": null,
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/oppo-f9-pro-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/oppo-f9-pro-chinh-hang.html",
+      "recentlyViewed": true
   },
   {
       "brand": "Xiaomi",
@@ -2004,7 +2006,7 @@
   },
   {
       "brand": "Xiaomi",
-      "name": "Xiaomi Redmi Note 5 32GB Chính hãng(Đã kích hoạt)",
+      "name": "Xiaomi Redmi Note 5 32GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/r/e/redmi-note-5-pro-black_1_2.jpg",
       "price": 3850000,
       "priceText": "3.850.000 ₫",
@@ -2021,21 +2023,23 @@
       "priceText": "2.990.000 ₫",
       "ceilPrice": 3690000,
       "ceilPriceText": "3.690.000 ₫",
-      "detailURL": "https://cellphones.com.vn/xiaomi-redmi-4x-32-gb-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/xiaomi-redmi-4x-32-gb-chinh-hang.html",
+      "recentlyViewed": true
   },
   {
       "brand": "Xiaomi",
-      "name": "Xiaomi Redmi Note 6 Pro 64GB Chính hãng(Tin đồn)",
+      "name": "Xiaomi Redmi Note 6 Pro 64GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/u/n/untitled_1_1.png",
       "price": 5799000,
       "priceText": "5.799.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/xiaomi-redmi-note-6-pro-64-gb-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/xiaomi-redmi-note-6-pro-64-gb-chinh-hang.html",
+      "recentlyViewed": true
   },
   {
       "brand": "Xiaomi",
-      "name": "Xiaomi Mi 8 64GB Chính hãng(Đã kích hoạt)",
+      "name": "Xiaomi Mi 8 64GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/m/i/mi-8-black_1_1.jpg",
       "price": 10300000,
       "priceText": "10.300.000 ₫",
@@ -2101,17 +2105,19 @@
       "priceText": "2.990.000 ₫",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/huawei-y6-prime-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/huawei-y6-prime-chinh-hang.html",
+      "recentlyViewed": true
   },
   {
       "brand": "Huawei",
-      "name": "Huawei Mate 20 Pro Chính hãng(Tin đồn)",
+      "name": "Huawei Mate 20 Pro Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/n/e/new_project-5.jpg",
       "price": null,
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/huawei-mate-20-pro-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/huawei-mate-20-pro-chinh-hang.html",
+      "recentlyViewed": true
   },
   {
       "brand": "Huawei",
@@ -2126,7 +2132,7 @@
   },
   {
       "brand": "Huawei",
-      "name": "Huawei Mate 20 Chính hãng(Tin đồn)",
+      "name": "Huawei Mate 20 Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/n/e/new_project-7.jpg",
       "price": null,
       "priceText": "Giá liên hệ",
@@ -2180,7 +2186,7 @@
   },
   {
       "brand": "Nokia",
-      "name": "Nokia 6.1 (2018) 32GB Chính hãng(Đã kích hoạt)",
+      "name": "Nokia 6.1 (2018) 32GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/6/-/6-2018-white.jpg",
       "price": 4450000,
       "priceText": "4.450.000 ₫",
@@ -2191,7 +2197,7 @@
   },
   {
       "brand": "Nokia",
-      "name": "Nokia 7 plus Chính hãng(Đã kích hoạt)",
+      "name": "Nokia 7 plus Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/7/-/7-plus-white_5.jpg",
       "price": 6590000,
       "priceText": "6.590.000 ₫",
@@ -2260,7 +2266,8 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/nokia-9-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/nokia-9-chinh-hang.html",
+      "recentlyViewed": true
   },
   {
       "brand": "Nokia",
@@ -2286,7 +2293,7 @@
   },
   {
       "brand": "Nokia",
-      "name": "Nokia 2 Chính hãng(Đã kích hoạt)",
+      "name": "Nokia 2 Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/2/-/2-black_2.jpg",
       "price": 1490000,
       "priceText": "1.490.000 ₫",
@@ -2303,7 +2310,8 @@
       "priceText": "Giá liên hệ",
       "ceilPrice": null,
       "ceilPriceText": null,
-      "detailURL": "https://cellphones.com.vn/nokia-x5-64-gb-chinh-hang.html"
+      "detailURL": "https://cellphones.com.vn/nokia-x5-64-gb-chinh-hang.html",
+      "recentlyViewed": true
   },
   {
       "brand": "Hãng khác",
@@ -2332,7 +2340,7 @@
   {
       "brand": "Hãng khác",
       "model": "Honor",
-      "name": "Honor 10 Chính hãng(Đã kích hoạt)",
+      "name": "Honor 10 Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/h/o/honor-10-black_1_2.jpg",
       "price": 6790000,
       "priceText": "6.790.000 ₫",
@@ -2356,7 +2364,7 @@
   {
       "brand": "Hãng khác",
       "model": "Honor",
-      "name": "Honor 8X 64GB Chính hãng(Tin đồn)",
+      "name": "Honor 8X 64GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/8/x/8x.png",
       "price": null,
       "priceText": "Giá liên hệ",
@@ -2367,7 +2375,7 @@
   {
       "brand": "Hãng khác",
       "model": "Honor",
-      "name": "Honor 8X 128GB Chính hãng(Tin đồn)",
+      "name": "Honor 8X 128GB Chính hãng",
       "thumbnail": "https://cellphones.com.vn/media/catalog/product/cache/7/small_image/220x175/9df78eab33525d08d6e5fb8d27136e95/8/x/8x_1.png",
       "price": null,
       "priceText": "Giá liên hệ",
