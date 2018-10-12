@@ -20,34 +20,33 @@
 
     <!-- Single Product -->
 
+
+
+
     <div class="single_product">
       <div class="container">
         <div class="row">
 
-          <!-- Images -->
-          <div class="col-lg-2 order-lg-1 order-2">
-            <ul class="image_list">
-              <li data-image="images/single_4.jpg"><img src="images/single_4.jpg" alt=""></li>
-              <li data-image="images/single_2.jpg"><img src="images/single_2.jpg" alt=""></li>
-              <li data-image="images/single_3.jpg"><img src="images/single_3.jpg" alt=""></li>
-            </ul>
-          </div>
-
-          <!-- Selected Image -->
-          <div class="col-lg-5 order-lg-2 order-1">
-            <div class="image_selected"><img src="images/single_4.jpg" alt=""></div>
+          <div class="col-lg-7">
+              <div class="slider_image_selected">
+                <!-- render at product.js -->
+              </div>
+              <div class="slider_image_list d-none d-lg-block d-md-block">
+                <!-- render at product.js -->
+              </div>
           </div>
 
           <!-- Description -->
-          <div class="col-lg-5 order-3">
+          <div class="col-lg-5">
             <div class="product_description">
-              <div class="product_category">Laptops</div>
-              <div class="product_name">MacBook Air 13</div>
+              <div class="product_category">Apple</div>
+              <div class="product_name">iPhone XS</div>
               <div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="product_text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum. laoreet turpis, nec
-                  sollicitudin dolor cursus at. Maecenas aliquet, dolor a faucibus efficitur, nisi tellus cursus urna,
-                  eget dictum lacus turpis.</p>
+              <div class="product_text status">
+                <p>Mới</p>
+              </div>
+              <div class="product_text warranty">
+                <p>12 tháng</p>
               </div>
               <div class="order_info d-flex flex-row">
                 <form action="#">
@@ -55,7 +54,7 @@
 
                     <!-- Product Quantity -->
                     <div class="product_quantity clearfix">
-                      <span>Quantity: </span>
+                      <span>Số lượng: </span>
                       <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
                       <div class="quantity_buttons">
                         <div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
@@ -88,14 +87,29 @@
 
                   </div>
 
-                  <div class="product_price">$2000</div>
+                  <div class="product_price">12.000.000 đ</div>
                   <div class="button_container">
-                    <button type="button" class="button cart_button">Add to Cart</button>
+                    <button type="button" class="button cart_button">Thêm vào giỏ</button>
                     <div class="product_fav"><i class="fas fa-heart"></i></div>
                   </div>
                 </form>
               </div>
             </div>
+          </div>
+
+          <!-- TechnicalInfo -->
+          <div class="col-12 tech-info">
+            <h3>Các thông số kĩ thuật</h3>
+            <table id="table-tech-info" class="table table-sm table-bordered table-hover">
+              <tbody>
+                <!-- <tr>
+                  <td>Key</td>
+                  <td>Value</td>
+                </tr> -->
+                <!-- render at product.js -->
+              </tbody>
+            </table>
+            <button type="button" class="btn-sm btn-more" data-all="0">Xem thêm</button>
           </div>
         </div>
       </div>
@@ -125,6 +139,8 @@
 
   ${require('../layouts/include/script.html')}
   ${require('../layouts/include/script_plugins.html')}
+
+  <script src="plugins/slick/slick.js"></script>
 
 </body>
 
