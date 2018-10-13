@@ -5,6 +5,7 @@
 .footer {
   padding-top: 52px;
   padding-bottom: 40px;
+  background-color: $color-dark;
   .logo_container {
     height: auto;
     margin-bottom: 18px;
@@ -14,7 +15,7 @@
     top: auto;
     //   transform: none;
     a {
-      color: #000000;
+      color: $color-light;
     }
   }
 }
@@ -22,7 +23,7 @@
 .footer_title {
   font-size: 14px;
   font-weight: 500;
-  color: #000000;
+  color: $color-light;
 }
 
 .footer_phone {
@@ -33,6 +34,7 @@
 }
 
 .footer_contact_text {
+  color: $color-light;
   margin-top: 10px;
   p {
     margin-bottom: 0px;
@@ -45,14 +47,14 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: #fafafa;
+    background: $color-gray-light;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
     margin-right: 16px;
     text-align: center;
     i {
-      color: #000000;
+      color: $color-light;
       line-height: 30px;
       -webkit-transition: all 200ms ease;
       -moz-transition: all 200ms ease;
@@ -68,7 +70,7 @@
 
 .footer_subtitle {
   font-size: 12px;
-  color: #000000;
+  color: $color-light;
 }
 
 .footer_column ul {
@@ -83,7 +85,7 @@
   a {
     font-size: 12px;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.4);
+    color: $color-light;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -101,7 +103,7 @@
 
 .copyright {
   width: 100%;
-  background: #fafafa;
+  background: $color-gray-light;
 }
 
 .copyright_container {
