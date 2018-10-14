@@ -11,7 +11,6 @@ import { initPageMenu } from './components/Menu';
 import { initCustomDropdown } from './components/CustomDropdown';
 
 import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
-import { initBrandsSlider } from './components/BrandSlider';
 
 import { initFavs } from './utils/favorites';
 
@@ -42,7 +41,6 @@ import { initFavs } from './utils/favorites';
   loadRecentlyViewedSlider(products);
   initViewedSlider();
 
-  initBrandsSlider();
 
   const product = detailProducts[3];
 

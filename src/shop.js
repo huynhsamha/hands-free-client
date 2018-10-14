@@ -9,7 +9,6 @@ import { setHeader } from './utils';
 import { initCustomDropdown } from './components/CustomDropdown';
 import { initPageMenu } from './components/Menu';
 import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
-import { initBrandsSlider } from './components/BrandSlider';
 import { initFavs } from './utils/favorites';
 import { initIsotope, initPriceSlider, loadProducts, loadSidebarBrands, loadSidebarModels } from './components/ShopSidebar';
 
@@ -38,8 +37,6 @@ import { initIsotope, initPriceSlider, loadProducts, loadSidebarBrands, loadSide
   // Recently Viewed Products
   loadRecentlyViewedSlider(products);
   initViewedSlider();
-
-  initBrandsSlider();
 
 
   // Init Shop Sidebar
