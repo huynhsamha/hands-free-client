@@ -1,12 +1,21 @@
 import '../scss/product.scss';
 import '../scss/responsive/product.scss';
 
-/* JS Document */
+
+import products from '../database/shortProducts.json';
+import detailProducts from '../database/detailProducts.json';
+
+import { setHeader } from './utils';
+
+import { initPageMenu } from './components/Menu';
+import { initCustomDropdown } from './components/CustomDropdown';
+
+import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
+import { initBrandsSlider } from './components/BrandSlider';
+
+import { initFavs } from './utils/favorites';
 
 /** ****************************
-
-[Table of Contents]
-
 1. Vars and Inits
 2. Set Header
 3. Init Custom Dropdown
@@ -17,266 +26,43 @@ import '../scss/responsive/product.scss';
 8. Init Color
 9. Init Favorites
 10. Init Image
-
-
 ******************************/
 
-$(document).ready(() => {
-  'use strict';
 
-  /*
-
-	1. Vars and Inits
-
-	*/
-
-  var menuActive = false;
-  var header = $('.header');
+(() => {
 
   setHeader();
 
+
   initCustomDropdown();
   initPageMenu();
+
+
+  // Recently Viewed Products
+  loadRecentlyViewedSlider(products);
   initViewedSlider();
+
   initBrandsSlider();
+
+  const product = detailProducts[3];
+
   initQuantity();
   initColor();
   initFavs();
+
+  loadImage();
   initImage();
+
+  loadDescription();
+
+  loadTechicalInfo();
 
   $(window).on('resize', () => {
     setHeader();
   });
 
-  /*
 
-	2. Set Header
-
-	*/
-
-  function setHeader() {
-    // To pin main nav to the top of the page when it's reached
-    // uncomment the following
-
-    // var controller = new ScrollMagic.Controller(
-    // {
-    // 	globalSceneOptions:
-    // 	{
-    // 		triggerHook: 'onLeave'
-    // 	}
-    // });
-
-    // var pin = new ScrollMagic.Scene(
-    // {
-    // 	triggerElement: '.main_nav'
-    // })
-    // .setPin('.main_nav').addTo(controller);
-
-    if (window.innerWidth > 991 && menuActive) {
-      closeMenu();
-    }
-  }
-
-  /*
-
-	3. Init Custom Dropdown
-
-	*/
-
-  function initCustomDropdown() {
-    if ($('.custom_dropdown_placeholder').length && $('.custom_list').length) {
-      var placeholder = $('.custom_dropdown_placeholder');
-      var list = $('.custom_list');
-    }
-
-    placeholder.on('click', (ev) => {
-      if (list.hasClass('active')) {
-        list.removeClass('active');
-      } else {
-        list.addClass('active');
-      }
-
-      $(document).one('click', function closeForm(e) {
-        if ($(e.target).hasClass('clc')) {
-          $(document).one('click', closeForm);
-        } else {
-          list.removeClass('active');
-        }
-      });
-
-    });
-
-    $('.custom_list a').on('click', function (ev) {
-      ev.preventDefault();
-      var index = $(this).parent().index();
-
-      placeholder.text($(this).text()).css('opacity', '1');
-
-      if (list.hasClass('active')) {
-        list.removeClass('active');
-      } else {
-        list.addClass('active');
-      }
-    });
-
-
-    $('select').on('change', function (e) {
-      placeholder.text(this.value);
-
-      $(this).animate({ width: `${placeholder.width()}px` });
-    });
-  }
-
-  /*
-
-	4. Init Page Menu
-
-	*/
-
-  function initPageMenu() {
-    if ($('.page_menu').length && $('.page_menu_content').length) {
-      var menu = $('.page_menu');
-      var menuContent = $('.page_menu_content');
-      var menuTrigger = $('.menu_trigger');
-
-      // Open / close page menu
-      menuTrigger.on('click', () => {
-        if (!menuActive) {
-          openMenu();
-        } else {
-          closeMenu();
-        }
-      });
-
-      // Handle page menu
-      if ($('.page_menu_item').length) {
-        var items = $('.page_menu_item');
-        items.each(function () {
-          var item = $(this);
-          if (item.hasClass('has-children')) {
-            item.on('click', (evt) => {
-              evt.preventDefault();
-              evt.stopPropagation();
-              var subItem = item.find('> ul');
-						    if (subItem.hasClass('active')) {
-						    	subItem.toggleClass('active');
-                TweenMax.to(subItem, 0.3, { height: 0 });
-						    } else {
-						    	subItem.toggleClass('active');
-						    	TweenMax.set(subItem, { height: 'auto' });
-                TweenMax.from(subItem, 0.3, { height: 0 });
-						    }
-            });
-          }
-        });
-      }
-    }
-  }
-
-  function openMenu() {
-    var menu = $('.page_menu');
-    var menuContent = $('.page_menu_content');
-    TweenMax.set(menuContent, { height: 'auto' });
-    TweenMax.from(menuContent, 0.3, { height: 0 });
-    menuActive = true;
-  }
-
-  function closeMenu() {
-    var menu = $('.page_menu');
-    var menuContent = $('.page_menu_content');
-    TweenMax.to(menuContent, 0.3, { height: 0 });
-    menuActive = false;
-  }
-
-  /*
-
-	5. Init Recently Viewed Slider
-
-	*/
-
-  function initViewedSlider() {
-    if ($('.viewed_slider').length) {
-      var viewedSlider = $('.viewed_slider');
-
-      viewedSlider.owlCarousel(
-        {
-          loop: true,
-          margin: 30,
-          autoplay: true,
-          autoplayTimeout: 6000,
-          nav: false,
-          dots: false,
-          responsive:
-				{
-				  0: { items: 1 },
-				  575: { items: 2 },
-				  768: { items: 3 },
-				  991: { items: 4 },
-				  1199: { items: 6 }
-				}
-        }
-      );
-
-      if ($('.viewed_prev').length) {
-        var prev = $('.viewed_prev');
-        prev.on('click', () => {
-          viewedSlider.trigger('prev.owl.carousel');
-        });
-      }
-
-      if ($('.viewed_next').length) {
-        var next = $('.viewed_next');
-        next.on('click', () => {
-          viewedSlider.trigger('next.owl.carousel');
-        });
-      }
-    }
-  }
-
-  /*
-
-	6. Init Brands Slider
-
-	*/
-
-  function initBrandsSlider() {
-    if ($('.brands_slider').length) {
-      var brandsSlider = $('.brands_slider');
-
-      brandsSlider.owlCarousel(
-        {
-          loop: true,
-          autoplay: true,
-          autoplayTimeout: 5000,
-          nav: false,
-          dots: false,
-          autoWidth: true,
-          items: 8,
-          margin: 42
-        }
-      );
-
-      if ($('.brands_prev').length) {
-        var prev = $('.brands_prev');
-        prev.on('click', () => {
-          brandsSlider.trigger('prev.owl.carousel');
-        });
-      }
-
-      if ($('.brands_next').length) {
-        var next = $('.brands_next');
-        next.on('click', () => {
-          brandsSlider.trigger('next.owl.carousel');
-        });
-      }
-    }
-  }
-
-  /*
-
-	7. Init Quantity
-
-	*/
+  /* Init Quantity*/
 
   function initQuantity() {
     // Handle product quantity input
@@ -304,11 +90,7 @@ $(document).ready(() => {
     }
   }
 
-  /*
-
-	8. Init Color
-
-	*/
+  /* Init Color*/
 
   function initColor() {
     if ($('.product_color').length) {
@@ -324,36 +106,81 @@ $(document).ready(() => {
     }
   }
 
-  /*
+  /** Description */
+  function loadDescription() {
+    $('.product_category').text(product.brand);
+    $('.product_name').text(product.name);
+    $('.product_text.status p').text(product.status);
+    $('.product_text.warranty p').text(product.warranty);
+    $('.product_price').text(product.priceText);
+  }
 
-	9. Init Favorites
+  /** Technical Info */
+  function loadTechicalInfo() {
+    const $tbInfo = $('#table-tech-info > tbody');
+    product.technicalInfo.forEach(({ name, value }, idx) => {
+      $tbInfo.append(`
+        <tr class="${idx > 12 ? 'more' : ''}">
+          <td width="30%">${name}</td>
+          <td>${value}</td>
+        </tr>
+      `);
+    });
 
-	*/
+    $tbInfo.find('tr.more').each((_, ele) => $(ele).hide());
 
-  function initFavs() {
-    // Handle Favorites
-    var fav = $('.product_fav');
-    fav.on('click', () => {
-      fav.toggleClass('active');
+    const $btnMore = $('.tech-info button');
+    $btnMore.click(() => {
+      const isAll = $btnMore.attr('data-all');
+      if (isAll == '1') {
+        $btnMore.text('Xem thêm');
+        $btnMore.attr('data-all', '0');
+        $tbInfo.find('tr.more').each((_, ele) => $(ele).hide());
+      } else { // '0'
+        $btnMore.text('Rút gọn');
+        $btnMore.attr('data-all', '1');
+        $tbInfo.find('tr.more').each((_, ele) => $(ele).show());
+      }
     });
   }
 
-  /*
+  /* Init Image*/
 
-	10. Init Image
+  function loadImage() {
+    product.galleryImages.forEach((src) => {
+      $('.slider_image_selected').append(`
+        <div class="item">
+          <img src="${src}" alt="${product.name}">
+        </div>
+      `);
 
-	*/
+      $('.slider_image_list').append(`
+      <div class="item">
+        <img src="${src}" alt="${product.name}">
+      </div>
+    `);
+    });
+  }
 
   function initImage() {
-    var images = $('.image_list li');
-    var selected = $('.image_selected img');
 
-    images.each(function () {
-      var image = $(this);
-      image.on('click', () => {
-        var imagePath = new String(image.data('image'));
-        selected.attr('src', imagePath);
-      });
+    $('.slider_image_selected').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider_image_list'
     });
+
+    $('.slider_image_list').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.slider_image_selected',
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true
+    });
+
   }
-});
+
+})();

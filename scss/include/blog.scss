@@ -69,7 +69,7 @@
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
   &:hover {
-    background: #0982d7;
+    background: $color-primary-hover;
   }
 }
 
