@@ -1,3 +1,5 @@
+import products from '../../database/shortProducts.json';
+
 import { convertPriceToText } from './price';
 
 
@@ -63,4 +65,10 @@ export const addWishlist = (product) => {
 
 export const removeWishlist = (product) => {
 
+};
+
+
+export const retrieveCart = () => {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  return products.filter(item => cart.filter(i => i.name == item.name).length > 0);
 };

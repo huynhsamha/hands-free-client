@@ -27,8 +27,9 @@ Cart
 }
 
 .cart_title {
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 34px;
+	font-weight: 900;
+	@include fontQuicksand;
 }
 
 .cart_items {
@@ -37,7 +38,12 @@ Cart
 
 .cart_list {
   border: solid 1px #e8e8e8;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+	p.cart_list_empty {
+		color: $color-dark;
+		text-align: center;
+		margin-top: 15px;
+	}
 }
 
 .cart_item {
@@ -68,11 +74,11 @@ Cart
 .cart_item_title {
   font-size: 14px;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgb(15, 15, 15);
 }
 
 .cart_item_text {
-  font-size: 18px;
+  font-size: 15px;
   margin-top: 35px;
   span {
     display: inline-block;
@@ -105,7 +111,7 @@ Cart
 .order_total_title {
   display: inline-block;
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgb(15, 15, 15);
   line-height: 60px;
 }
 

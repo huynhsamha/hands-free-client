@@ -4,6 +4,7 @@ import { setHeader } from './utils';
 import { initCustomDropdown } from './components/CustomDropdown';
 import { initPageMenu } from './components/Menu';
 import { initCart, initWishlist } from './utils/shareData';
+import { loadCartItem } from './components/Cart';
 
 (() => {
 
@@ -14,6 +15,8 @@ import { initCart, initWishlist } from './utils/shareData';
 
   initCart();
   initWishlist();
+
+  loadCartItem();
 
   $(window).on('resize', () => {
     setHeader();
