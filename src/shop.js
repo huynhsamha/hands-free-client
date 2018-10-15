@@ -11,33 +11,22 @@ import { initPageMenu } from './components/Menu';
 import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
 import { initFavs } from './utils/favorites';
 import { initIsotope, initPriceSlider, loadProducts, loadSidebarBrands, loadSidebarModels } from './components/ShopSidebar';
+import { initCart, initWishlist } from './utils/shareData';
 
-
-/** ****************************
-1. Vars and Inits
-2. Set Header
-3. Init Custom Dropdown
-4. Init Page Menu
-5. Init Recently Viewed Slider
-6. Init Brands Slider
-7. Init Isotope
-8. Init Price Slider
-9. Init Favorites
-******************************/
 
 (() => {
 
   setHeader();
 
-
   initCustomDropdown();
   initPageMenu();
 
+  initCart();
+  initWishlist();
 
   // Recently Viewed Products
   loadRecentlyViewedSlider(products);
   initViewedSlider();
-
 
   // Init Shop Sidebar
   loadSidebarBrands(brands);
@@ -48,9 +37,7 @@ import { initIsotope, initPriceSlider, loadProducts, loadSidebarBrands, loadSide
   initIsotope(brands);
   initPriceSlider(brands);
 
-
   initFavs();
-
 
   $(window).on('resize', () => {
     setHeader();

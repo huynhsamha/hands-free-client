@@ -52,11 +52,18 @@ Single Blog
     font-size: 18px;
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7);
-    line-height: 2;
-    &:not(:first-of-type) {
-      margin-top: 42px;
-    }
-  }
+		line-height: 2;
+		margin-top: 15px;
+		margin-bottom: 15px;
+    // &:not(:first-of-type) {
+    //   margin-top: 42px;
+		// }
+		h3 {margin-top: 15px;}
+	}
+	img {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
 }
 
 .single_post_quote {

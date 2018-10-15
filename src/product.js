@@ -13,6 +13,7 @@ import { initCustomDropdown } from './components/CustomDropdown';
 import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
 
 import { initFavs } from './utils/favorites';
+import { initCart, initWishlist } from './utils/shareData';
 
 (() => {
 
@@ -20,6 +21,9 @@ import { initFavs } from './utils/favorites';
 
   initCustomDropdown();
   initPageMenu();
+
+  initCart();
+  initWishlist();
 
   // Recently Viewed Products
   loadRecentlyViewedSlider(products);
@@ -42,7 +46,6 @@ import { initFavs } from './utils/favorites';
   $(window).on('resize', () => {
     setHeader();
   });
-
 
   /* Init Quantity*/
 
