@@ -77,7 +77,7 @@ export const loadSidebarBrands = (brands) => {
   $brands.html('');
 
   brands.forEach((item) => {
-    $brands.append(`<li><a href="#" onClick="alert(${item.brand})">${item.brand}</a></li>`);
+    $brands.append(`<li><a href="#" onClick="alert('${item.brand}')">${item.brand}</a></li>`);
   });
 };
 

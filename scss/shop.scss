@@ -428,7 +428,7 @@ Shop Sidebar
   li {
     margin-bottom: 7px;
     a {
-      color: rgba(0, 0, 0, 0.5);
+      color: $color-gray-dark;
       -webkit-transition: all 200ms ease;
       -moz-transition: all 200ms ease;
       -ms-transition: all 200ms ease;
@@ -507,7 +507,7 @@ Shop Sidebar
 .brand {
   margin-bottom: 7px;
   a {
-    color: rgba(0, 0, 0, 0.5);
+    color: $color-gray-dark;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
