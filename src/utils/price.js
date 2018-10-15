@@ -6,5 +6,5 @@ export function convertPriceToText(price) {
 
 
 export function convertTextToPrice(priceText) {
-  Number(String(priceText).replace(/[.\s₫đ]*/g, ''));
+  Number(String(priceText).replace(/[.,\s₫đ]*/g, ''));
 }

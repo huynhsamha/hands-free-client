@@ -58,7 +58,10 @@ Cart
   float: left;
   img {
     max-width: 100%;
-  }
+	}
+	&.cart_item_image_empty {
+		height: 20px;
+	}
 }
 
 .cart_item_info {
@@ -68,7 +71,7 @@ Cart
 }
 
 .cart_item_name {
-  margin-left: 7.53%;
+  // margin-left: 7.53%;
 }
 
 .cart_item_title {
