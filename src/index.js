@@ -28,40 +28,30 @@ import { initCart, initWishlist } from './utils/shareData';
 
   setHeader();
 
-
   initCustomDropdown();
   initPageMenu();
 
-
   initCart();
   initWishlist();
-
 
   // Deal Products
   loadDealProducts(products);
   initDealsSlider();
 
-
   initTabLines();
-
 
   // Featured Products
   loadFeaturedProducts(products);
   initFeaturedSlider();
   setFeaturedSliderZIndex();
 
-
   // Popular Brands
   loadPopularSlider(brands);
   initPopularSlider();
 
-
   // Banner 2
   loadBanner2Products(banner2Products);
   initBanner2Slider();
-
-
-  initFavs();
 
   // Hot New Arrivals Products
   loadArrivalsProducts(products);
@@ -70,16 +60,15 @@ import { initCart, initWishlist } from './utils/shareData';
 
   initTabs();
 
-
   // Trend Slider Products
   laodTrendsSlider(products);
   initTrendsSlider();
-
 
   // Recently Viewed Products
   loadRecentlyViewedSlider(products);
   initViewedSlider();
 
+  initFavs();
 
   $(window).on('resize', () => {
     setHeader();

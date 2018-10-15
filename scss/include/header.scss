@@ -57,7 +57,7 @@
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
     &:hover {
-      color: #8a8a8a;
+      color: $color-primary;
     }
   }
   &:last-child {
@@ -213,7 +213,7 @@
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
     &:hover {
-      color: #8a8a8a;
+      color: $color-primary;
     }
   }
 }

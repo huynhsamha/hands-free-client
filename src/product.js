@@ -14,39 +14,21 @@ import { initViewedSlider, loadRecentlyViewedSlider } from './components/Recentl
 
 import { initFavs } from './utils/favorites';
 
-/** ****************************
-1. Vars and Inits
-2. Set Header
-3. Init Custom Dropdown
-4. Init Page Menu
-5. Init Recently Viewed Slider
-6. Init Brands Slider
-7. Init Quantity
-8. Init Color
-9. Init Favorites
-10. Init Image
-******************************/
-
-
 (() => {
 
   setHeader();
 
-
   initCustomDropdown();
   initPageMenu();
-
 
   // Recently Viewed Products
   loadRecentlyViewedSlider(products);
   initViewedSlider();
 
-
   const product = detailProducts[3];
 
   initQuantity();
   initColor();
-  initFavs();
 
   loadImage();
   initImage();
@@ -54,6 +36,8 @@ import { initFavs } from './utils/favorites';
   loadDescription();
 
   loadTechicalInfo();
+
+  initFavs();
 
   $(window).on('resize', () => {
     setHeader();
@@ -161,7 +145,6 @@ import { initFavs } from './utils/favorites';
   }
 
   function initImage() {
-
     $('.slider_image_selected').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -178,7 +161,6 @@ import { initFavs } from './utils/favorites';
       centerMode: true,
       focusOnSelect: true
     });
-
   }
 
 })();

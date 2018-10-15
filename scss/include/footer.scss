@@ -3,7 +3,7 @@
 *********************************/
 
 .footer {
-  padding-top: 52px;
+  padding-top: 80px;
   padding-bottom: 40px;
   background-color: $color-dark;
   .logo_container {
@@ -13,9 +13,10 @@
   }
   .logo {
     top: auto;
-    //   transform: none;
+		//   transform: none;
+		@include fontQuicksand;
     a {
-      color: $color-light;
+      color: $color-light-2;
     }
   }
 }

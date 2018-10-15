@@ -58,7 +58,8 @@ Single Product
 }
 
 .product_text {
-  margin-top: 27px;
+	margin-top: 27px;
+	p {color: #000;}
   p:last-child {
     margin-bottom: 0px;
   }

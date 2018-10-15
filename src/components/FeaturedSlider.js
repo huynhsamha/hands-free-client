@@ -71,12 +71,10 @@ export function loadFeaturedProducts(products) {
     });
 
   const listItems = $('.featured_slider_item');
-  listItems.each((idx, ele) => {
-    const $btn = $(ele).find('.product_cart_button').click(() => {
+  listItems.each((_, ele) => {
+    $(ele).find('.product_cart_button').click(() => {
       const itemName = $(ele).attr('data-item-name');
-      console.log(itemName);
       const item = products.filter(i => i.name == itemName)[0];
-      console.log(item);
       addCart(item);
     });
   });
