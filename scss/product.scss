@@ -298,8 +298,9 @@ Single Product
     line-height: 36px;
     color: #cccccc;
   }
-  &.active i {
-    color: #df3b3b;
+  &.active {
+		background-color: red;
+		i { color: white; }
   }
 }
 

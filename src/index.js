@@ -21,28 +21,8 @@ import { initDealsSlider, loadDealProducts } from './components/DealProduct';
 import { initArrivalsSlider, setArrivalsSliderZIndex, loadArrivalsProducts } from './components/ArrivalsSlider';
 import { initFeaturedSlider, loadFeaturedProducts, setFeaturedSliderZIndex } from './components/FeaturedSlider';
 import { initFavs } from './utils/favorites';
+import { initCart, initWishlist } from './utils/shareData';
 
-
-/** ****************************
-1. Vars and Inits
-2. Set Header
-3. Init Custom Dropdown
-4. Init Page Menu
-5. Init Deals Slider
-6. Init Tab Lines
-7. Init Tabs
-8. Init Featured Slider
-9. Init Favorites
-10. Init ZIndex
-11. Init Popular Categories Slider
-12. Init Banner 2 Slider
-13. Init Arrivals Slider
-14. Init Arrivals Slider ZIndex
-15. Init Best Sellers Slider
-16. Init Trends Slider
-18. Init Recently Viewed Slider
-19. Init Brands Slider
-******************************/
 
 (() => {
 
@@ -51,6 +31,10 @@ import { initFavs } from './utils/favorites';
 
   initCustomDropdown();
   initPageMenu();
+
+
+  initCart();
+  initWishlist();
 
 
   // Deal Products

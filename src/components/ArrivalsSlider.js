@@ -1,7 +1,9 @@
+import { addCart, addWishlist } from '../utils/shareData';
+
 /* Arrivals Slider */
 
 export const ArrivalsSliderShortProduct = item => `
-<div class="arrivals_slider_item">
+<div class="arrivals_slider_item" data-item-name="${item.name}">
   <div class="border_active"></div>
   <div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
     <div class="product_image d-flex flex-column align-items-center justify-content-center">
@@ -33,8 +35,27 @@ export const ArrivalsSliderShortProduct = item => `
 </div>
 */
 
+export const loadWishlistProduct = (products) => {
+  const listItems = $('.arrivals_slider_item');
+  // TODO
+};
+
+
+export const loadArrivalSingle = () => {
+  const $product = $('.arrivals_single');
+  $product.find('.arrivals_single_button').click(() => {
+    const item = {
+      brand: $product.find('.arrivals_single_category').find('a').text(),
+      name: $product.find('.arrivals_single_name').find('a').text(),
+      price: parseInt($product.attr('data-item-price'), 10)
+    };
+    console.log(item);
+    addCart(item);
+  });
+};
 
 export function loadArrivalsProducts(products) {
+  loadArrivalSingle();
   const $hotNewApple = $('.hot-new-apple');
   const $hotNewSamsung = $('.hot-new-samsung');
   const $hotNewXiaomiOPPO = $('.hot-new-xiaomi-oppo');
@@ -53,6 +74,19 @@ export function loadArrivalsProducts(products) {
     .sort((a, b) => b.price - a.price).forEach((item) => {
       $hotNewXiaomiOPPO.append(ArrivalsSliderShortProduct(item));
     });
+
+  const listItems = $('.arrivals_slider_item');
+  listItems.each((idx, ele) => {
+    const $btn = $(ele).find('.product_cart_button').click(() => {
+      const itemName = $(ele).attr('data-item-name');
+      console.log(itemName);
+      const item = products.filter(i => i.name == itemName)[0];
+      console.log(item);
+      addCart(item);
+    });
+  });
+
+  // loadWishlistProduct(products);
 }
 
 

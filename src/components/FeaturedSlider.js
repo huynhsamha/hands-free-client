@@ -1,7 +1,9 @@
+import { addCart } from '../utils/shareData';
+
 /** Featured Slider */
 
 export const FeaturedSliderShortProduct = item => `
-<div class="featured_slider_item">
+<div class="featured_slider_item" data-item-name="${item.name}">
   <div class="border_active"></div>
   <div class="product_item d-flex flex-column align-items-center justify-content-center text-center
   ${item.ceilPriceText ? 'discount' : `${item.hotNew ? 'is_new' : ''}`}">
@@ -67,6 +69,18 @@ export function loadFeaturedProducts(products) {
     .sort((a, b) => a.price - b.price).forEach((item) => {
       $bestPriceProducts.append(FeaturedSliderShortProduct(item));
     });
+
+  const listItems = $('.featured_slider_item');
+  listItems.each((idx, ele) => {
+    const $btn = $(ele).find('.product_cart_button').click(() => {
+      const itemName = $(ele).attr('data-item-name');
+      console.log(itemName);
+      const item = products.filter(i => i.name == itemName)[0];
+      console.log(item);
+      addCart(item);
+    });
+  });
+
 }
 
 export function setFeaturedSliderZIndex() {

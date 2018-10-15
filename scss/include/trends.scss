@@ -191,8 +191,9 @@
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
   }
-  &.active i {
-    color: red;
+  &.active {
+		background-color: red;
+		i { color: white; }
   }
 }
 
