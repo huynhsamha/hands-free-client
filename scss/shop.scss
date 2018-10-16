@@ -457,7 +457,7 @@ Shop Sidebar
   display: inline-block;
   font-size: 12px;
   font-weight: 500 !important;
-  color: rgba(0, 0, 0, 0.5);
+  color: #000000cb;
   margin-bottom: 0px;
 }
 
@@ -470,7 +470,7 @@ Shop Sidebar
 .filter_price p input {
   font-size: 12px;
   font-weight: 500 !important;
-  color: rgba(0, 0, 0, 0.5);
+  color: #000000cb;
 }
 
 .amount {
@@ -517,4 +517,10 @@ Shop Sidebar
       color: $color-primary;
     }
   }
+}
+
+
+.form-check-input {
+	margin-left: 0px;
+	background-color: $color-primary-hover;
 }

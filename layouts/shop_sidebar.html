@@ -2,9 +2,17 @@
 
 <div class="shop_sidebar">
 
+  <!-- Keywords -->
+  <div class="sidebar_section">
+    <div class="sidebar_title">Từ khoá</div>
+    <div class="form-group sidebar_keywords mt-4">
+      <input type="text" class="form-control form-control-sm" placeholder="Nhập từ khoá...">
+    </div>
+  </div>
+
   <!-- Brands -->
   <div class="sidebar_section">
-    <div class="sidebar_title">Hãng sản xuất</div>
+    <div class="sidebar_title mt-5">Hãng sản xuất</div>
     <ul class="sidebar_categories">
 
       <!-- render at src/components/ShopSidebar.js -->
@@ -39,17 +47,31 @@
     </ul>
   </div>
 
-  <!-- Models -->
+  <!-- Sortings -->
+  <div class="sidebar_content">
+    <div class="sidebar_title mt-5">Sắp xếp theo</div>
+    <ul class="sidebar_sort_options mt-4">
+
+      <!-- render at ShopSidebar.js -->
+
+    </ul>
+  </div>
+
   <div class="sidebar_section">
-    <div class="sidebar_subtitle brands_subtitle">Mẫu</div>
-    <ul class="brands_list">
+    <button class="btn btn-danger btn-sm btn-block mt-5">Tìm kiếm</button>
+  </div>
+
+  <!-- Models -->
+  <!-- <div class="sidebar_section"> -->
+    <!-- <div class="sidebar_subtitle brands_subtitle">Mẫu</div> -->
+    <!-- <ul class="brands_list"> -->
 
       <!-- render at src/components/ShopSidebar.js -->
 
       <!-- <li class="brand"><a href="#">Apple</a></li> -->
       <!-- <li class="brand"><a href="#">Beoplay</a></li> -->
 
-    </ul>
-  </div>
+    <!-- </ul> -->
+  <!-- </div> -->
 
 </div>

@@ -10,7 +10,7 @@ import { initCustomDropdown } from './components/CustomDropdown';
 import { initPageMenu } from './components/Menu';
 import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
 import { initFavs } from './utils/favorites';
-import { initIsotope, initPriceSlider, loadProducts, loadSidebarBrands, loadSidebarModels } from './components/ShopSidebar';
+import { initIsotope, initPriceSlider, loadProducts, loadSidebarBrands, loadSidebarModels, loadSortOptions } from './components/ShopSidebar';
 import { initCart, initWishlist } from './utils/shareData';
 
 
@@ -30,7 +30,8 @@ import { initCart, initWishlist } from './utils/shareData';
 
   // Init Shop Sidebar
   loadSidebarBrands(brands);
-  loadSidebarModels(models, 'Apple');
+  loadSortOptions();
+  // loadSidebarModels(models, 'Apple');
 
   loadProducts(products);
 

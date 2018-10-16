@@ -1,7 +1,9 @@
+import { shuffle } from '../utils/array';
+
 /** Shop Sidebar + Shop Content */
 
 // Products show on grid
-export const PRODUCT_PER_PAGE = 20;
+export const PRODUCT_PER_PAGE = 30;
 
 // Components
 export const ShopProductItem = item => `
@@ -36,16 +38,19 @@ export const ShopProductItem = item => `
 </div>`;
 
 
-/** Load Products */
-export const loadProducts = (products) => {
-  const $productGrid = $('.product_grid');
-  products.slice(0, PRODUCT_PER_PAGE).forEach(item => $productGrid.append(ShopProductItem(item)));
+// Update Products Count
+export const updateProductsCount = (totalProducts) => {
+  $('#shop_product_count_value').text(totalProducts);
 };
 
 
-// Update Products Count
-export const updateProductsCount = (totalProducts) => {
-  $('#shop_product_count_value').val(totalProducts);
+/** Load Products */
+export const loadProducts = (products) => {
+  const $productGrid = $('.product_grid');
+  products = shuffle(products);
+
+  products.slice(0, PRODUCT_PER_PAGE).forEach(item => $productGrid.append(ShopProductItem(item)));
+  updateProductsCount(products.length);
 };
 
 
@@ -77,7 +82,64 @@ export const loadSidebarBrands = (brands) => {
   $brands.html('');
 
   brands.forEach((item) => {
-    $brands.append(`<li><a href="#" onClick="alert('${item.brand}')">${item.brand}</a></li>`);
+    $brands.append(`
+      <li>
+        <div class="form-check sidebar_categories_brand" data-brand="${item.brand}">
+          <input class="form-check-input" type="checkbox" checked="checked">
+          <label class="form-check-label">
+            ${item.brand}
+          </label>
+        </div>
+      </li>`);
+  });
+
+  const $brandsList = $('.sidebar_categories_brand');
+  $brandsList.each((_, ele) => {
+    const brand = $(ele).attr('data-brand');
+    $(ele).find('input').change(function () {
+      if (this.checked) {
+        // alert(brand);
+      } else {
+        // alert(`${brand} Unchecked`);
+      }
+    });
+  });
+  // `<li><a href="#" onClick="alert('${item.brand}')">${item.brand}</a></li>`
+};
+
+export const loadSortOptions = () => {
+  const $sorts = $('.sidebar_sort_options');
+  $sorts.html('');
+
+  const sorts = [
+    { value: 'best_sell', text: 'Bán chạy nhất' },
+    { value: 'price_asc', text: 'Giá tăng dần' },
+    { value: 'price_desc', text: 'Giá giảm dần' },
+    { value: 'name', text: 'Tên' }
+  ];
+
+  sorts.forEach((item) => {
+    $sorts.append(`
+      <li>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sort" value="${item.value}" ${item.value == 'best_sell' ? 'checked' : ''}>
+          <label class="form-check-label">
+            ${item.text}
+          </label>
+        </div>
+      </li>`);
+  });
+
+  const $brandsList = $('.sidebar_categories_brand');
+  $brandsList.each((_, ele) => {
+    const brand = $(ele).attr('data-brand');
+    $(ele).find('input').change(function () {
+      if (this.checked) {
+        // alert(brand);
+      } else {
+        // alert(`${brand} Unchecked`);
+      }
+    });
   });
 };
 
@@ -147,28 +209,28 @@ export function initPriceSlider(brands) {
     const defaultPriceMax = $('#slider-range').slider('values', 1);
     $('#amount').val(`${defaultPriceMin} triệu - ${defaultPriceMax} triệu`);
 
-    $('.ui-slider-handle').on('mouseup', () => {
-      $('.product_grid').isotope({
-        filter() {
-          const priceRange = $('#amount').val();
-          let priceMin = parseFloat(priceRange.split('-')[0].replace('triệu', ''));
-          let priceMax = parseFloat(priceRange.split('-')[1].replace('triệu', ''));
+    // $('.ui-slider-handle').on('mouseup', () => {
+    //   $('.product_grid').isotope({
+    //     filter() {
+    //       const priceRange = $('#amount').val();
+    //       let priceMin = parseFloat(priceRange.split('-')[0].replace('triệu', ''));
+    //       let priceMax = parseFloat(priceRange.split('-')[1].replace('triệu', ''));
 
-          let itemPrice = $(this).find('.product_price').attr('data-price');
-          if (itemPrice == 'null') itemPrice = '60000000';
+    //       let itemPrice = $(this).find('.product_price').attr('data-price');
+    //       if (itemPrice == 'null') itemPrice = '60000000';
 
-          itemPrice = parseInt(itemPrice, 10);
-          priceMin = parseInt(priceMin * ONE_MILLION, 10);
-          priceMax = parseInt(priceMax * ONE_MILLION, 10);
+    //       itemPrice = parseInt(itemPrice, 10);
+    //       priceMin = parseInt(priceMin * ONE_MILLION, 10);
+    //       priceMax = parseInt(priceMax * ONE_MILLION, 10);
 
-          return (itemPrice >= priceMin) && (itemPrice <= priceMax);
-        },
-        animationOptions: {
-          duration: 750,
-          easing: 'linear',
-          queue: false
-        }
-      });
-    });
+    //       return (itemPrice >= priceMin) && (itemPrice <= priceMax);
+    //     },
+    //     animationOptions: {
+    //       duration: 750,
+    //       easing: 'linear',
+    //       queue: false
+    //     }
+    //   });
+    // });
   }
 }

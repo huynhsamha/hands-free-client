@@ -114,11 +114,11 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
-h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {}
+// h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {}
 
-.form-control {
-  color: #db5246;
-}
+// .form-control {
+//   color: #db5246;
+// }
 
 section {
   display: block;
