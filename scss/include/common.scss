@@ -269,3 +269,34 @@ section {
     content: "\f005";
   }
 }
+
+
+
+/** Override Bootstrap 4 */
+
+.form-check-input {
+	margin-left: 0px;
+}
+
+.override-blue-outline {
+	-webkit-appearance:none;
+		outline: none !important;
+  	box-shadow: none !important;
+}
+
+input {
+	&[type=text],
+	&[type=tel],
+	&[type=email]
+	{
+		&:hover, &:focus, &:active {
+			@extend .override-blue-outline
+		}
+	}
+}
+
+button {
+	&:hover, &:focus, &:active {
+		@extend .override-blue-outline
+	}
+}

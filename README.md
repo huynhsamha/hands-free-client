@@ -165,3 +165,4 @@ Vào [đây](https://browserl.ist/?q=last+2+versions%2C+%3E+0.1%25%2C+ie+%3E%3D+
 + ScrollMagic v2.5.0 (http://scrollmagic.io/)
 + Slick (http://kenwheeler.github.io/slick/)
 + Isotope (https://isotope.metafizzy.co/)
++ jquery-confirm v3.3.0 (https://craftpip.github.io/jquery-confirm/)

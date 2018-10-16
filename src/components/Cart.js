@@ -62,4 +62,28 @@ export const loadCartItem = () => {
   });
 
   $('.order_total_amount').text(convertPriceToText(sumPrice));
+
+  $('.cart_button_checkout').click(() => {
+    $.confirm({
+      title: 'Thông báo',
+      icon: 'fa fa-bell',
+      type: 'green',
+      content: 'Đơn hàng đang được xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất quá trình mua hàng.',
+      // content() {
+      //   var self = this;
+      //   return setTimeout(() => {
+      //     self.setContent('<div>Đơn hàng đang được xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất quá trình mua hàng.</div>');
+      //   }, 2000);
+      // },
+      buttons: {
+        ok: {
+          text: 'OK',
+          btnClass: 'btn-green',
+          action() {
+            window.location.pathname = '';
+          }
+        }
+      }
+    });
+  });
 };

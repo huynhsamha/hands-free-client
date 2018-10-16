@@ -67,8 +67,6 @@ Contact Form
   padding-top: 85px;
 }
 
-.contact_form_container {}
-
 .contact_form_title {
   font-size: 30px;
   font-weight: 500;
@@ -86,7 +84,7 @@ Contact Form
   border: solid 1px #e5e5e5;
   border-radius: 5px;
   outline: none;
-  color: $color-primary;
+  color: $color-dark;
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;
   -ms-transition: all 200ms ease;

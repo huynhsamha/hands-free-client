@@ -64,9 +64,103 @@
                 </div>
               </div>
 
+              <!-- Information and Payments -->
+              <div class="cart_title cart_payment_title">Tiến hành đặt hàng</div>
+
+              <div class="cart_payments">
+              <form class="">
+                <div class="row">
+                  <!-- Information -->
+                  <div class="col-12">
+                    <h4 class="my-4">Thông tin liên lạc</h4>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-group">
+                      <label for="">Tên</label>
+                      <input type="text" class="form-control" placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-group">
+                      <label for="">Địa chỉ email</label>
+                      <input type="email" class="form-control" placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-group">
+                      <label for="">Số điện thoại</label>
+                      <input type="tel" class="form-control" placeholder="">
+                    </div>
+                  </div>
+
+                  <!-- Payments -->
+                  <div class="col-12">
+                    <h4 class="my-4">Hình thức mua hàng</h4>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_address" value="shop" checked>
+                      <label class="form-check-label">
+                        Mua hàng và thanh toán tại cửa hành trụ sở quận Tân Bình, TP.HCM
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_address" value="shop" checked>
+                      <label class="form-check-label">
+                        Mua hàng và thanh toán tại cửa hành chi nhánh quận Cầu Giấy, Hà Nội
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_address" value="home">
+                      <label class="form-check-label">
+                        Giao hàng và thanh toán tại nhà
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <h4 class="my-4">Phương thức thanh toán</h4>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_method" value="cash" checked>
+                      <label class="form-check-label">
+                        Dùng tiền mặt
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_method" value="bank">
+                      <label class="form-check-label">
+                        Chuyển khoản ngân hàng
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_method" value="mastercard">
+                      <label class="form-check-label">
+                        <ul class="logos_list">
+                          <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
+                          <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
+                          <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
+                          <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
+                        </ul>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              </div>
+
               <div class="cart_buttons">
                 <!-- <button type="button" class="button cart_button_clear">Xoá</button> -->
-                <button type="button" class="button cart_button_checkout">Tiến hành thanh toán</button>
+                <button type="button" class="button cart_button_checkout">Hoàn tất đơn hàng</button>
               </div>
             </div>
           </div>
@@ -90,6 +184,10 @@
 
   ${require('../layouts/include/script.html')}
   ${require('../layouts/include/script_plugins.html')}
+
+  <!-- jQuery confirm -->
+  <link rel="stylesheet" href="plugins/jquery-confirm/jquery-confirm.min.css">
+  <script src="plugins/jquery-confirm/jquery-confirm.min.js"></script>
 
 </body>
 
