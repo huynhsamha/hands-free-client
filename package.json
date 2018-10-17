@@ -1,5 +1,5 @@
 {
-  "name": "cse-assignment-web-programming",
+  "name": "hands-free",
   "version": "1.0.0",
   "description": "Multiple Pages Setup with Webpack and apply a template.",
   "scripts": {
@@ -41,12 +41,12 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huynhsamha/cse-assignment-web-programming.git"
+    "url": "git+https://github.com/huynhsamha/hands-free.git"
   },
-  "homepage": "https://github.com/huynhsamha/cse-assignment-web-programming#readme",
+  "homepage": "https://github.com/huynhsamha/hands-free#readme",
   "author": "huynhsamha",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/huynhsamha/cse-assignment-web-programming/issues"
+    "url": "https://github.com/huynhsamha/hands-free/issues"
   }
 }

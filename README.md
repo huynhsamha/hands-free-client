@@ -1,14 +1,12 @@
 # Assignment Web Programming Course - HCMUT
 
-Demo hiện tại của trang web từ template OneTech: [https://huynhsamha.github.io/cse-assignment-web-programming](https://huynhsamha.github.io/cse-assignment-web-programming)
-
 ## Quickstart
 
 ### Clone project
 ```
-git clone https://github.com/huynhsamha/cse-assignment-web-programming.git
+git clone https://github.com/huynhsamha/hands-free.git
 
-cd cse-assignment-web-programming
+cd hands-free
 ```
 
 ### Installing packages NPM
