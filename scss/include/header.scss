@@ -774,7 +774,7 @@ select {
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
     &:hover {
-      color: #b5aec4;
+      color: #f1f1f1;
     }
   }
   a i {
@@ -808,7 +808,7 @@ select {
       -o-transition: opacity 0.3s ease;
       transition: all 0.3s ease;
       &:hover {
-        color: #b5aec4;
+        color: #f1f1f1;
       }
     }
     &:last-child a {
