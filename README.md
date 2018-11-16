@@ -1,4 +1,7 @@
-# Assignment Web Programming Course - HCMUT
+# Hands-free Client
+Assignment web (HCMUT) - Client for Hands-free App
+
+Server Repository: https://github.com/huynhsamha/hands-free-server
 
 ## Quickstart
 

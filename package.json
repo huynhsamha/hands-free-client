@@ -41,12 +41,12 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huynhsamha/hands-free.git"
+    "url": "git+https://github.com/huynhsamha/hands-free-client.git"
   },
-  "homepage": "https://github.com/huynhsamha/hands-free#readme",
+  "homepage": "https://github.com/huynhsamha/hands-free-client#readme",
   "author": "huynhsamha",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/huynhsamha/hands-free/issues"
+    "url": "https://github.com/huynhsamha/hands-free-client/issues"
   }
 }
