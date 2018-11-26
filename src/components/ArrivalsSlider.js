@@ -1,4 +1,5 @@
 import { addCart, addWishlist } from '../utils/shareData';
+import { parseProductsList } from '../utils/models';
 
 /* Arrivals Slider */
 
@@ -35,6 +36,8 @@ export const ArrivalsSliderShortProduct = item => `
 </div>
 */
 
+let products = [];
+
 export const loadWishlistProduct = (products) => {
   const listItems = $('.arrivals_slider_item');
   // TODO
@@ -54,35 +57,47 @@ export const loadArrivalSingle = () => {
   });
 };
 
-export function loadArrivalsProducts(products) {
+export function loadArrivalsProducts() {
   loadArrivalSingle();
   const $hotNewApple = $('.hot-new-apple');
   const $hotNewSamsung = $('.hot-new-samsung');
   const $hotNewXiaomiOPPO = $('.hot-new-xiaomi-oppo');
 
-  products.filter(item => item.hotNew && item.brand == 'Apple')
-    .sort((a, b) => b.price - a.price).forEach((item) => {
-      $hotNewApple.append(ArrivalsSliderShortProduct(item));
+  const api = '/api/product/getHotNew.php';
+  $.get(`http://localhost/hands-free${api}`, (data) => {
+    // console.log(data);
+
+    products = parseProductsList(data);
+
+    products.filter(item => item.hotNew && item.brandName == 'Apple')
+      .sort((a, b) => b.price - a.price).forEach((item) => {
+        $hotNewApple.append(ArrivalsSliderShortProduct(item));
+      });
+
+    products.filter(item => item.hotNew && item.brandName == 'Samsung')
+      .sort((a, b) => b.price - a.price).forEach((item) => {
+        $hotNewSamsung.append(ArrivalsSliderShortProduct(item));
+      });
+
+    products.filter(item => item.hotNew && (item.brandName == 'Xiaomi' || item.brandName == 'OPPO'))
+      .sort((a, b) => b.price - a.price).forEach((item) => {
+        $hotNewXiaomiOPPO.append(ArrivalsSliderShortProduct(item));
+      });
+
+
+    const listItems = $('.arrivals_slider_item');
+    listItems.each((_, ele) => {
+      $(ele).find('.product_cart_button').click(() => {
+        const itemName = $(ele).attr('data-item-name');
+        const item = products.filter(i => i.name == itemName)[0];
+        addCart(item);
+      });
+
+      initArrivalsSlider();
+      setArrivalsSliderZIndex();
     });
 
-  products.filter(item => item.hotNew && item.brand == 'Samsung')
-    .sort((a, b) => b.price - a.price).forEach((item) => {
-      $hotNewSamsung.append(ArrivalsSliderShortProduct(item));
-    });
-
-  products.filter(item => item.hotNew && (item.brand == 'Xiaomi' || item.brand == 'OPPO'))
-    .sort((a, b) => b.price - a.price).forEach((item) => {
-      $hotNewXiaomiOPPO.append(ArrivalsSliderShortProduct(item));
-    });
-
-  const listItems = $('.arrivals_slider_item');
-  listItems.each((_, ele) => {
-    $(ele).find('.product_cart_button').click(() => {
-      const itemName = $(ele).attr('data-item-name');
-      const item = products.filter(i => i.name == itemName)[0];
-      addCart(item);
-    });
-  });
+  }).fail(err => console.log(err));
 
   // loadWishlistProduct(products);
 }

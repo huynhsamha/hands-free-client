@@ -4,18 +4,25 @@ export const PopularCategoryBrand = item => `
 <div class="owl-item">
   <div class="popular_category d-flex flex-column align-items-center justify-content-center">
     <div class="popular_category_image">
-      <img src="${item.icon}" alt="${item.brand}">
+      <img src="${item.iconUri}" alt="${item.name}">
     </div>
-    <div class="popular_category_text">${item.brand}</div>
+    <div class="popular_category_text">${item.name}</div>
   </div>
 </div>
 `;
 
+let brands = [];
 
-export function loadPopularSlider(brands) {
+export function loadPopularSlider() {
   const $popularSlider = $('.popular_categories_slider');
 
-  brands.forEach(item => $popularSlider.append(PopularCategoryBrand(item)));
+  const api = '/api/brand/get.php';
+  $.get(`http://localhost/hands-free${api}`, (data) => {
+    // console.log(data);
+    brands = data;
+    brands.forEach(item => $popularSlider.append(PopularCategoryBrand(item)));
+    initPopularSlider();
+  }).fail(err => console.log(err));
 }
 
 export function initPopularSlider() {

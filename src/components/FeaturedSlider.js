@@ -1,9 +1,12 @@
+import async from 'async';
+
 import { addCart } from '../utils/shareData';
+import { parseProductsList } from '../utils/models';
 
 /** Featured Slider */
 
 export const FeaturedSliderShortProduct = item => `
-<div class="featured_slider_item" data-item-name="${item.name}">
+<div class="featured_slider_item" data-item-name="${item.name}" data-id="${item.id}">
   <div class="border_active"></div>
   <div class="product_item d-flex flex-column align-items-center justify-content-center text-center
   ${item.ceilPriceText ? 'discount' : `${item.hotNew ? 'is_new' : ''}`}">
@@ -49,27 +52,43 @@ export const FeaturedSliderShortProduct = item => `
 </div>
 */
 
+const products = {
+  bestSellProducts: [],
+  bestGiftProducts: [],
+  bestPriceProducts: []
+};
 
-export function loadFeaturedProducts(products) {
+export function loadFeaturedProducts() {
   const $bestSellProducts = $('.best-sell-products');
   const $bestGiftProducts = $('.best-gift-products');
   const $bestPriceProducts = $('.best-price-products');
 
-  products.filter(item => item.bestSell)
-    .sort((a, b) => a.price - b.price).forEach((item) => {
-      $bestSellProducts.append(FeaturedSliderShortProduct(item));
-    });
+  async.each([
+    { datalist: 'bestSellProducts', $view: $bestSellProducts, api: '/api/product/getBestSell.php' },
+    { datalist: 'bestGiftProducts', $view: $bestGiftProducts, api: '/api/product/getBestGift.php' },
+    { datalist: 'bestPriceProducts', $view: $bestPriceProducts, api: '/api/product/getBestPrice.php' }
+  ], ({ datalist, $view, api }, cb) => {
+    $.get(`http://localhost/hands-free${api}`, (data) => {
+      // console.log(data);
+      products[datalist] = parseProductsList(data);
+      products[datalist].sort((a, b) => a.price - b.price).forEach((item) => {
+        $view.append(FeaturedSliderShortProduct(item));
+      });
+      cb();
+    }).fail(err => cb(err));
+  }, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      // console.log(products);
+      setEventFeaturedSlider();
+      setFeaturedSliderZIndex();
+      initFeaturedSlider();
+    }
+  });
+}
 
-  products.filter(item => item.bestGift)
-    .sort((a, b) => b.price - a.price).forEach((item) => {
-      $bestGiftProducts.append(FeaturedSliderShortProduct(item));
-    });
-
-  products.filter(item => item.bestPrice)
-    .sort((a, b) => a.price - b.price).forEach((item) => {
-      $bestPriceProducts.append(FeaturedSliderShortProduct(item));
-    });
-
+export function setEventFeaturedSlider() {
   const listItems = $('.featured_slider_item');
   listItems.each((_, ele) => {
     $(ele).find('.product_cart_button').click(() => {
@@ -78,7 +97,6 @@ export function loadFeaturedProducts(products) {
       addCart(item);
     });
   });
-
 }
 
 export function setFeaturedSliderZIndex() {

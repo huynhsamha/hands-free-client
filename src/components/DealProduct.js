@@ -1,3 +1,5 @@
+import { parseProductsList } from '../utils/models';
+
 /* Deals Slider */
 
 export const DealProduct = item => `
@@ -7,7 +9,7 @@ export const DealProduct = item => `
     </div>
     <div class="deals_content">
       <div class="deals_info_line d-flex flex-row justify-content-start">
-        <div class="deals_item_category"><a href="#">${item.brand}</a></div>
+        <div class="deals_item_category"><a href="#">${item.brandName}</a></div>
         <div class="deals_item_price_a ml-auto">${item.ceilPriceText}</div>
       </div>
       <div class="deals_info_line d-flex flex-row justify-content-start">
@@ -18,14 +20,23 @@ export const DealProduct = item => `
   </div>
 `;
 
+let products = [];
 
-export function loadDealProducts(products) {
+export function loadDealProducts() {
   const $dealsSlider = $('.deals_slider');
-  const dealProducts = products.filter(item => item.hotDeal);
 
-  dealProducts.forEach((item) => {
-    $dealsSlider.append(DealProduct(item));
-  });
+  const api = '/api/product/getHotDeal.php';
+  $.get(`http://localhost/hands-free${api}`, (data) => {
+    // console.log(data);
+
+    products = parseProductsList(data);
+    products.forEach((item) => {
+      $dealsSlider.append(DealProduct(item));
+    });
+
+    initDealsSlider();
+  })
+    .fail(err => console.log(err));
 }
 
 

@@ -1,8 +1,8 @@
 import '../scss/index.scss';
 import '../scss/responsive/index.scss';
 
-import products from '../database/shortProducts.json';
-import brands from '../database/brands.json';
+// import products from '../database/shortProducts.json';
+// import brands from '../database/brands.json';
 import banner2Products from '../database/banner2Products.json';
 
 import { setHeader } from './utils';
@@ -10,7 +10,7 @@ import { setHeader } from './utils';
 import { initPageMenu } from './components/Menu';
 import { initCustomDropdown } from './components/CustomDropdown';
 
-import { initTrendsSlider, laodTrendsSlider } from './components/TrendSlider';
+import { initTrendsSlider, loadTrendsSlider } from './components/TrendSlider';
 import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
 import { initBanner2Slider, loadBanner2Products } from './components/Banner2Slider';
 import { initPopularSlider, loadPopularSlider } from './components/PopularSlider';
@@ -29,44 +29,44 @@ import { initCart, initWishlist } from './utils/shareData';
   setHeader();
 
   initCustomDropdown();
-  initPageMenu();
 
+  initPageMenu();
   initCart();
   initWishlist();
 
   // Deal Products
-  loadDealProducts(products);
-  initDealsSlider();
+  loadDealProducts();
+  // initDealsSlider();
 
   initTabLines();
 
   // Featured Products
-  loadFeaturedProducts(products);
-  initFeaturedSlider();
-  setFeaturedSliderZIndex();
+  loadFeaturedProducts();
+  // initFeaturedSlider();
+  // setFeaturedSliderZIndex();
 
   // Popular Brands
-  loadPopularSlider(brands);
-  initPopularSlider();
+  loadPopularSlider();
+  // initPopularSlider();
 
   // Banner 2
   loadBanner2Products(banner2Products);
   initBanner2Slider();
 
   // Hot New Arrivals Products
-  loadArrivalsProducts(products);
-  initArrivalsSlider();
-  setArrivalsSliderZIndex();
+  loadArrivalsProducts();
+  // initArrivalsSlider();
+  // setArrivalsSliderZIndex();
 
   initTabs();
 
   // Trend Slider Products
-  laodTrendsSlider(products);
-  initTrendsSlider();
+  loadTrendsSlider();
+  // initTrendsSlider();
 
   // Recently Viewed Products
-  loadRecentlyViewedSlider(products);
-  initViewedSlider();
+  loadRecentlyViewedSlider();
+  // initViewedSlider();
 
   initFavs();
 

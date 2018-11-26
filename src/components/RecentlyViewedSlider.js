@@ -1,3 +1,5 @@
+import { parseProductsList } from '../utils/models';
+
 /** Recently Viewed Slider */
 
 export const RecentlyViewedProduct = item => `
@@ -33,12 +35,24 @@ export const RecentlyViewedProduct = item => `
 </div>
 `;
 
-export const loadRecentlyViewedSlider = (products) => {
+let products = [];
+
+export function loadRecentlyViewedSlider() {
   const $viewedSlider = $('.viewed_slider');
-  products.filter(i => i.recentlyViewed).forEach((item) => {
-    $viewedSlider.append(RecentlyViewedProduct(item));
-  });
-};
+
+  const api = '/api/product/getHotDeal.php';
+  $.get(`http://localhost/hands-free${api}`, (data) => {
+    // console.log(data);
+
+    products = parseProductsList(data);
+    products.forEach((item) => {
+      $viewedSlider.append(RecentlyViewedProduct(item));
+    });
+
+    initViewedSlider();
+  })
+    .fail(err => console.log(err));
+}
 
 export function initViewedSlider() {
   if ($('.viewed_slider').length) {

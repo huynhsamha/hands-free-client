@@ -1,3 +1,5 @@
+import { parseProductsList } from '../utils/models';
+
 /** Trends Slider */
 
 export const TrendsSliderItem = item => `
@@ -7,7 +9,7 @@ export const TrendsSliderItem = item => `
     <img src="${item.thumbnail}" alt="${item.name}">
   </div>
   <div class="trends_content">
-    <div class="trends_category"><a href="#">${item.brand}</a></div>
+    <div class="trends_category"><a href="#">${item.brandName}</a></div>
     <div class="trends_info clearfix">
       <div class="trends_name"><a href="product.html">${item.name}</a></div>
       <div class="trends_price">${item.priceText}</div>
@@ -31,12 +33,23 @@ export const TrendsSliderItem = item => `
 </div>
 `;
 
-export const laodTrendsSlider = (products) => {
+let products = [];
+
+export const loadTrendsSlider = () => {
   const $trendsSlider = $('.trends_slider');
-  products.filter(item => item.hotNew)
-    .sort((a, b) => b.price - a.price).forEach((item) => {
+
+  const api = '/api/product/getHotNew.php';
+  $.get(`http://localhost/hands-free${api}`, (data) => {
+    // console.log(data);
+
+    products = parseProductsList(data);
+    products.sort((a, b) => b.price - a.price).forEach((item) => {
       $trendsSlider.append(TrendsSliderItem(item));
     });
+
+    initTrendsSlider();
+
+  }).fail(err => console.log(err));
 };
 
 export function initTrendsSlider() {
