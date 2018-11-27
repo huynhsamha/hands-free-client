@@ -20,7 +20,7 @@ export const ShopProductItem = item => `
     ? `<span>${item.ceilPriceText}</span>` : ''}
     </div>
     <div class="product_name">
-      <div><a href="product.html">${item.name}</a></div>
+      <div><a href="product.html?id=${item.id}">${item.name}</a></div>
     </div>
   </div>
   <div class="product_fav"><i class="fas fa-heart"></i></div>

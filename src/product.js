@@ -1,9 +1,11 @@
+import qs from 'qs';
+
 import '../scss/product.scss';
 import '../scss/responsive/product.scss';
 
 
-import products from '../database/shortProducts.json';
-import detailProducts from '../database/detailProducts.json';
+// import products from '../database/shortProducts.json';
+// import detailProducts from '../database/detailProducts.json';
 
 import { setHeader } from './utils';
 
@@ -14,6 +16,10 @@ import { initViewedSlider, loadRecentlyViewedSlider } from './components/Recentl
 
 import { initFavs } from './utils/favorites';
 import { initCart, initWishlist } from './utils/shareData';
+import { getUrlVars } from './utils/url';
+import { parseProduct } from './utils/models';
+
+let product = {};
 
 (() => {
 
@@ -26,22 +32,34 @@ import { initCart, initWishlist } from './utils/shareData';
   initWishlist();
 
   // Recently Viewed Products
-  loadRecentlyViewedSlider(products);
-  initViewedSlider();
+  loadRecentlyViewedSlider();
+  // initViewedSlider();
 
-  const product = detailProducts[3];
+  const query = getUrlVars();
+  console.log(query);
+  const id = query.id;
+  if (!id) {
+    window.location.href = 'product.html?id=601';
+  }
+  const api = `/api/product/getOne.php?${qs.stringify({ id })}`;
+  console.log(api);
+  $.get(`http://localhost/hands-free${api}`, (data) => {
+    // console.log(data);
+    product = parseProduct(data);
+    console.log(product);
+    initQuantity();
+    initColor();
 
-  initQuantity();
-  initColor();
+    loadImage();
+    initImage();
 
-  loadImage();
-  initImage();
+    loadDescription();
 
-  loadDescription();
+    loadTechicalInfo();
 
-  loadTechicalInfo();
+    initFavs();
 
-  initFavs();
+  }).fail(err => console.log(err));
 
   $(window).on('resize', () => {
     setHeader();
