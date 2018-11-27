@@ -39,7 +39,7 @@ let product = {};
   console.log(query);
   const id = query.id;
   if (!id) {
-    window.location.href = 'product.html?id=601';
+    window.location.href = 'index.html';
   }
   const api = `/api/product/getOne.php?${qs.stringify({ id })}`;
   console.log(api);
@@ -150,6 +150,7 @@ let product = {};
   /* Init Image*/
 
   function loadImage() {
+    product.galleryImages = [product.thumbnail, ...product.galleryImages];
     product.galleryImages.forEach((src) => {
       $('.slider_image_selected').append(`
         <div class="item">

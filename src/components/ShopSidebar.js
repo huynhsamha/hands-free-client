@@ -96,7 +96,7 @@ export const updatePagination = (totalProducts, activePage, onePage, totalPage) 
   const $paginaton = $('.page_nav');
   $paginaton.html('');
 
-  for (let i = 1; i < totalPage; i++) addLink(i, i == activePage);
+  for (let i = 1; i <= totalPage; i++) addLink(i, i == activePage);
 
   // const lpages = genPagingatorInRange(1, Math.min(activePage - 3, 2), totalPage);
   // const cpages = genPagingatorInRange(activePage - 2, activePage + 2, totalPage);
@@ -298,7 +298,7 @@ export const initPaginationNextPrev = () => {
     handleSearch();
   });
   btnNext.click(() => {
-    if (parseInt(queries.page, 10) + 1 == parseInt(currMaxPage, 10)) return;
+    if (parseInt(queries.page, 10) + 1 > parseInt(currMaxPage, 10)) return;
     queries.page = parseInt(queries.page, 10) + 1;
     handleSearch();
   });

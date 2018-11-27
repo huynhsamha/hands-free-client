@@ -1,5 +1,6 @@
 import { addCart, addWishlist } from '../utils/shareData';
 import { parseProductsList } from '../utils/models';
+import { convertPriceToText } from '../utils/price';
 
 /* Arrivals Slider */
 

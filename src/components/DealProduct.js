@@ -14,7 +14,7 @@ export const DealProduct = item => `
       </div>
       <div class="deals_info_line d-flex flex-row justify-content-start">
         <div class="deals_item_name">${item.name}</div>
-        <div class="deals_item_price ml-auto">${item.priceText}</div>
+        <div class="deals_item_price ml-auto">${item.priceText} đ</div>
       </div>
     </div>
   </div>

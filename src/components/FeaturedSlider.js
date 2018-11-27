@@ -72,48 +72,64 @@ export function loadFeaturedProducts() {
       // console.log(data);
       products[datalist] = parseProductsList(data);
       products[datalist].sort((a, b) => a.price - b.price).forEach((item) => {
-        $view.append(FeaturedSliderShortProduct(item));
+        const $ele = $(FeaturedSliderShortProduct(item));
+        $view.append($ele);
+
+        $ele.find('.product_cart_button').click(() => {
+          addCart(item);
+        });
+
+        $ele.on('mouseenter', () => {
+          $('.featured_slider .slick-dots').css('display', 'none');
+        });
+
+        $ele.on('mouseleave', () => {
+          $('.featured_slider .slick-dots').css('display', 'block');
+        });
       });
       cb();
+
     }).fail(err => cb(err));
+
   }, (err) => {
     if (err) {
       console.log(err);
     } else {
       // console.log(products);
-      setEventFeaturedSlider();
-      setFeaturedSliderZIndex();
+      // setEventFeaturedSlider();
+      // setFeaturedSliderZIndex();
       initFeaturedSlider();
     }
   });
 }
 
-export function setEventFeaturedSlider() {
-  const listItems = $('.featured_slider_item');
-  listItems.each((_, ele) => {
-    $(ele).find('.product_cart_button').click(() => {
-      const itemName = $(ele).attr('data-item-name');
-      const item = products.filter(i => i.name == itemName)[0];
-      addCart(item);
-    });
-  });
-}
+// export function setEventFeaturedSlider() {
+//   const listItems = $('.featured_slider_item');
+//   listItems.each((_, ele) => {
+//     $(ele).find('.product_cart_button').click(() => {
+//       const itemName = $(ele).attr('data-item-name');
+//       const itemID = $(ele).attr('data-id');
+//       const item = products.filter(i => i.name == itemName)[0];
+//       addCart(item);
+//     });
+//   });
+// }
 
-export function setFeaturedSliderZIndex() {
-  // Hide slider dots on item hover
-  var items = document.getElementsByClassName('featured_slider_item');
+// export function setFeaturedSliderZIndex() {
+//   // Hide slider dots on item hover
+//   var items = document.getElementsByClassName('featured_slider_item');
 
-  for (var x = 0; x < items.length; x++) {
-    var item = items[x];
-    item.addEventListener('mouseenter', () => {
-      $('.featured_slider .slick-dots').css('display', 'none');
-    });
+//   for (var x = 0; x < items.length; x++) {
+//     var item = items[x];
+//     item.addEventListener('mouseenter', () => {
+//       $('.featured_slider .slick-dots').css('display', 'none');
+//     });
 
-    item.addEventListener('mouseleave', () => {
-      $('.featured_slider .slick-dots').css('display', 'block');
-    });
-  }
-}
+//     item.addEventListener('mouseleave', () => {
+//       $('.featured_slider .slick-dots').css('display', 'block');
+//     });
+//   }
+// }
 
 
 export function initFeaturedSlider() {
