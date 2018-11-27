@@ -1,16 +1,16 @@
 import '../scss/shop.scss';
 import '../scss/responsive/shop.scss';
 
-import products from '../database/shortProducts.json';
-import brands from '../database/brands.json';
-import models from '../database/models.json';
+// import products from '../database/shortProducts.json';
+// import brands from '../database/brands.json';
+// import models from '../database/models.json';
 
 import { setHeader } from './utils';
 import { initCustomDropdown } from './components/CustomDropdown';
 import { initPageMenu } from './components/Menu';
 import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
 import { initFavs } from './utils/favorites';
-import { initIsotope, initPriceSlider, loadProducts, loadSidebarBrands, loadSidebarModels, loadSortOptions } from './components/ShopSidebar';
+import { initIsotope, initPriceSlider, loadProducts, loadSidebarBrands, loadSidebarModels, loadSortOptions, setEventBtnSearch } from './components/ShopSidebar';
 import { initCart, initWishlist } from './utils/shareData';
 
 
@@ -25,18 +25,20 @@ import { initCart, initWishlist } from './utils/shareData';
   initWishlist();
 
   // Recently Viewed Products
-  loadRecentlyViewedSlider(products);
-  initViewedSlider();
+  loadRecentlyViewedSlider();
+  // initViewedSlider();
 
   // Init Shop Sidebar
-  loadSidebarBrands(brands);
+  loadSidebarBrands();
   loadSortOptions();
   // loadSidebarModels(models, 'Apple');
+  initPriceSlider();
 
-  loadProducts(products);
+  initIsotope();
+  loadProducts();
+  // initIsotope(brands);
 
-  initIsotope(brands);
-  initPriceSlider(brands);
+  setEventBtnSearch();
 
   initFavs();
 

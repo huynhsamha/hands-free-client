@@ -1,9 +1,10 @@
-import { shuffle } from '../utils/array';
+import qs from 'qs';
+// import { shuffle } from '../utils/array';
+import { parseProductsList } from '../utils/models';
 
 /** Shop Sidebar + Shop Content */
 
 // Products show on grid
-export const PRODUCT_PER_PAGE = 30;
 
 // Components
 export const ShopProductItem = item => `
@@ -37,6 +38,19 @@ export const ShopProductItem = item => `
   </ul>
 </div>`;
 
+let brands = [];
+let products = [];
+
+const queries = {
+  keywords: '',
+  brandList: [],
+  minPrice: 0,
+  maxPrice: 18000000,
+  orderType: 'best_sell',
+  page: 1
+};
+
+const $productGrid = $('.product_grid_items');
 
 // Update Products Count
 export const updateProductsCount = (totalProducts) => {
@@ -44,18 +58,8 @@ export const updateProductsCount = (totalProducts) => {
 };
 
 
-/** Load Products */
-export const loadProducts = (products) => {
-  const $productGrid = $('.product_grid');
-  products = shuffle(products);
-
-  products.slice(0, PRODUCT_PER_PAGE).forEach(item => $productGrid.append(ShopProductItem(item)));
-  updateProductsCount(products.length);
-};
-
-
-export const updatePagination = (totalProducts, activePage) => {
-  const numPages = Math.ceil(totalProducts / PRODUCT_PER_PAGE);
+export const updatePagination = (totalProducts, activePage, onePage, totalPage) => {
+  const numPages = totalPage;
   const $paginaton = $('.page_nav');
   $paginaton.html('');
 
@@ -77,37 +81,21 @@ export const updatePagination = (totalProducts, activePage) => {
 };
 
 
-export const loadSidebarBrands = (brands) => {
-  const $brands = $('.sidebar_categories');
-  $brands.html('');
+// export function setEventsBrandList() {
+//   const $brandsList = $('.sidebar_categories_brand');
+//   $brandsList.each((_, ele) => {
+//     const brand = $(ele).attr('data-brand');
+//     // $(ele).find('input').change(function () {
+//     //   if (this.checked) {
+//     //     alert(brand);
+//     //   } else {
+//     //     alert(`${brand} Unchecked`);
+//     //   }
+//     // });
+//   });
+// }
 
-  brands.forEach((item) => {
-    $brands.append(`
-      <li>
-        <div class="form-check sidebar_categories_brand" data-brand="${item.brand}">
-          <input class="form-check-input" type="checkbox" checked="checked">
-          <label class="form-check-label">
-            ${item.brand}
-          </label>
-        </div>
-      </li>`);
-  });
-
-  const $brandsList = $('.sidebar_categories_brand');
-  $brandsList.each((_, ele) => {
-    const brand = $(ele).attr('data-brand');
-    $(ele).find('input').change(function () {
-      if (this.checked) {
-        // alert(brand);
-      } else {
-        // alert(`${brand} Unchecked`);
-      }
-    });
-  });
-  // `<li><a href="#" onClick="alert('${item.brand}')">${item.brand}</a></li>`
-};
-
-export const loadSortOptions = () => {
+export function loadSortOptions() {
   const $sorts = $('.sidebar_sort_options');
   $sorts.html('');
 
@@ -130,18 +118,18 @@ export const loadSortOptions = () => {
       </li>`);
   });
 
-  const $brandsList = $('.sidebar_categories_brand');
-  $brandsList.each((_, ele) => {
-    const brand = $(ele).attr('data-brand');
-    $(ele).find('input').change(function () {
-      if (this.checked) {
-        // alert(brand);
-      } else {
-        // alert(`${brand} Unchecked`);
-      }
-    });
-  });
-};
+  // const $brandsList = $('.sidebar_categories_brand');
+  // $brandsList.each((_, ele) => {
+  //   const brand = $(ele).attr('data-brand');
+  //   $(ele).find('input').change(function () {
+  //     if (this.checked) {
+  //       // alert(brand);
+  //     } else {
+  //       // alert(`${brand} Unchecked`);
+  //     }
+  //   });
+  // });
+}
 
 export const loadSidebarModels = (models, activeBrandName) => {
   const $models = $('.brands_list');
@@ -152,18 +140,100 @@ export const loadSidebarModels = (models, activeBrandName) => {
   });
 };
 
+export function loadSidebarBrands() {
+  const $brands = $('.sidebar_categories');
+  $brands.html('');
+
+  const api = '/api/brand/get.php';
+  $.get(`http://localhost/hands-free${api}`, (data) => {
+    // console.log(data);
+    brands = data;
+    brands.forEach((item) => {
+      $brands.append(`
+        <li>
+          <div class="form-check sidebar_categories_brand" data-brand="${item.id}">
+            <input class="form-check-input" type="checkbox" checked="checked">
+            <label class="form-check-label">
+              ${item.name}
+            </label>
+          </div>
+        </li>`);
+    });
+
+    // setEventsBrandList();
+    // loadSortOptions();
+    // initPriceSlider();
+
+  }).fail(err => console.log(err));
+}
+
+
+/** Load Products */
+export const loadProducts = () => {
+  const api = `/api/product/search.php?${qs.stringify(queries)}`;
+  console.log(api);
+  $.get(`http://localhost/hands-free${api}`, (response) => {
+    console.log(response);
+    const { total, page, onePage, totalPage, offset, data } = response;
+    products = parseProductsList(data);
+    // $productGrid.html('');
+    $productGrid.isotope('getItemElements').forEach((ele) => {
+      $productGrid.isotope('remove', ele);
+    });
+    products.forEach((item) => {
+      const newElement = $(ShopProductItem(item));
+      $productGrid.append(newElement)
+        .isotope('appended', newElement)
+        .isotope('layout');
+    });
+    // initIsotope();
+    // $productGrid.isotope('insert', $productGrid.find('.product_item'));
+    updateProductsCount(total);
+    updatePagination(total, page, onePage, totalPage);
+
+  }).fail(err => console.log(err));
+};
+
+export function setEventBtnSearch() {
+  $('#btn-search').click(() => {
+    // Keywords
+    queries.keywords = $('#input-keywords').val();
+
+    // Brand IDs list
+    queries.brandList = [];
+    $('.sidebar_categories_brand').each((_, ele) => {
+      const brandId = $(ele).attr('data-brand');
+      if ($(ele).find('input').is(':checked')) queries.brandList.push(brandId);
+    });
+
+    const $sorts = $('.sidebar_sort_options');
+    $sorts.find('li input').each((_, ele) => {
+      if ($(ele).is(':checked')) queries.orderType = $(ele).attr('value');
+    });
+
+    console.log(queries);
+
+    loadProducts();
+  });
+}
+
 /* Isotope*/
 
-export function initIsotope(brands) {
+export function initIsotope() {
   var sortingButtons = $('.shop_sorting_button');
 
-  $('.product_grid').isotope({
+  $productGrid.isotope({
     itemSelector: '.product_item',
     getSortData: {
       price(itemElement) {
         let priceEle = $(itemElement).find('.product_price').attr('data-price');
         if (priceEle == 'null') priceEle = '9999999999999';
         return parseInt(priceEle, 10);
+      },
+      negPrice(itemElement) {
+        let priceEle = $(itemElement).find('.product_price').attr('data-price');
+        if (priceEle == 'null') priceEle = '9999999999999';
+        return -parseInt(priceEle, 10);
       },
       name: '.product_name div a'
     },
@@ -180,7 +250,7 @@ export function initIsotope(brands) {
       $('.sorting_text span').text($(this).text()); // update sorted shown on UI
       var option = $(this).attr('data-isotope-option');
       option = JSON.parse(option);
-      $('.product_grid').isotope(option);
+      $productGrid.isotope(option);
     });
   });
 }
@@ -188,7 +258,7 @@ export function initIsotope(brands) {
 
 /* Price Slider*/
 
-export function initPriceSlider(brands) {
+export function initPriceSlider() {
   if ($('#slider-range').length) {
     const ONE_MILLION = 1000000;
 
@@ -198,9 +268,11 @@ export function initPriceSlider(brands) {
       min: 1,
       max: 60,
       step: 0.5,
-      values: [1, 18],
+      values: [queries.minPrice / 1000000, queries.maxPrice / 1000000],
       slide(event, ui) {
         $('#amount').val(`${ui.values[0]} triệu - ${ui.values[1]} triệu`);
+        queries.minPrice = ui.values[0] * 1000000;
+        queries.maxPrice = ui.values[1] * 1000000;
       }
     });
 
@@ -210,7 +282,7 @@ export function initPriceSlider(brands) {
     $('#amount').val(`${defaultPriceMin} triệu - ${defaultPriceMax} triệu`);
 
     // $('.ui-slider-handle').on('mouseup', () => {
-    //   $('.product_grid').isotope({
+    //   $productGrid.isotope({
     //     filter() {
     //       const priceRange = $('#amount').val();
     //       let priceMin = parseFloat(priceRange.split('-')[0].replace('triệu', ''));

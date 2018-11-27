@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "async": "^2.6.1",
-    "numeral": "^2.0.6"
+    "numeral": "^2.0.6",
+    "qs": "^6.6.0"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
