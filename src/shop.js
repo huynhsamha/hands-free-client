@@ -10,7 +10,7 @@ import { initCustomDropdown } from './components/CustomDropdown';
 import { initPageMenu } from './components/Menu';
 import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
 import { initFavs } from './utils/favorites';
-import { initIsotope, initPriceSlider, loadProducts, loadSidebarBrands, loadSidebarModels, loadSortOptions, setEventBtnSearch } from './components/ShopSidebar';
+import { initIsotope, initPriceSlider, loadProducts, loadSidebarBrands, loadSidebarModels, loadSortOptions, setEventBtnSearch, initPaginationNextPrev } from './components/ShopSidebar';
 import { initCart, initWishlist } from './utils/shareData';
 
 
@@ -39,6 +39,8 @@ import { initCart, initWishlist } from './utils/shareData';
   // initIsotope(brands);
 
   setEventBtnSearch();
+
+  initPaginationNextPrev();
 
   initFavs();
 

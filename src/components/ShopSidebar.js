@@ -1,5 +1,6 @@
 import qs from 'qs';
 // import { shuffle } from '../utils/array';
+import { type } from 'os';
 import { parseProductsList } from '../utils/models';
 
 /** Shop Sidebar + Shop Content */
@@ -45,10 +46,12 @@ const queries = {
   keywords: '',
   brandList: [],
   minPrice: 0,
-  maxPrice: 18000000,
+  maxPrice: 30000000,
   orderType: 'best_sell',
   page: 1
 };
+
+let currMaxPage = 1;
 
 const $productGrid = $('.product_grid_items');
 
@@ -57,27 +60,51 @@ export const updateProductsCount = (totalProducts) => {
   $('#shop_product_count_value').text(totalProducts);
 };
 
+const addLink = (i, isActivePage) => {
+  const isDot = i == '...';
+  const $paginaton = $('.page_nav');
+  const $newLink = $(`
+    <li class="${isActivePage ? 'btn btn-danger' : ''}" style="${isDot ? 'cursor: not-allowed !important;' : ''}
+    ${isActivePage ? 'color: white !important;' : ''}">
+      <a href="javascript:void(0)" id="page-${i}"
+      style="${isDot ? 'cursor: not-allowed !important;' : ''}
+        ${isActivePage ? 'color: white !important;' : ''}"
+      >${i}</a>
+    </li>`);
+  $paginaton.append($newLink);
+  if (!isDot) {
+    $newLink.click(() => {
+      queries.page = i;
+      loadProducts();
+    });
+  }
+};
+
+// function genPagingatorInRange(l, r, maxPage) {
+//   l = Math.max(1, l);
+//   r = Math.min(r, maxPage);
+//   for (let i = l; i <= r; i++) addLink(i);
+//   return { l, r };
+// }
+
+// function genDotPageInRange(sl, sr) {
+//   if (sl.l > sl.r || sr.l > sr.r || sr.l - sl.r <= 1) return;
+//   addLink('...');
+// }
 
 export const updatePagination = (totalProducts, activePage, onePage, totalPage) => {
-  const numPages = totalPage;
   const $paginaton = $('.page_nav');
   $paginaton.html('');
 
-  const addLink = i => $paginaton.append(`<li><a href="#">${i}</a></li>`);
+  for (let i = 1; i < totalPage; i++) addLink(i, i == activePage);
 
-  for (let i = 1; i <= Math.min(4, numPages); i++) {
-    addLink(i);
-  }
-  if (numPages < 8) {
-    for (let i = 5; i <= numPages; i++) {
-      addLink(i);
-    }
-  } else {
-    addLink('...');
-    for (let i = numPages - 2; i <= numPages; i++) {
-      addLink(i);
-    }
-  }
+  // const lpages = genPagingatorInRange(1, Math.min(activePage - 3, 2), totalPage);
+  // const cpages = genPagingatorInRange(activePage - 2, activePage + 2, totalPage);
+  // const rpages = genPagingatorInRange(Math.max(activePage + 3, totalPage - 2), totalPage, totalPage);
+
+  // console.log(lpages, cpages, rpages);
+  // genDotPageInRange(lpages, cpages);
+  // genDotPageInRange(cpages, rpages);
 };
 
 
@@ -186,6 +213,7 @@ export const loadProducts = () => {
         .isotope('appended', newElement)
         .isotope('layout');
     });
+    currMaxPage = totalPage;
     // initIsotope();
     // $productGrid.isotope('insert', $productGrid.find('.product_item'));
     updateProductsCount(total);
@@ -194,26 +222,32 @@ export const loadProducts = () => {
   }).fail(err => console.log(err));
 };
 
+const handleSearch = (resetPage) => {
+// Keywords
+  queries.keywords = $('#input-keywords').val();
+
+  // Brand IDs list
+  queries.brandList = [];
+  $('.sidebar_categories_brand').each((_, ele) => {
+    const brandId = $(ele).attr('data-brand');
+    if ($(ele).find('input').is(':checked')) queries.brandList.push(brandId);
+  });
+
+  const $sorts = $('.sidebar_sort_options');
+  $sorts.find('li input').each((_, ele) => {
+    if ($(ele).is(':checked')) queries.orderType = $(ele).attr('value');
+  });
+
+  if (resetPage) queries.page = 1;
+
+  console.log(queries);
+
+  loadProducts();
+};
+
 export function setEventBtnSearch() {
   $('#btn-search').click(() => {
-    // Keywords
-    queries.keywords = $('#input-keywords').val();
-
-    // Brand IDs list
-    queries.brandList = [];
-    $('.sidebar_categories_brand').each((_, ele) => {
-      const brandId = $(ele).attr('data-brand');
-      if ($(ele).find('input').is(':checked')) queries.brandList.push(brandId);
-    });
-
-    const $sorts = $('.sidebar_sort_options');
-    $sorts.find('li input').each((_, ele) => {
-      if ($(ele).is(':checked')) queries.orderType = $(ele).attr('value');
-    });
-
-    console.log(queries);
-
-    loadProducts();
+    handleSearch(true);
   });
 }
 
@@ -254,6 +288,21 @@ export function initIsotope() {
     });
   });
 }
+
+export const initPaginationNextPrev = () => {
+  const btnPrev = $('#page_prev');
+  const btnNext = $('#page_next');
+  btnPrev.click(() => {
+    if (queries.page == 1) return;
+    queries.page = parseInt(queries.page, 10) - 1;
+    handleSearch();
+  });
+  btnNext.click(() => {
+    if (parseInt(queries.page, 10) + 1 == parseInt(currMaxPage, 10)) return;
+    queries.page = parseInt(queries.page, 10) + 1;
+    handleSearch();
+  });
+};
 
 
 /* Price Slider*/
