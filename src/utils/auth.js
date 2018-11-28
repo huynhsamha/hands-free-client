@@ -10,3 +10,22 @@ export function clearAuthentication() {
     localStorage.removeItem(i);
   });
 }
+
+export function getToken() {
+  return localStorage.getItem('token');
+}
+
+export function getUser() {
+  return JSON.parse(localStorage.getItem('user'));
+}
+
+export function isLogined(cb) {
+  const user = JSON.parse(localStorage.getItem('user'));
+  const token = localStorage.getItem('token');
+  const tokenExpire = localStorage.getItem('tokenExpire');
+  if (!user || !user.email || !token || !tokenExpire || tokenExpire * 1000 < Date.now()) {
+    clearAuthentication();
+    return cb();
+  }
+  cb({ user, token });
+}

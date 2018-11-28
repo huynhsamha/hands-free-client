@@ -9,7 +9,7 @@ export function hideLoading() {
   $('#loading').css('display', 'none');
 }
 
-export function handleError(message) {
+export function handleError(errMessage) {
   hideLoading();
-  setTimeout(() => error(message), 100);
+  setTimeout(() => error(errMessage), 100);
 }

@@ -190,7 +190,8 @@ $height-top_bar: 40px;
 .top_bar_user {
   div {
     display: inline-block;
-    &:nth-child(2),&:nth-child(3) {
+		// &:nth-child(2),&:nth-child(3) {
+		&:not(:last-child) {
       margin-right: 21px;
       &::after {
         display: block;
