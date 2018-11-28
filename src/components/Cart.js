@@ -1,10 +1,11 @@
-import { retrieveCart, sumPriceText, sumPrice, addCart, removeCart } from '../utils/shareData';
+import { retrieveCart, sumPriceText, sumPrice, addCart, removeCart, clearCart } from '../utils/shareData';
 import { convertPriceToText, convertTextToPrice } from '../utils/price';
-import { dangerConfirm } from '../utils/confirm';
+import { dangerConfirm, successConfirm, success, warningConfirm } from '../utils/confirm';
+import { showLoading, hideLoading } from '../utils/loading';
 
 let totalPrice = 0;
 
-export const CartItem = (item, quantity) => `
+export const CartItem = item => `
 <li class="cart_item clearfix">
   <div class="cart_item_image"><img src="${item.thumbnail}" alt="${item.name}"></div>
   <div class="cart_item_info row">
@@ -34,11 +35,6 @@ export const CartItem = (item, quantity) => `
 
 /**
  * Color HTML
-
-<div class="cart_item_text"> x
-        <input type="" ${item.quantity}
-      </div>
-
 <div class="cart_item_color col-12 col-md-2 col-sm-3">
       <div class="cart_item_text">
         <span style="background-color:${item.color.hex}; ${item.color.hexBorder ? `border: solid 1px ${item.color.hexBorder};` : ''}"></span>
@@ -56,6 +52,8 @@ export const CartItem = (item, quantity) => `
 
 
 export const loadCartItem = () => {
+  initPayment();
+
   const $cartList = $('.cart_list');
   const products = retrieveCart();
   if (products.length == 0) {
@@ -84,25 +82,24 @@ export const loadCartItem = () => {
   });
 
   $('.order_total_amount').text(convertPriceToText(totalPrice));
-
-  $('.cart_button_checkout').click(() => {
-    $.confirm({
-      title: 'Thông báo',
-      icon: 'fa fa-bell',
-      type: 'green',
-      content: 'Đơn hàng đang được xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất quá trình mua hàng.',
-      buttons: {
-        ok: {
-          text: 'OK',
-          btnClass: 'btn-green',
-          action() {
-            window.location.pathname = '';
-          }
-        }
-      }
-    });
-  });
 };
+
+export function initPayment() {
+  $('.cart_button_checkout').click(() => {
+    warningConfirm('Đơn hàng của bạn sẽ được thiết lập. Bạn thật sự muốn gửi yêu cầu đơn hàng này?', 'Gửi yêu cầu', 'Hủy',
+      () => {
+        showLoading();
+        setTimeout(() => {
+          hideLoading();
+          success('Đơn hàng đã được chấp nhận và đang chờ xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất đơn hàng này.',
+            () => {
+              clearCart();
+              window.location.pathname = '';
+            });
+        }, 1000);
+      });
+  });
+}
 
 /* Init Quantity*/
 

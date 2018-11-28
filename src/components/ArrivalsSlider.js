@@ -80,7 +80,7 @@ export function handleAddNewProdcut($list, item) {
 }
 
 export function loadArrivalsProducts() {
-  loadArrivalSingle();
+  // loadArrivalSingle();
   const $hotNewApple = $('.hot-new-apple');
   const $hotNewSamsung = $('.hot-new-samsung');
   const $hotNewXiaomiOPPO = $('.hot-new-xiaomi-oppo');

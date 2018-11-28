@@ -18,8 +18,8 @@ import { initPopularSlider, loadPopularSlider } from './components/PopularSlider
 import { initTabLines, initTabs } from './components/Tab';
 
 import { initDealsSlider, loadDealProducts } from './components/DealProduct';
-import { initArrivalsSlider, setArrivalsSliderZIndex, loadArrivalsProducts } from './components/ArrivalsSlider';
-import { initFeaturedSlider, loadFeaturedProducts, setFeaturedSliderZIndex } from './components/FeaturedSlider';
+import { initArrivalsSlider, loadArrivalsProducts } from './components/ArrivalsSlider';
+import { initFeaturedSlider, loadFeaturedProducts } from './components/FeaturedSlider';
 import { initFavs } from './utils/favorites';
 import { initCart, initWishlist } from './utils/shareData';
 
@@ -72,7 +72,7 @@ import { initCart, initWishlist } from './utils/shareData';
 
   $(window).on('resize', () => {
     setHeader();
-    setFeaturedSliderZIndex();
+    // setFeaturedSliderZIndex();
     initTabLines();
   });
 

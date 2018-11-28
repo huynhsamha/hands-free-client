@@ -94,3 +94,8 @@ export const removeWishlist = (product) => {
 
 
 export const retrieveCart = () => JSON.parse(sessionStorage.getItem('cart') || '[]');
+
+
+export const clearCart = () => {
+  sessionStorage.removeItem('cart');
+};

@@ -16,6 +16,7 @@ export function success(content, cb) {
   });
 }
 
+
 export function successConfirm(content, btnOK, btnCancel, onOK = () => {}, onCancel = () => {}) {
   $.confirm({
     title: 'Thông báo',
@@ -49,7 +50,31 @@ export function dangerConfirm(content, btnOK, btnCancel, onOK = () => {}, onCanc
     buttons: {
       ok: {
         text: btnOK,
-        btnClass: 'btn-danger',
+        btnClass: 'btn-red',
+        action() {
+          onOK();
+        }
+      },
+      cancel: {
+        text: btnCancel,
+        action() {
+          onCancel();
+        }
+      }
+    }
+  });
+}
+
+export function warningConfirm(content, btnOK, btnCancel, onOK = () => {}, onCancel = () => {}) {
+  $.confirm({
+    title: 'Thông báo',
+    icon: 'fa fa-question-circle',
+    type: 'orange',
+    content,
+    buttons: {
+      ok: {
+        text: btnOK,
+        btnClass: 'btn-orange',
         action() {
           onOK();
         }

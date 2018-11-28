@@ -22,12 +22,15 @@
 3.1 Top Bar
 *********************************/
 
+$height-top_bar: 36px;
+
 .top_bar {
   width: 100%;
-  height: 56px;
-  background: $color-gray-light;
+  height: $height-top_bar;
+  background: $color-primary;
   border-bottom: solid 1px rgba(0, 0, 0, 0.05);
-  z-index: 2;
+	z-index: 2;
+	color: $color-light-2;
 }
 
 .header.scrolled .top_bar {
@@ -39,25 +42,25 @@
 }
 
 .top_bar_contact_item {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 56px;
+  line-height: $height-top_bar;
   margin-right: 40px;
   &:not(:first-child) {
     margin-right: 0px;
   }
   a {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
-    line-height: 56px;
-    color: #000;
+    line-height: $height-top_bar;
+    color: $color-light-2;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
     &:hover {
-      color: $color-primary;
+      color: white;
     }
   }
   &:last-child {
@@ -88,7 +91,7 @@
   li {
     display: inline-block;
     position: relative;
-    height: 56px;
+    height: $height-top_bar;
     li {
       display: block;
       width: 100%;
@@ -96,7 +99,7 @@
         display: block;
         width: 100%;
         border-bottom: solid 1px #f2f2f2;
-        font-size: 16px;
+        font-size: 14px;
       }
     }
     &:last-child a {
@@ -109,10 +112,10 @@
     a {
       display: block;
       position: relative;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 300;
-      color: #000000;
-      line-height: 56px;
+      color: $color-light-2;
+      line-height: $height-top_bar;
       white-space: nowrap;
       -webkit-transition: all 200ms ease;
       -moz-transition: all 200ms ease;
@@ -120,7 +123,7 @@
       -o-transition: all 200ms ease;
       transition: all 200ms ease;
       &:hover {
-        color: $color-primary;
+        color: white;
       }
       i {
         display: none;
