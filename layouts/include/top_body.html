@@ -3,3 +3,120 @@
 <div id="loading">
   <div id="loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>
 </div>
+
+
+<!-- Modal Login -->
+<div class="modal fade" id="js-modal-login" tabindex="-1" role="dialog" aria-labelledby="labelModalLogin" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="labelModalLogin">Đăng nhập</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="loginEmail" class="col-form-label">Địa chỉ Email:</label>
+            <input type="email" class="form-control" id="loginEmail">
+          </div>
+          <div class="form-group">
+            <label for="loginPassword" class="col-form-label">Mật khẩu:</label>
+            <input type="password" class="form-control" id="loginPassword">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-block btn-red" id="btn-modal-login">Đăng nhập</button>
+        <div class="m-2"></div>
+        <div><a href="#" role="button" data-toggle="modal" data-target="#js-modal-forgot" data-dismiss="modal">Quên mật khẩu?</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Register -->
+<div class="modal fade" id="js-modal-signup" tabindex="-1" role="dialog" aria-labelledby="labelModalSignUp" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="labelModalSignUp">Tạo tài khoản</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <!-- Row 1 -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="signUpEmail" class="col-form-label">Địa chỉ Email:</label>
+              <input type="email" class="form-control" id="signUpEmail">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="signUpFirstName" class="col-form-label">Họ và tên đệm:</label>
+              <input type="text" class="form-control" id="signUpFirstName">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="signUpLastName" class="col-form-label">Tên:</label>
+              <input type="text" class="form-control" id="signUpLastName">
+            </div>
+          </div>
+          <!-- Row 2 -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="signUpPassword" class="col-form-label">Mật khẩu:</label>
+              <input type="password" class="form-control" id="signUpPassword">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="signUpConfirm" class="col-form-label">Xác nhận mật khẩu:</label>
+              <input type="password" class="form-control" id="signUpConfirm">
+            </div>
+          </div>
+          <!-- Row 3 -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="signUpTel" class="col-form-label">Số điện thoại:</label>
+              <input type="text" class="form-control" id="signUpTel">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="signUpAddress" class="col-form-label">Địa chỉ:</label>
+              <input type="text" class="form-control" id="signUpAddress">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-block btn-red" id="btn-modal-signup">Đăng kí</button>
+        <div class="m-2"></div>
+        <div><a href="#" role="button" data-toggle="modal" data-target="#js-modal-login" data-dismiss="modal">Đã có tài khoản?</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Forgot password -->
+<div class="modal fade" id="js-modal-forgot" tabindex="-1" role="dialog" aria-labelledby="labelModalForgot" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="labelModalLogin">Quên Mật Khẩu</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="forgotEmail" class="col-form-label">Địa chỉ Email:</label>
+            <input type="email" class="form-control" id="forgotEmail">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-block btn-red" id="btn-modal-forgot">Gửi</button>
+      </div>
+    </div>
+  </div>
+</div>

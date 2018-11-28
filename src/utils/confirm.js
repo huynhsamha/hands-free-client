@@ -1,4 +1,4 @@
-export function success(content, cb) {
+export function success(content, cb = () => {}) {
   $.confirm({
     title: 'Thông báo',
     icon: 'fa fa-bell',
@@ -8,6 +8,24 @@ export function success(content, cb) {
       ok: {
         text: 'OK',
         btnClass: 'btn-green',
+        action() {
+          cb();
+        }
+      }
+    }
+  });
+}
+
+export function error(content, cb = () => {}) {
+  $.confirm({
+    title: 'Lỗi',
+    icon: 'fa fa-exclamation-triangle',
+    type: 'red',
+    content,
+    buttons: {
+      ok: {
+        text: 'OK',
+        btnClass: 'btn-red',
         action() {
           cb();
         }

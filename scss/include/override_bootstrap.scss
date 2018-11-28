@@ -1,0 +1,83 @@
+/** Override Bootstrap 4 */
+
+.form-check-input {
+	margin-left: 0px;
+}
+
+.override-blue-outline {
+	-webkit-appearance:none;
+		outline: none !important;
+  	box-shadow: none !important;
+}
+
+input {
+	&[type=text],
+	&[type=tel],
+	&[type=email],
+	&[type=password]
+	{
+		&:hover, &:focus, &:active {
+			@extend .override-blue-outline
+		}
+	}
+}
+
+button {
+	&:hover, &:focus, &:active {
+		@extend .override-blue-outline
+	}
+}
+
+
+.modal-dialog {
+	.modal-content {
+
+		$border-modal: .0rem;
+
+		border-radius: $border-modal;
+
+		.modal-header {
+			justify-content: center;
+			align-items: center;
+			background-color: $color-primary;
+			color: white;
+			border: none;
+			border-top-left-radius: $border-modal;
+			border-top-right-radius: $border-modal;
+			text-transform: uppercase;
+
+			button.close {
+				position: absolute;
+				right: 12px;
+				top: 12px;
+				cursor: pointer;
+				color: white;
+			}
+		}
+
+		.modal-body {
+
+		}
+
+		.modal-footer {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border: none;
+			border-bottom-left-radius: $border-modal;
+			border-bottom-right-radius: $border-modal;
+		}
+
+		input {
+			font-size: 1em;
+		}
+	}
+}
+
+
+.btn-red {
+	background-color: $color-primary;
+	color: white;
+	cursor: pointer;
+}

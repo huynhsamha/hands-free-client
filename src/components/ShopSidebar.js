@@ -64,7 +64,7 @@ const addLink = (i, isActivePage) => {
   const isDot = i == '...';
   const $paginaton = $('.page_nav');
   const $newLink = $(`
-    <li class="${isActivePage ? 'btn btn-danger' : ''}" style="${isDot ? 'cursor: not-allowed !important;' : ''}
+    <li class="${isActivePage ? 'btn btn-red' : ''}" style="${isDot ? 'cursor: not-allowed !important;' : ''}
     ${isActivePage ? 'color: white !important;' : ''}">
       <a href="javascript:void(0)" id="page-${i}"
       style="${isDot ? 'cursor: not-allowed !important;' : ''}
