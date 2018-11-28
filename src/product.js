@@ -47,8 +47,9 @@ let product = {};
     // console.log(data);
     product = parseProduct(data);
     console.log(product);
+
     initQuantity();
-    initColor();
+    // initColor();
 
     loadImage();
     initImage();
@@ -111,7 +112,7 @@ let product = {};
 
   /** Description */
   function loadDescription() {
-    $('.product_category').text(product.brand);
+    $('.product_category').text(`${product.brandName} - ${product.modelName}`);
     $('.product_name').text(product.name);
     $('.product_text.status p').text(product.status);
     $('.product_text.warranty p').text(product.warranty);

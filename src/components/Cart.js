@@ -1,20 +1,27 @@
-import { retrieveCart, sumPriceText, sumPrice } from '../utils/shareData';
+import { retrieveCart, sumPriceText, sumPrice, addCart, removeCart } from '../utils/shareData';
 import { convertPriceToText, convertTextToPrice } from '../utils/price';
+
+let totalPrice = 0;
 
 export const CartItem = (item, quantity) => `
 <li class="cart_item clearfix">
   <div class="cart_item_image"><img src="${item.thumbnail}" alt="${item.name}"></div>
   <div class="cart_item_info row">
-    <div class="cart_item_name col-12 col-md-6">
+    <div class="cart_item_name col-12 col-md-5">
       <div class="cart_item_text">${item.name}</div>
     </div>
 
     <div class="cart_item_price col-5 col-md-2 col-sm-4">
       <div class="cart_item_text">${convertPriceToText(item.price)}</div>
     </div>
-    <div class="cart_item_quantity col-1 col-md-1 col-sm-1">
-      <div class="cart_item_text"> x
-        <input type="" ${item.quantity}
+    <div class="cart_item_quantity col-1 col-md-2 col-sm-1">
+      <div class="product_quantity clearfix">
+        <span>x</span>
+        <input type="text" pattern="[0-9]*" value="${item.quantity}">
+        <div class="quantity_buttons">
+          <div class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+          <div class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+        </div>
       </div>
     </div>
     <div class="cart_item_total col-6 col-md-3 col-sm-4">
@@ -26,6 +33,11 @@ export const CartItem = (item, quantity) => `
 
 /**
  * Color HTML
+
+<div class="cart_item_text"> x
+        <input type="" ${item.quantity}
+      </div>
+
 <div class="cart_item_color col-12 col-md-2 col-sm-3">
       <div class="cart_item_text">
         <span style="background-color:${item.color.hex}; ${item.color.hexBorder ? `border: solid 1px ${item.color.hexBorder};` : ''}"></span>
@@ -63,9 +75,11 @@ export const loadCartItem = () => {
 
   console.log(products);
 
-  const totalPrice = sumPrice(products);
+  totalPrice = sumPrice(products);
   products.forEach((item) => {
-    $cartList.append(CartItem(item));
+    const $ele = $(CartItem(item));
+    $cartList.append($ele);
+    initQuantity($ele, item);
   });
 
   $('.order_total_amount').text(convertPriceToText(totalPrice));
@@ -94,3 +108,53 @@ export const loadCartItem = () => {
     });
   });
 };
+
+/* Init Quantity*/
+
+function initQuantity($ele, item) {
+  // Handle product quantity input
+  if ($ele.find('.product_quantity').length) {
+    var input = $ele.find('input');
+    var incButton = $ele.find('.quantity_inc');
+    var decButton = $ele.find('.quantity_dec');
+
+    var originalVal;
+    var endVal;
+
+    incButton.on('click', () => {
+      originalVal = input.val();
+      if (originalVal < 10) {
+        endVal = parseFloat(originalVal) + 1;
+        input.val(endVal);
+        addCart(item);
+        item.quantity++;
+        totalPrice += item.price;
+        $ele.find('.cart_item_total > .cart_item_text').text(convertPriceToText(item.price * item.quantity));
+        $('.order_total_amount').text(convertPriceToText(totalPrice));
+      } else {
+        alert('Bạn chỉ có thể mua tối đa 10 sản phẩm cho mỗi loại!');
+      }
+    });
+
+    decButton.on('click', () => {
+      originalVal = input.val();
+      if (originalVal > 1) {
+        endVal = parseFloat(originalVal) - 1;
+        input.val(endVal);
+        removeCart(item);
+        item.quantity--;
+        totalPrice -= item.price;
+        $ele.find('.cart_item_total > .cart_item_text').text(convertPriceToText(item.price * item.quantity));
+        $('.order_total_amount').text(convertPriceToText(totalPrice));
+      } else {
+        const res = window.confirm('Bạn thật sự muốn xóa sản phẩm này khỏi giỏ hàng?');
+        if (res) {
+          removeCart(item);
+          totalPrice -= item.price;
+          $('.order_total_amount').text(convertPriceToText(totalPrice));
+          $ele.remove();
+        }
+      }
+    });
+  }
+}

@@ -52,7 +52,27 @@ export const addCart = (product) => {
 
 
 export const removeCart = (product) => {
-  // TODO
+  const $cartCount = $('.cart_count span');
+  const $cartPrice = $('.cart_price');
+
+  const cart = JSON.parse(sessionStorage.getItem('cart') || '[]');
+
+  console.log('Remove cart:', product);
+  const { id, brandName, modelId, modelName, name, price, thumbnail } = product;
+  const idx = cart.findIndex(o => o.id == id);
+  if (idx > -1) {
+    cart[idx].quantity--;
+    if (cart[idx].quantity == 0) {
+      cart.splice(idx, 1);
+    }
+  } else {
+    console.log('Item not found');
+  }
+
+  $cartCount.text(totalProductsInCart(cart));
+  $cartPrice.text(sumPriceText(cart));
+
+  sessionStorage.setItem('cart', JSON.stringify(cart));
 };
 
 export const addWishlist = (product) => {
