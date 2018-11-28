@@ -14,7 +14,7 @@ export const ArrivalsSliderShortProduct = item => `
     <div class="product_content">
       <div class="product_price">${item.priceText}</div>
       <div class="product_name">
-        <div><a href="product.html">${item.name}</a></div>
+        <div><a href="product.html?id=${item.id}">${item.name}</a></div>
       </div>
       <div class="product_extras">
 

@@ -11,7 +11,7 @@ export const TrendsSliderItem = item => `
   <div class="trends_content">
     <div class="trends_category"><a href="#">${item.brandName}</a></div>
     <div class="trends_info clearfix">
-      <div class="trends_name"><a href="product.html">${item.name}</a></div>
+      <div class="trends_name"><a href="product.html?id=${item.id}">${item.name}</a></div>
       <div class="trends_price">${item.priceText}</div>
     </div>
   </div>

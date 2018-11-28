@@ -13,7 +13,9 @@ export const CartItem = (item, quantity) => `
       <div class="cart_item_text">${convertPriceToText(item.price)}</div>
     </div>
     <div class="cart_item_quantity col-1 col-md-1 col-sm-1">
-      <div class="cart_item_text"> x ${item.quantity}</div>
+      <div class="cart_item_text"> x
+        <input type="" ${item.quantity}
+      </div>
     </div>
     <div class="cart_item_total col-6 col-md-3 col-sm-4">
       <div class="cart_item_text">${convertPriceToText(item.price * item.quantity)}</div>

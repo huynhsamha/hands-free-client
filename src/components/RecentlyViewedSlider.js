@@ -16,7 +16,7 @@ export const RecentlyViewedProduct = item => `
     ${item.ceilPriceText
     ? `<span>${item.ceilPriceText}</span>` : ''}
     </div>
-    <div class="viewed_name"><a href="#">${item.name}</a></div>
+    <div class="viewed_name"><a href="product.html?id=${item.id}">${item.name}</a></div>
   </div>
   <ul class="item_marks">
 
