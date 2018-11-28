@@ -69,7 +69,8 @@ export function loadFeaturedProducts() {
     { datalist: 'bestGiftProducts', $view: $bestGiftProducts, api: '/api/product/getBestGift.php' },
     { datalist: 'bestPriceProducts', $view: $bestPriceProducts, api: '/api/product/getBestPrice.php' }
   ], ({ datalist, $view, api }, cb) => {
-    $.get(`http://localhost/hands-free${api}`, (data) => {
+    const url = `http://localhost/hands-free${api}`;
+    $.get(url, (data) => {
       // console.log(data);
       products[datalist] = parseProductsList(data);
       products[datalist].sort((a, b) => a.price - b.price).forEach((item) => {
@@ -78,7 +79,8 @@ export function loadFeaturedProducts() {
 
         $ele.find('.product_cart_button').click(() => {
           addCart(item);
-          successConfirm(`Sản phẩm <i>${item.name}</i> đã được thêm vào giỏ hàng. Bạn có muốn tiến hành thanh toán?`, 'Đi đến giỏ hàng', 'Bỏ qua',
+          const content = `Sản phẩm <i>${item.name}</i> đã được thêm vào giỏ hàng. Bạn có muốn tiến hành thanh toán?`;
+          successConfirm(content, 'Đi đến giỏ hàng', 'Bỏ qua',
             () => {
               window.location.href = 'cart.html';
             });

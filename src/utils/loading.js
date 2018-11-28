@@ -13,3 +13,8 @@ export function handleError(errMessage) {
   hideLoading();
   setTimeout(() => error(errMessage), 100);
 }
+
+export function handleErrorJQuery(err) {
+  hideLoading();
+  setTimeout(() => error(err.responseJSON), 100);
+}

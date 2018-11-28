@@ -12,6 +12,7 @@ import { getUrlVars } from './utils/url';
 import { parseProduct } from './utils/models';
 
 import './_common';
+import { successConfirm } from './utils/confirm';
 
 let product = {};
 
@@ -60,6 +61,11 @@ let product = {};
   function setEventAddCart() {
     $('#btn-add-cart').click(() => {
       addCart(product, product.quantity);
+      const content = `Sản phẩm <i>${product.name}</i> đã được thêm vào giỏ hàng. Bạn có muốn tiến hành thanh toán?`;
+      successConfirm(content, 'Đi đến giỏ hàng', 'Bỏ qua',
+        () => {
+          window.location.href = 'cart.html';
+        });
     });
   }
 

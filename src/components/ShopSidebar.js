@@ -1,7 +1,7 @@
 import qs from 'qs';
 // import { shuffle } from '../utils/array';
-import { type } from 'os';
 import { parseProductsList } from '../utils/models';
+import { showLoading, handleErrorJQuery, hideLoading } from '../utils/loading';
 
 /** Shop Sidebar + Shop Content */
 
@@ -75,52 +75,18 @@ const addLink = (i, isActivePage) => {
   if (!isDot) {
     $newLink.click(() => {
       queries.page = i;
-      loadProducts();
+      showLoading(() => loadProducts());
     });
   }
 };
-
-// function genPagingatorInRange(l, r, maxPage) {
-//   l = Math.max(1, l);
-//   r = Math.min(r, maxPage);
-//   for (let i = l; i <= r; i++) addLink(i);
-//   return { l, r };
-// }
-
-// function genDotPageInRange(sl, sr) {
-//   if (sl.l > sl.r || sr.l > sr.r || sr.l - sl.r <= 1) return;
-//   addLink('...');
-// }
 
 export const updatePagination = (totalProducts, activePage, onePage, totalPage) => {
   const $paginaton = $('.page_nav');
   $paginaton.html('');
 
   for (let i = 1; i <= totalPage; i++) addLink(i, i == activePage);
-
-  // const lpages = genPagingatorInRange(1, Math.min(activePage - 3, 2), totalPage);
-  // const cpages = genPagingatorInRange(activePage - 2, activePage + 2, totalPage);
-  // const rpages = genPagingatorInRange(Math.max(activePage + 3, totalPage - 2), totalPage, totalPage);
-
-  // console.log(lpages, cpages, rpages);
-  // genDotPageInRange(lpages, cpages);
-  // genDotPageInRange(cpages, rpages);
 };
 
-
-// export function setEventsBrandList() {
-//   const $brandsList = $('.sidebar_categories_brand');
-//   $brandsList.each((_, ele) => {
-//     const brand = $(ele).attr('data-brand');
-//     // $(ele).find('input').change(function () {
-//     //   if (this.checked) {
-//     //     alert(brand);
-//     //   } else {
-//     //     alert(`${brand} Unchecked`);
-//     //   }
-//     // });
-//   });
-// }
 
 export function loadSortOptions() {
   const $sorts = $('.sidebar_sort_options');
@@ -198,8 +164,10 @@ export function loadSidebarBrands() {
 /** Load Products */
 export const loadProducts = () => {
   const api = `/api/product/search.php?${qs.stringify(queries)}`;
+  const url = `http://localhost/hands-free${api}`;
   console.log(api);
-  $.get(`http://localhost/hands-free${api}`, (response) => {
+
+  $.get(url, (response) => {
     console.log(response);
     const { total, page, onePage, totalPage, offset, data } = response;
     products = parseProductsList(data);
@@ -219,7 +187,9 @@ export const loadProducts = () => {
     updateProductsCount(total);
     updatePagination(total, page, onePage, totalPage);
 
-  }).fail(err => console.log(err));
+    hideLoading();
+
+  }).fail(err => handleErrorJQuery(err));
 };
 
 const handleSearch = (resetPage) => {
@@ -247,7 +217,7 @@ const handleSearch = (resetPage) => {
 
 export function setEventBtnSearch() {
   $('#btn-search').click(() => {
-    handleSearch(true);
+    showLoading(() => handleSearch(true));
   });
 }
 
@@ -295,12 +265,12 @@ export const initPaginationNextPrev = () => {
   btnPrev.click(() => {
     if (queries.page == 1) return;
     queries.page = parseInt(queries.page, 10) - 1;
-    handleSearch();
+    showLoading(() => handleSearch());
   });
   btnNext.click(() => {
     if (parseInt(queries.page, 10) + 1 > parseInt(currMaxPage, 10)) return;
     queries.page = parseInt(queries.page, 10) + 1;
-    handleSearch();
+    showLoading(() => handleSearch());
   });
 };
 
@@ -328,7 +298,8 @@ export function initPriceSlider() {
     // Default Slider
     const defaultPriceMin = $('#slider-range').slider('values', 0);
     const defaultPriceMax = $('#slider-range').slider('values', 1);
-    $('#amount').val(`${defaultPriceMin} triệu - ${defaultPriceMax} triệu`);
+    const text = `${defaultPriceMin} triệu - ${defaultPriceMax} triệu`;
+    $('#amount').val(text);
 
     // $('.ui-slider-handle').on('mouseup', () => {
     //   $productGrid.isotope({

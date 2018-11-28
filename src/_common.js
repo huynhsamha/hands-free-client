@@ -8,7 +8,7 @@ import { setHeader } from './utils';
 import { initPageMenu } from './components/Menu';
 import { initCustomDropdown } from './components/CustomDropdown';
 import { initCart, initWishlist } from './utils/shareData';
-import { storeAuthentication, isLogined } from './utils/auth';
+import { storeAuthentication, isLogined, clearAuthentication } from './utils/auth';
 
 
 /** Forgot password */
@@ -42,7 +42,7 @@ $('#btn-modal-login').click(() => {
       const { issuedAt, token, tokenExpire, user } = data;
       storeAuthentication(user, token, tokenExpire, issuedAt);
       window.location.reload();
-    }).fail(err => handleError(err.responseText));
+    }).fail(err => handleError(err.responseJSON));
   });
 });
 
@@ -86,11 +86,16 @@ $('#btn-modal-signup').click(() => {
   });
 });
 
+$('#headerLogout').find('a').click(() => {
+  clearAuthentication();
+  window.location.reload();
+});
 
 isLogined((data) => {
   if (!data) {
     console.log('No login');
     $('#headerProfile').hide();
+    $('#headerLogout').hide();
   } else {
     console.log('Logined');
     const { user, token } = data;

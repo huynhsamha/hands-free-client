@@ -86,7 +86,8 @@ export function loadArrivalsProducts() {
   const $hotNewXiaomiOPPO = $('.hot-new-xiaomi-oppo');
 
   const api = '/api/product/getHotNew.php';
-  $.get(`http://localhost/hands-free${api}`, (data) => {
+  const url = `http://localhost/hands-free${api}`;
+  $.get(url, (data) => {
     // console.log(data);
 
     products = parseProductsList(data);

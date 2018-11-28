@@ -1,7 +1,8 @@
 import { retrieveCart, sumPriceText, sumPrice, addCart, removeCart, clearCart } from '../utils/shareData';
 import { convertPriceToText, convertTextToPrice } from '../utils/price';
-import { dangerConfirm, successConfirm, success, warningConfirm } from '../utils/confirm';
+import { dangerConfirm, successConfirm, success, warningConfirm, error } from '../utils/confirm';
 import { showLoading, hideLoading } from '../utils/loading';
+import { isLogined } from '../utils/auth';
 
 let totalPrice = 0;
 
@@ -85,19 +86,35 @@ export const loadCartItem = () => {
 };
 
 export function initPayment() {
+  let logined = false;
+  isLogined((data) => {
+    if (data) {
+      logined = true;
+      $('#payment-no-login').css('display', 'none');
+    } else {
+      logined = false;
+    }
+  });
+
   $('.cart_button_checkout').click(() => {
-    warningConfirm('Đơn hàng của bạn sẽ được thiết lập. Bạn thật sự muốn gửi yêu cầu đơn hàng này?', 'Gửi yêu cầu', 'Hủy',
-      () => {
-        showLoading();
-        setTimeout(() => {
-          hideLoading();
-          success('Đơn hàng đã được chấp nhận và đang chờ xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất đơn hàng này.',
-            () => {
-              clearCart();
-              window.location.pathname = '';
-            });
-        }, 1000);
+    if (logined) {
+      warningConfirm('Đơn hàng của bạn sẽ được thiết lập. Bạn thật sự muốn gửi yêu cầu đơn hàng này?', 'Gửi yêu cầu', 'Hủy',
+        () => {
+          showLoading();
+          setTimeout(() => {
+            hideLoading();
+            success('Đơn hàng đã được chấp nhận và đang chờ xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất đơn hàng này.',
+              () => {
+                clearCart();
+                window.location.pathname = '';
+              });
+          }, 1000);
+        });
+    } else {
+      error('Vui lòng đăng nhập để tiếp tục.', () => {
+        $('#js-modal-login').modal('show');
       });
+    }
   });
 }
 
