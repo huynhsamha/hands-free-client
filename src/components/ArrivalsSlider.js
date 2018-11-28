@@ -1,6 +1,7 @@
 import { addCart, addWishlist } from '../utils/shareData';
 import { parseProductsList } from '../utils/models';
 import { convertPriceToText } from '../utils/price';
+import { successConfirm } from '../utils/confirm';
 
 /* Arrivals Slider */
 
@@ -58,6 +59,26 @@ export const loadArrivalSingle = () => {
   });
 };
 
+export function handleAddNewProdcut($list, item) {
+  const $ele = $(ArrivalsSliderShortProduct(item));
+  $list.append($ele);
+  $ele.find('.product_cart_button').click(() => {
+    addCart(item);
+    successConfirm(`Sản phẩm <i>${item.name}</i> đã được thêm vào giỏ hàng. Bạn có muốn tiến hành thanh toán?`, 'Đi đến giỏ hàng', 'Bỏ qua',
+      () => {
+        window.location.href = 'cart.html';
+      });
+  });
+
+  $ele.on('mouseenter', () => {
+    $('.arrivals_slider .slick-dots').css('display', 'none');
+  });
+
+  $ele.on('mouseleave', () => {
+    $('.arrivals_slider .slick-dots').css('display', 'block');
+  });
+}
+
 export function loadArrivalsProducts() {
   loadArrivalSingle();
   const $hotNewApple = $('.hot-new-apple');
@@ -72,33 +93,22 @@ export function loadArrivalsProducts() {
 
     products.filter(item => item.hotNew && item.brandName == 'Apple')
       .sort((a, b) => b.price - a.price).forEach((item) => {
-        $hotNewApple.append(ArrivalsSliderShortProduct(item));
+        handleAddNewProdcut($hotNewApple, item);
       });
 
     products.filter(item => item.hotNew && item.brandName == 'Samsung')
       .sort((a, b) => b.price - a.price).forEach((item) => {
-        $hotNewSamsung.append(ArrivalsSliderShortProduct(item));
+        handleAddNewProdcut($hotNewSamsung, item);
       });
 
     products.filter(item => item.hotNew && (item.brandName == 'Xiaomi' || item.brandName == 'OPPO'))
       .sort((a, b) => b.price - a.price).forEach((item) => {
-        $hotNewXiaomiOPPO.append(ArrivalsSliderShortProduct(item));
+        handleAddNewProdcut($hotNewXiaomiOPPO, item);
       });
 
-
-    const listItems = $('.arrivals_slider_item');
-    listItems.each((_, ele) => {
-      $(ele).find('.product_cart_button').click(() => {
-        const itemName = $(ele).attr('data-item-name');
-        const item = products.filter(i => i.name == itemName)[0];
-        addCart(item);
-      });
-
-      initArrivalsSlider();
-      setArrivalsSliderZIndex();
-    });
-
-  }).fail(err => console.log(err));
+    initArrivalsSlider();
+  })
+    .fail(err => console.log(err));
 
   // loadWishlistProduct(products);
 }
@@ -181,18 +191,18 @@ export function initASlider(as) {
 
 /* Init Arrivals Slider ZIndex */
 
-export function setArrivalsSliderZIndex() {
-  // Hide slider dots on item hover
-  var items = document.getElementsByClassName('arrivals_slider_item');
+// export function setArrivalsSliderZIndex() {
+//   // Hide slider dots on item hover
+//   var items = document.getElementsByClassName('arrivals_slider_item');
 
-  for (var x = 0; x < items.length; x++) {
-    var item = items[x];
-    item.addEventListener('mouseenter', () => {
-      $('.arrivals_slider .slick-dots').css('display', 'none');
-    });
+//   for (var x = 0; x < items.length; x++) {
+//     var item = items[x];
+//     item.addEventListener('mouseenter', () => {
+//       $('.arrivals_slider .slick-dots').css('display', 'none');
+//     });
 
-    item.addEventListener('mouseleave', () => {
-      $('.arrivals_slider .slick-dots').css('display', 'block');
-    });
-  }
-}
+//     item.addEventListener('mouseleave', () => {
+//       $('.arrivals_slider .slick-dots').css('display', 'block');
+//     });
+//   }
+// }

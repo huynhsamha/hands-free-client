@@ -1,5 +1,6 @@
 import { retrieveCart, sumPriceText, sumPrice, addCart, removeCart } from '../utils/shareData';
 import { convertPriceToText, convertTextToPrice } from '../utils/price';
+import { dangerConfirm } from '../utils/confirm';
 
 let totalPrice = 0;
 
@@ -90,12 +91,6 @@ export const loadCartItem = () => {
       icon: 'fa fa-bell',
       type: 'green',
       content: 'Đơn hàng đang được xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất quá trình mua hàng.',
-      // content() {
-      //   var self = this;
-      //   return setTimeout(() => {
-      //     self.setContent('<div>Đơn hàng đang được xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất quá trình mua hàng.</div>');
-      //   }, 2000);
-      // },
       buttons: {
         ok: {
           text: 'OK',
@@ -123,17 +118,13 @@ function initQuantity($ele, item) {
 
     incButton.on('click', () => {
       originalVal = input.val();
-      if (originalVal < 10) {
-        endVal = parseFloat(originalVal) + 1;
-        input.val(endVal);
-        addCart(item);
-        item.quantity++;
-        totalPrice += item.price;
-        $ele.find('.cart_item_total > .cart_item_text').text(convertPriceToText(item.price * item.quantity));
-        $('.order_total_amount').text(convertPriceToText(totalPrice));
-      } else {
-        alert('Bạn chỉ có thể mua tối đa 10 sản phẩm cho mỗi loại!');
-      }
+      endVal = parseFloat(originalVal) + 1;
+      input.val(endVal);
+      addCart(item);
+      item.quantity++;
+      totalPrice += item.price;
+      $ele.find('.cart_item_total > .cart_item_text').text(convertPriceToText(item.price * item.quantity));
+      $('.order_total_amount').text(convertPriceToText(totalPrice));
     });
 
     decButton.on('click', () => {
@@ -147,13 +138,12 @@ function initQuantity($ele, item) {
         $ele.find('.cart_item_total > .cart_item_text').text(convertPriceToText(item.price * item.quantity));
         $('.order_total_amount').text(convertPriceToText(totalPrice));
       } else {
-        const res = window.confirm('Bạn thật sự muốn xóa sản phẩm này khỏi giỏ hàng?');
-        if (res) {
+        dangerConfirm(`Sản phẩm <i>${item.name}</i> sẽ bị xóa khỏi giỏ hàng. Bạn thật sự muốn xóa sản phẩm này khỏi giỏ hàng?`, 'Xóa khỏi giỏ', 'Bỏ qua', () => {
           removeCart(item);
           totalPrice -= item.price;
           $('.order_total_amount').text(convertPriceToText(totalPrice));
           $ele.remove();
-        }
+        });
       }
     });
   }

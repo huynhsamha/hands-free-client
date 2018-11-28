@@ -15,7 +15,7 @@ import { initCustomDropdown } from './components/CustomDropdown';
 import { initViewedSlider, loadRecentlyViewedSlider } from './components/RecentlyViewedSlider';
 
 import { initFavs } from './utils/favorites';
-import { initCart, initWishlist } from './utils/shareData';
+import { initCart, initWishlist, addCart } from './utils/shareData';
 import { getUrlVars } from './utils/url';
 import { parseProduct } from './utils/models';
 
@@ -48,6 +48,8 @@ let product = {};
     product = parseProduct(data);
     console.log(product);
 
+    product.quantity = 1;
+
     initQuantity();
     // initColor();
 
@@ -58,6 +60,8 @@ let product = {};
 
     loadTechicalInfo();
 
+    setEventAddCart();
+
     initFavs();
 
   }).fail(err => console.log(err));
@@ -65,6 +69,12 @@ let product = {};
   $(window).on('resize', () => {
     setHeader();
   });
+
+  function setEventAddCart() {
+    $('#btn-add-cart').click(() => {
+      addCart(product, product.quantity);
+    });
+  }
 
   /* Init Quantity*/
 
@@ -82,6 +92,7 @@ let product = {};
         originalVal = input.val();
         endVal = parseFloat(originalVal) + 1;
         input.val(endVal);
+        product.quantity++;
       });
 
       decButton.on('click', () => {
@@ -89,6 +100,7 @@ let product = {};
         if (originalVal > 0) {
           endVal = parseFloat(originalVal) - 1;
           input.val(endVal);
+          product.quantity--;
         }
       });
     }

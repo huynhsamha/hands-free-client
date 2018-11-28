@@ -29,7 +29,7 @@ export const initWishlist = () => {
   $wishlistCount.text(wishlist.length);
 };
 
-export const addCart = (product) => {
+export const addCart = (product, quantity = 1) => {
   const $cartCount = $('.cart_count span');
   const $cartPrice = $('.cart_price');
 
@@ -39,9 +39,9 @@ export const addCart = (product) => {
   const { id, brandName, modelId, modelName, name, price, thumbnail } = product;
   const idx = cart.findIndex(o => o.id == id);
   if (idx > -1) {
-    cart[idx].quantity++;
+    cart[idx].quantity += quantity;
   } else {
-    cart.push({ quantity: 1, id, brandName, modelId, modelName, name, price, thumbnail });
+    cart.push({ quantity, id, brandName, modelId, modelName, name, price, thumbnail });
   }
 
   $cartCount.text(totalProductsInCart(cart));

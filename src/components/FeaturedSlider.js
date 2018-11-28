@@ -2,6 +2,7 @@ import async from 'async';
 
 import { addCart } from '../utils/shareData';
 import { parseProductsList } from '../utils/models';
+import { success, successConfirm } from '../utils/confirm';
 
 /** Featured Slider */
 
@@ -77,6 +78,10 @@ export function loadFeaturedProducts() {
 
         $ele.find('.product_cart_button').click(() => {
           addCart(item);
+          successConfirm(`Sản phẩm <i>${item.name}</i> đã được thêm vào giỏ hàng. Bạn có muốn tiến hành thanh toán?`, 'Đi đến giỏ hàng', 'Bỏ qua',
+            () => {
+              window.location.href = 'cart.html';
+            });
         });
 
         $ele.on('mouseenter', () => {
