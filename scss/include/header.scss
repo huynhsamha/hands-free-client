@@ -22,7 +22,7 @@
 3.1 Top Bar
 *********************************/
 
-$height-top_bar: 36px;
+$height-top_bar: 40px;
 
 .top_bar {
   width: 100%;
@@ -99,7 +99,11 @@ $height-top_bar: 36px;
         display: block;
         width: 100%;
         border-bottom: solid 1px #f2f2f2;
-        font-size: 14px;
+				font-size: 14px;
+				color: $color-dark;
+				&:hover {
+					color: $color-primary;
+				}
       }
     }
     &:last-child a {
@@ -109,7 +113,7 @@ $height-top_bar: 36px;
       display: inline-block;
       margin-left: 5px;
     }
-    a {
+    & > a {
       display: block;
       position: relative;
       font-size: 14px;
@@ -206,17 +210,17 @@ $height-top_bar: 36px;
     }
   }
   a {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
-    line-height: 56px;
-    color: #000;
+    line-height: $height-top_bar;
+    color: $color-light-2;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
     &:hover {
-      color: $color-primary;
+      color: white;
     }
   }
 }
@@ -682,13 +686,18 @@ select {
   a {
     font-size: 18px;
     font-weight: 400;
-    color: $color-gray-dark;
-    line-height: 60px;
-  }
+    color: $color-dark;
+		line-height: 60px;
+		&:hover { color: $color-primary;}
+	}
+	ul { margin-top: 20px;}
   li {
     padding-left: 15px;
     padding-right: 15px;
-    margin-right: 0px;
+		margin-right: 0px;
+		height: 40px;
+		line-height: 40px;
+		a { line-height: 40px; }
   }
 }
 

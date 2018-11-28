@@ -5,7 +5,7 @@
 .footer {
   padding-top: 80px;
   padding-bottom: 40px;
-  background-color: $color-dark;
+  background-color: #212121;
   .logo_container {
     height: auto;
     margin-bottom: 18px;
@@ -112,7 +112,8 @@
 
 .copyright {
   width: 100%;
-  background: #946a6a5c;
+  // background: #946a6a5c;
+  background: #131212;
 }
 
 .copyright_container {
@@ -121,14 +122,16 @@
 }
 
 .copyright_content {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.842);
+  font-size: 13px;
+  // color: rgba(0, 0, 0, 0.842);
+  color: white;
   span {
     font-weight: 500;
   }
 }
 
-.logos {}
+.logos {
+}
 
 .logos_list li {
   display: inline-block;
