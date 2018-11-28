@@ -1,7 +1,9 @@
+import qs from 'qs';
+
 import { retrieveCart, sumPriceText, sumPrice, addCart, removeCart, clearCart } from '../utils/shareData';
 import { convertPriceToText, convertTextToPrice } from '../utils/price';
 import { dangerConfirm, successConfirm, success, warningConfirm, error } from '../utils/confirm';
-import { showLoading, hideLoading } from '../utils/loading';
+import { showLoading, hideLoading, handleErrorJQuery } from '../utils/loading';
 import { isLogined } from '../utils/auth';
 
 let totalPrice = 0;
@@ -85,6 +87,31 @@ export const loadCartItem = () => {
   $('.order_total_amount').text(convertPriceToText(totalPrice));
 };
 
+function postOrder(cart) {
+  const api = '/api/order/create.php';
+  const url = `http://localhost/hands-free${api}`;
+  const data = {
+    paymenAddress: $('input[name=payment_address]:checked').val(),
+    paymentMethod: $('input[name=payment_method]:checked').val(),
+    products: cart.map(item => ({
+      productId: item.id,
+      quantity: item.quantity,
+      unitPrice: item.price
+    }))
+  };
+  console.log(data);
+  $.post(url, qs.stringify(data), (data) => {
+    hideLoading();
+    success('Đơn hàng đã được chấp nhận và đang chờ xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất đơn hàng này.',
+      () => {
+        console.log(data);
+        // clearCart();
+        // window.location.pathname = 'profile.html';
+      });
+  })
+    .fail(err => handleErrorJQuery(err));
+}
+
 export function initPayment() {
   let logined = false;
   isLogined((data) => {
@@ -98,17 +125,14 @@ export function initPayment() {
 
   $('.cart_button_checkout').click(() => {
     if (logined) {
+      const cart = retrieveCart();
+      if (cart.length == 0) {
+        error('Giỏ hàng của bạn hiện chưa có sản phẩm nào. Hãy tiếp tục mua sắm trước khi tiến hành thanh toán.');
+        return;
+      }
       warningConfirm('Đơn hàng của bạn sẽ được thiết lập. Bạn thật sự muốn gửi yêu cầu đơn hàng này?', 'Gửi yêu cầu', 'Hủy',
         () => {
-          showLoading();
-          setTimeout(() => {
-            hideLoading();
-            success('Đơn hàng đã được chấp nhận và đang chờ xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất đơn hàng này.',
-              () => {
-                clearCart();
-                window.location.pathname = '';
-              });
-          }, 1000);
+          showLoading(() => postOrder(cart));
         });
     } else {
       error('Vui lòng đăng nhập để tiếp tục.', () => {
