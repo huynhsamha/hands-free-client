@@ -2,6 +2,7 @@ import { addCart, addWishlist } from '../utils/shareData';
 import { parseProductsList } from '../utils/models';
 import { convertPriceToText } from '../utils/price';
 import { successConfirm } from '../utils/confirm';
+import { config } from '../config';
 
 /* Arrivals Slider */
 
@@ -86,7 +87,7 @@ export function loadArrivalsProducts() {
   const $hotNewXiaomiOPPO = $('.hot-new-xiaomi-oppo');
 
   const api = '/api/product/getHotNew.php';
-  const url = `http://localhost/hands-free${api}`;
+  const url = `${config.baseUrl}${api}`;
   $.get(url, (data) => {
     // console.log(data);
 

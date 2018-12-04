@@ -2,6 +2,7 @@ import qs from 'qs';
 // import { shuffle } from '../utils/array';
 import { parseProductsList } from '../utils/models';
 import { showLoading, handleErrorJQuery, hideLoading } from '../utils/loading';
+import { config } from '../config';
 
 /** Shop Sidebar + Shop Content */
 
@@ -138,7 +139,7 @@ export function loadSidebarBrands() {
   $brands.html('');
 
   const api = '/api/brand/get.php';
-  $.get(`http://localhost/hands-free${api}`, (data) => {
+  $.get(`${config.baseUrl}${api}`, (data) => {
     // console.log(data);
     brands = data;
     brands.forEach((item) => {
@@ -164,7 +165,7 @@ export function loadSidebarBrands() {
 /** Load Products */
 export const loadProducts = () => {
   const api = `/api/product/search.php?${qs.stringify(queries)}`;
-  const url = `http://localhost/hands-free${api}`;
+  const url = `${config.baseUrl}${api}`;
   console.log(api);
 
   $.get(url, (response) => {

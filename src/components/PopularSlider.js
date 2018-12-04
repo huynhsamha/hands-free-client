@@ -1,3 +1,5 @@
+import { config } from "../config";
+
 /** Popular Slider */
 
 export const PopularCategoryBrand = item => `
@@ -17,7 +19,7 @@ export function loadPopularSlider() {
   const $popularSlider = $('.popular_categories_slider');
 
   const api = '/api/brand/get.php';
-  $.get(`http://localhost/hands-free${api}`, (data) => {
+  $.get(`${config.baseUrl}${api}`, (data) => {
     // console.log(data);
     brands = data;
     brands.forEach(item => $popularSlider.append(PopularCategoryBrand(item)));

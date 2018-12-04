@@ -3,6 +3,7 @@ import async from 'async';
 import { addCart } from '../utils/shareData';
 import { parseProductsList } from '../utils/models';
 import { success, successConfirm } from '../utils/confirm';
+import { config } from '../config';
 
 /** Featured Slider */
 
@@ -69,7 +70,7 @@ export function loadFeaturedProducts() {
     { datalist: 'bestGiftProducts', $view: $bestGiftProducts, api: '/api/product/getBestGift.php' },
     { datalist: 'bestPriceProducts', $view: $bestPriceProducts, api: '/api/product/getBestPrice.php' }
   ], ({ datalist, $view, api }, cb) => {
-    const url = `http://localhost/hands-free${api}`;
+    const url = `${config.baseUrl}${api}`;
     $.get(url, (data) => {
       // console.log(data);
       products[datalist] = parseProductsList(data);

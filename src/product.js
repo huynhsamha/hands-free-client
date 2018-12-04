@@ -13,6 +13,7 @@ import { parseProduct } from './utils/models';
 
 import './_common';
 import { successConfirm } from './utils/confirm';
+import { config } from './config';
 
 let product = {};
 
@@ -27,14 +28,14 @@ let product = {};
 
   const id = query.id;
   if (!id) {
-    window.location.href = 'index.html';
+    window.location.pathname = '';
   }
 
   const api = `/api/product/getOne.php?${qs.stringify({ id })}`;
 
   console.log(api);
 
-  $.get(`http://localhost/hands-free${api}`, (data) => {
+  $.get(`${config.baseUrl}${api}`, (data) => {
     // console.log(data);
     product = parseProduct(data);
     console.log(product);

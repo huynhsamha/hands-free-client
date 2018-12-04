@@ -33,3 +33,14 @@ export function isLogined(cb) {
   }
   cb({ user, token });
 }
+
+export function isLoginedSync() {
+  const user = JSON.parse(localStorage.getItem('user'));
+  const token = localStorage.getItem('token');
+  const tokenExpire = localStorage.getItem('tokenExpire');
+  if (!user || !user.email || !token || !tokenExpire || tokenExpire * 1000 < Date.now()) {
+    clearAuthentication();
+    return false;
+  }
+  return { user, token };
+}

@@ -5,6 +5,7 @@ import { convertPriceToText, convertTextToPrice } from '../utils/price';
 import { dangerConfirm, successConfirm, success, warningConfirm, error } from '../utils/confirm';
 import { showLoading, hideLoading, handleErrorJQuery } from '../utils/loading';
 import { isLogined, getToken } from '../utils/auth';
+import { config } from '../config';
 
 let totalPrice = 0;
 
@@ -89,7 +90,7 @@ export const loadCartItem = () => {
 
 function postOrder(cart) {
   const api = '/api/order/create.php';
-  const url = `http://localhost/hands-free${api}`;
+  const url = `${config.baseUrl}${api}`;
   const data = {
     paymentAddress: $('input[name=payment_address]:checked').val(),
     paymentMethod: $('input[name=payment_method]:checked').val(),

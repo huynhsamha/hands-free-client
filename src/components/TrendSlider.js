@@ -1,4 +1,5 @@
 import { parseProductsList } from '../utils/models';
+import { config } from '../config';
 
 /** Trends Slider */
 
@@ -39,7 +40,7 @@ export const loadTrendsSlider = () => {
   const $trendsSlider = $('.trends_slider');
 
   const api = '/api/product/getHotNew.php';
-  $.get(`http://localhost/hands-free${api}`, (data) => {
+  $.get(`${config.baseUrl}${api}`, (data) => {
     // console.log(data);
 
     products = parseProductsList(data);

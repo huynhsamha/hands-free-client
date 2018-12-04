@@ -9,6 +9,7 @@ import { initPageMenu } from './components/Menu';
 import { initCustomDropdown } from './components/CustomDropdown';
 import { initCart, initWishlist } from './utils/shareData';
 import { storeAuthentication, isLogined, clearAuthentication } from './utils/auth';
+import { config } from './config';
 
 
 /** Forgot password */
@@ -33,7 +34,7 @@ $('#btn-modal-login').click(() => {
   }
 
   const api = '/api/auth/login.php';
-  const url = `http://localhost/hands-free${api}`;
+  const url = `${config.baseUrl}${api}`;
 
   showLoading(() => {
     $.post(url, qs.stringify({ email, password }), (data) => {
@@ -71,7 +72,7 @@ $('#btn-modal-signup').click(() => {
   }
 
   const api = '/api/auth/signup.php';
-  const url = `http://localhost/hands-free${api}`;
+  const url = `${config.baseUrl}${api}`;
 
   const data = { email, firstName, lastName, tel, address, password };
 

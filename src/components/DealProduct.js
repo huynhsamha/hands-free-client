@@ -1,4 +1,5 @@
 import { parseProductsList } from '../utils/models';
+import { config } from '../config';
 
 /* Deals Slider */
 
@@ -26,7 +27,7 @@ export function loadDealProducts() {
   const $dealsSlider = $('.deals_slider');
 
   const api = '/api/product/getHotDeal.php';
-  $.get(`http://localhost/hands-free${api}`, (data) => {
+  $.get(`${config.baseUrl}${api}`, (data) => {
     // console.log(data);
 
     products = parseProductsList(data);

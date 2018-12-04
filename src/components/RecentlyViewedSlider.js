@@ -1,4 +1,5 @@
 import { parseProductsList } from '../utils/models';
+import { config } from '../config';
 
 /** Recently Viewed Slider */
 
@@ -41,7 +42,7 @@ export function loadRecentlyViewedSlider() {
   const $viewedSlider = $('.viewed_slider');
 
   const api = '/api/product/getHotDeal.php';
-  $.get(`http://localhost/hands-free${api}`, (data) => {
+  $.get(`${config.baseUrl}${api}`, (data) => {
     // console.log(data);
 
     products = parseProductsList(data);
