@@ -16,6 +16,7 @@ module.exports = {
     blog_single: './src/blog_single.js',
     blog: './src/blog.js',
     cart: './src/cart.js',
+    profile: './src/profile.js',
     contact: './src/contact.js',
     index: './src/index.js',
     product: './src/product.js',

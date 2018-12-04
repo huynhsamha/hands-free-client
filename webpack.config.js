@@ -15,6 +15,11 @@ module.exports.Pages = [
     js: ['cart']
   },
   {
+    template: './views/profile.html',
+    filename: 'profile.html',
+    js: ['profile']
+  },
+  {
     template: './views/contact.html',
     filename: 'contact.html',
     js: ['contact']

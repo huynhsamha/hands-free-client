@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Cart</title>
+
+  ${require('../layouts/include/meta.html')}
+  ${require('../layouts/include/stylesheet.html')}
+
+</head>
+
+<body>
+
+  ${require('../layouts/include/top_body.html')}
+
+  <div class="super_container">
+
+    <!-- Header -->
+
+    ${require('../layouts/header.html')}
+
+    <!-- Cart -->
+
+    <div class="cart_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <div class="cart_container">
+              <div class="cart_title">Giỏ hàng của bạn</div>
+              <div class="cart_items">
+                <ul class="cart_list">
+
+                  <li class="cart_item clearfix">
+                    <div class="cart_item_image cart_item_image_empty"></div>
+                    <div class="cart_item_info row cart_item_info_header">
+                      <div class="cart_item_name col-12 col-md-5">
+                        <div class="cart_item_text font-weight-bold">Tên sản phẩm</div>
+                      </div>
+                      <!-- <div class="cart_item_color col-12 col-md-2">
+                        <div class="cart_item_text font-weight-bold">Màu</div>
+                      </div> -->
+                      <div class="cart_item_price col-12 col-md-2">
+                        <div class="cart_item_text font-weight-bold">Đơn giá</div>
+                      </div>
+                      <div class="cart_item_quantity col-12 col-md-2">
+                        <div class="cart_item_text font-weight-bold">Số lượng</div>
+                      </div>
+                      <div class="cart_item_total col-12 col-md-3">
+                        <div class="cart_item_text font-weight-bold">Tổng</div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <p class="cart_list_empty">Hiện tại chưa có sản phẩm nào trong giỏ hàng.</p>
+
+                  <!-- rendered at Cart.js -->
+
+                </ul>
+              </div>
+
+              <!-- Order Total -->
+              <div class="order_total">
+                <div class="order_total_content text-md-right">
+                  <div class="order_total_title">Tổng tiền:</div>
+                  <div class="order_total_amount">0 đ</div>
+                </div>
+              </div>
+
+              <!-- Information and Payments -->
+              <div class="cart_title cart_payment_title">Tiến hành đặt hàng</div>
+
+              <div class="cart_payments">
+              <form class="">
+                <div class="row" id="payment-no-login">
+                  <div class="col-12 text-center py-4">
+                    <h6>Vui lòng đăng nhập để tiếp tục đặt đơn hàng</h6>
+                  </div>
+                </div>
+                <div class="row" id="payment-logined">
+                  <!-- Information -->
+                  <!-- <div class="col-12">
+                    <h4 class="my-4">Thông tin liên lạc</h4>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-group">
+                      <label for="">Tên</label>
+                      <input type="text" class="form-control" placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-group">
+                      <label for="">Địa chỉ email</label>
+                      <input type="email" class="form-control" placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-group">
+                      <label for="">Số điện thoại</label>
+                      <input type="tel" class="form-control" placeholder="">
+                    </div>
+                  </div> -->
+
+                  <!-- Payments -->
+                  <div class="col-12">
+                    <h4 class="my-4">Hình thức mua hàng</h4>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_address" value="shop_hcm" checked>
+                      <label class="form-check-label">
+                        Mua hàng và thanh toán tại cửa hành trụ sở quận Tân Bình, TP.HCM
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_address" value="shop_hn">
+                      <label class="form-check-label">
+                        Mua hàng và thanh toán tại cửa hành chi nhánh quận Cầu Giấy, Hà Nội
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_address" value="home">
+                      <label class="form-check-label">
+                        Giao hàng và thanh toán tại nhà
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <h4 class="my-4">Phương thức thanh toán</h4>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_method" value="cash" checked>
+                      <label class="form-check-label">
+                        Dùng tiền mặt
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_method" value="bank">
+                      <label class="form-check-label">
+                        Chuyển khoản ngân hàng
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_method" value="mastercard">
+                      <label class="form-check-label">
+                        <ul class="logos_list">
+                          <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
+                          <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
+                          <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
+                          <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
+                        </ul>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              </div>
+
+              <div class="cart_buttons">
+                <!-- <button type="button" class="button cart_button_clear">Xoá</button> -->
+                <button type="button" class="button cart_button_checkout">Hoàn tất đơn hàng</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+
+    ${require('../layouts/newsletter.html')}
+
+    <!-- Footer -->
+
+    ${require('../layouts/footer.html')}
+
+    <!-- Copyright -->
+
+    ${require('../layouts/copyright.html')}
+  </div>
+
+
+  ${require('../layouts/include/script.html')}
+  ${require('../layouts/include/script_plugins.html')}
+
+</body>
+
+</html>
