@@ -19,6 +19,10 @@ export function getUser() {
   return JSON.parse(localStorage.getItem('user'));
 }
 
+export function updateUser(user) {
+  localStorage.setItem('user', JSON.stringify(user));
+}
+
 export function isLogined(cb) {
   const user = JSON.parse(localStorage.getItem('user'));
   const token = localStorage.getItem('token');

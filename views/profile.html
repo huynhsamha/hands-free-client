@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Cart</title>
+  <title>Tài khoản của tôi</title>
 
   ${require('../layouts/include/meta.html')}
   ${require('../layouts/include/stylesheet.html')}
@@ -24,151 +24,65 @@
     <div class="cart_section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 offset-lg-1">
+          <div class="col-lg-12">
             <div class="cart_container">
-              <div class="cart_title">Giỏ hàng của bạn</div>
-              <div class="cart_items">
-                <ul class="cart_list">
 
-                  <li class="cart_item clearfix">
-                    <div class="cart_item_image cart_item_image_empty"></div>
-                    <div class="cart_item_info row cart_item_info_header">
-                      <div class="cart_item_name col-12 col-md-5">
-                        <div class="cart_item_text font-weight-bold">Tên sản phẩm</div>
-                      </div>
-                      <!-- <div class="cart_item_color col-12 col-md-2">
-                        <div class="cart_item_text font-weight-bold">Màu</div>
-                      </div> -->
-                      <div class="cart_item_price col-12 col-md-2">
-                        <div class="cart_item_text font-weight-bold">Đơn giá</div>
-                      </div>
-                      <div class="cart_item_quantity col-12 col-md-2">
-                        <div class="cart_item_text font-weight-bold">Số lượng</div>
-                      </div>
-                      <div class="cart_item_total col-12 col-md-3">
-                        <div class="cart_item_text font-weight-bold">Tổng</div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <p class="cart_list_empty">Hiện tại chưa có sản phẩm nào trong giỏ hàng.</p>
-
-                  <!-- rendered at Cart.js -->
-
-                </ul>
-              </div>
-
-              <!-- Order Total -->
-              <div class="order_total">
-                <div class="order_total_content text-md-right">
-                  <div class="order_total_title">Tổng tiền:</div>
-                  <div class="order_total_amount">0 đ</div>
-                </div>
-              </div>
-
-              <!-- Information and Payments -->
-              <div class="cart_title cart_payment_title">Tiến hành đặt hàng</div>
-
-              <div class="cart_payments">
-              <form class="">
-                <div class="row" id="payment-no-login">
-                  <div class="col-12 text-center py-4">
-                    <h6>Vui lòng đăng nhập để tiếp tục đặt đơn hàng</h6>
+              <!-- Section -->
+              <div class="cart_title mb-4">Thông tin tài khoản</div>
+              <form>
+                <!-- Row -->
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="email" class="col-form-label">Địa chỉ Email:</label>
+                    <input type="email" class="form-control" id="email" disabled>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="firstName" class="col-form-label">Họ và tên đệm:</label>
+                    <input type="text" class="form-control" id="firstName">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="lastName" class="col-form-label">Tên:</label>
+                    <input type="text" class="form-control" id="lastName">
                   </div>
                 </div>
-                <div class="row" id="payment-logined">
-                  <!-- Information -->
-                  <!-- <div class="col-12">
-                    <h4 class="my-4">Thông tin liên lạc</h4>
+                <!-- Row -->
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="tel" class="col-form-label">Số điện thoại:</label>
+                    <input type="text" class="form-control" id="tel">
                   </div>
-                  <div class="col-12 col-md-4">
-                    <div class="form-group">
-                      <label for="">Tên</label>
-                      <input type="text" class="form-control" placeholder="">
-                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="address" class="col-form-label">Địa chỉ liên hệ:</label>
+                    <input type="text" class="form-control" id="address">
                   </div>
-                  <div class="col-12 col-md-4">
-                    <div class="form-group">
-                      <label for="">Địa chỉ email</label>
-                      <input type="email" class="form-control" placeholder="">
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-4">
-                    <div class="form-group">
-                      <label for="">Số điện thoại</label>
-                      <input type="tel" class="form-control" placeholder="">
-                    </div>
-                  </div> -->
-
-                  <!-- Payments -->
-                  <div class="col-12">
-                    <h4 class="my-4">Hình thức mua hàng</h4>
-                  </div>
-                  <div class="col-12 col-md-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="payment_address" value="shop_hcm" checked>
-                      <label class="form-check-label">
-                        Mua hàng và thanh toán tại cửa hành trụ sở quận Tân Bình, TP.HCM
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="payment_address" value="shop_hn">
-                      <label class="form-check-label">
-                        Mua hàng và thanh toán tại cửa hành chi nhánh quận Cầu Giấy, Hà Nội
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="payment_address" value="home">
-                      <label class="form-check-label">
-                        Giao hàng và thanh toán tại nhà
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <h4 class="my-4">Phương thức thanh toán</h4>
-                  </div>
-                  <div class="col-12 col-md-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="payment_method" value="cash" checked>
-                      <label class="form-check-label">
-                        Dùng tiền mặt
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="payment_method" value="bank">
-                      <label class="form-check-label">
-                        Chuyển khoản ngân hàng
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="payment_method" value="mastercard">
-                      <label class="form-check-label">
-                        <ul class="logos_list">
-                          <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
-                          <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
-                          <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
-                          <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
-                        </ul>
-                      </label>
-                    </div>
-                  </div>
+                </div>
+                <div class="cart_buttons">
+                  <button type="button" class="button cart_button_checkout" id="btnUpdateInfo">Cập nhật</button>
                 </div>
               </form>
-              </div>
 
-              <div class="cart_buttons">
-                <!-- <button type="button" class="button cart_button_clear">Xoá</button> -->
-                <button type="button" class="button cart_button_checkout">Hoàn tất đơn hàng</button>
-              </div>
+              <!-- Section -->
+              <div class="cart_title mb-4">Thay đổi mật khẩu</div>
+              <form>
+                <!-- Row -->
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="oldPassword" class="col-form-label">Mật khẩu cũ:</label>
+                    <input type="password" class="form-control" id="oldPassword">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="newPassword" class="col-form-label">Mật khẩu mới:</label>
+                    <input type="password" class="form-control" id="newPassword">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="confirmNewPassword" class="col-form-label">Xác nhận mật khẩu:</label>
+                    <input type="password" class="form-control" id="confirmNewPassword">
+                  </div>
+                </div>
+                <div class="cart_buttons">
+                  <button type="button" class="button cart_button_checkout">Thay đổi</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
