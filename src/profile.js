@@ -1,6 +1,7 @@
 import '../scss/cart.scss';
 import '../scss/responsive/cart.scss';
 import qs from 'qs';
+import moment from 'moment';
 import { getUser, getToken, updateUser, isLogined, isLoginedSync } from './utils/auth';
 
 import './_common';
@@ -8,6 +9,7 @@ import { handleError, showLoading, hideLoading, handleErrorJQuery } from './util
 import { success } from './utils/confirm';
 import { config } from './config';
 import { checkPassword } from './utils/regex';
+import { convertPriceToText } from './utils/price';
 
 (() => {
 
@@ -42,7 +44,7 @@ import { checkPassword } from './utils/regex';
       updateUser(user);
       renderProfile();
     }
-  }).fail(err => handleError(err));
+  }).fail(err => handleErrorJQuery(err));
 
   $('#btnUpdateInfo').click(() => {
     const firstName = $('#firstName').val();
@@ -115,5 +117,66 @@ import { checkPassword } from './utils/regex';
       }).fail(err => handleErrorJQuery(err));
     });
   });
+
+  let orders = [];
+
+  function getPaymentAddress(t) {
+    if (t == 'shop_hn') return 'Chi nhánh Quận Cầu Giấy, Hà Nội';
+    if (t == 'shop_hcm') return 'Trụ sở Quận Tân Bình, TP.HCM';
+    return 'Thanh toán tại nhà'; // home
+  }
+
+  function getPaymentMethod(t) {
+    if (t == 'cash') return 'Dùng tiền mặt';
+    if (t == 'bank') return 'Chuyển khoản ngân hàng';
+    return 'Sử dụng Master Card'; // mastercard
+  }
+
+  function getOrderStatus(t) {
+    if (t == 'Order') return 'Đang xử lý';
+    if (t == 'Approved') return 'Đã bắt đầu';
+    return 'Đã hoàn tất'; // Completed
+  }
+
+  function getBadgeOrderStatus(t) {
+    let color = 'success';
+    if (t == 'Order') color = 'danger';
+    if (t == 'Approved') color = 'info';
+    return `<span class="badge badge-pill badge-${color}">${getOrderStatus(t)}</span>`;
+  }
+
+  const renderOrderList = () => {
+    if (orders.length == 0) {
+      return $('#emptyOrders').show();
+    }
+    $('#emptyOrders').hide();
+    const $tb = $('#tbOrders tbody');
+    orders.forEach((order) => {
+      const $ele = $(`
+          <tr>
+            <th class="text-center">${order.id}</th>
+            <td>${moment(order.orderTime).format('LLL')}</td>
+            <td>${getPaymentAddress(order.paymentAddress)}</td>
+            <td>${getPaymentMethod(order.paymentMethod)}</td>
+            <td class="text-right">${convertPriceToText(order.totalPrice)}</td>
+            <td class="text-center">${getBadgeOrderStatus(order.status)}</td>
+          </tr>
+      `);
+      $tb.append($ele);
+    });
+  };
+
+  $.ajax({
+    url: `${config.baseUrl}/api/order/get.php`,
+    type: 'GET',
+    headers: {
+      Authorization: getToken()
+    },
+    success: (data) => {
+      orders = data;
+      renderOrderList();
+    }
+  }).fail(err => handleErrorJQuery(err));
+
 
 })();

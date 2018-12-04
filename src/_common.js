@@ -10,6 +10,7 @@ import { initCustomDropdown } from './components/CustomDropdown';
 import { initCart, initWishlist } from './utils/shareData';
 import { storeAuthentication, isLogined, clearAuthentication } from './utils/auth';
 import { config } from './config';
+import { checkPassword } from './utils/regex';
 
 
 /** Forgot password */
@@ -65,6 +66,10 @@ $('#btn-modal-signup').click(() => {
 
   if (!validator.isEmail(email)) {
     return alert('Địa chỉ email không hợp lệ.');
+  }
+
+  if (!checkPassword(password)) {
+    return alert('Mật khẩu yêu cầu tối thiểu 8 ki tự, trong đó ít nhất 1 kí tự hoa, 1 kí tự thường, 1 số và 1 kí tự đặc biệt.');
   }
 
   if (password !== confirmPassword) {
