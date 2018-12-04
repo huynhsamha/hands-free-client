@@ -4,7 +4,7 @@ import { retrieveCart, sumPriceText, sumPrice, addCart, removeCart, clearCart } 
 import { convertPriceToText, convertTextToPrice } from '../utils/price';
 import { dangerConfirm, successConfirm, success, warningConfirm, error } from '../utils/confirm';
 import { showLoading, hideLoading, handleErrorJQuery } from '../utils/loading';
-import { isLogined } from '../utils/auth';
+import { isLogined, getToken } from '../utils/auth';
 
 let totalPrice = 0;
 
@@ -91,7 +91,7 @@ function postOrder(cart) {
   const api = '/api/order/create.php';
   const url = `http://localhost/hands-free${api}`;
   const data = {
-    paymenAddress: $('input[name=payment_address]:checked').val(),
+    paymentAddress: $('input[name=payment_address]:checked').val(),
     paymentMethod: $('input[name=payment_method]:checked').val(),
     products: cart.map(item => ({
       productId: item.id,
@@ -100,14 +100,22 @@ function postOrder(cart) {
     }))
   };
   console.log(data);
-  $.post(url, qs.stringify(data), (data) => {
-    hideLoading();
-    success('Đơn hàng đã được chấp nhận và đang chờ xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất đơn hàng này.',
-      () => {
-        console.log(data);
-        // clearCart();
-        // window.location.pathname = 'profile.html';
-      });
+  $.ajax({
+    url,
+    type: 'POST',
+    data: qs.stringify(data),
+    headers: {
+      'Authorization': getToken()
+    },
+    success: (data) => {
+      hideLoading();
+      console.log(data);
+      success(`Đơn hàng đã được chấp nhận và đang chờ xét duyệt. Chúng tôi sẽ liên lạc bạn để hoàn tất đơn hàng này. \n Mã đơn hàng: ${data.order.id}`,
+        () => {
+          clearCart();
+          window.location.pathname = 'profile.html';
+        });
+    }
   })
     .fail(err => handleErrorJQuery(err));
 }
