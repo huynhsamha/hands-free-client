@@ -13,7 +13,7 @@ export const initCart = () => {
   const $cartCount = $('.cart_count span');
   const $cartPrice = $('.cart_price');
 
-  const cart = JSON.parse(sessionStorage.getItem('cart') || '[]');
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
   $cartCount.text(totalProductsInCart(cart));
   $cartPrice.text(sumPriceText(cart));
   // console.log(cart);
@@ -25,7 +25,7 @@ export const initCart = () => {
 export const initWishlist = () => {
   const $wishlistCount = $('.wishlist_count');
 
-  const wishlist = JSON.parse(sessionStorage.getItem('wishlist') || '[]');
+  const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
   $wishlistCount.text(wishlist.length);
 };
 
@@ -33,7 +33,7 @@ export const addCart = (product, quantity = 1) => {
   const $cartCount = $('.cart_count span');
   const $cartPrice = $('.cart_price');
 
-  const cart = JSON.parse(sessionStorage.getItem('cart') || '[]');
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
   console.log('Add cart:', product);
   const { id, brandName, modelId, modelName, name, price, thumbnail } = product;
@@ -47,7 +47,7 @@ export const addCart = (product, quantity = 1) => {
   $cartCount.text(totalProductsInCart(cart));
   $cartPrice.text(sumPriceText(cart));
 
-  sessionStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(cart));
 };
 
 
@@ -55,7 +55,7 @@ export const removeCart = (product) => {
   const $cartCount = $('.cart_count span');
   const $cartPrice = $('.cart_price');
 
-  const cart = JSON.parse(sessionStorage.getItem('cart') || '[]');
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
   console.log('Remove cart:', product);
   const { id, brandName, modelId, modelName, name, price, thumbnail } = product;
@@ -72,20 +72,20 @@ export const removeCart = (product) => {
   $cartCount.text(totalProductsInCart(cart));
   $cartPrice.text(sumPriceText(cart));
 
-  sessionStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(cart));
 };
 
 export const addWishlist = (product) => {
   const $wishlistCount = $('.wishlist_count');
 
-  const wishlist = JSON.parse(sessionStorage.getItem('wishlist') || '[]');
+  const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
 
   const { brand, model, name, price } = product;
   wishlist.push({ brand, model, name, price });
 
   $wishlistCount.text(wishlist.length);
 
-  sessionStorage.setItem('wishlist', JSON.stringify(wishlist));
+  localStorage.setItem('wishlist', JSON.stringify(wishlist));
 };
 
 export const removeWishlist = (product) => {
@@ -93,9 +93,9 @@ export const removeWishlist = (product) => {
 };
 
 
-export const retrieveCart = () => JSON.parse(sessionStorage.getItem('cart') || '[]');
+export const retrieveCart = () => JSON.parse(localStorage.getItem('cart') || '[]');
 
 
 export const clearCart = () => {
-  sessionStorage.removeItem('cart');
+  localStorage.removeItem('cart');
 };
