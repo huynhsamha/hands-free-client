@@ -154,7 +154,9 @@ import { convertPriceToText } from './utils/price';
     orders.forEach((order) => {
       const $ele = $(`
           <tr>
-            <th class="text-center">${order.id}</th>
+            <td class="text-center text-danger toggle-modal-order" style="cursor: pointer">
+              <i class="mr-0 fa fa-link"></i> ${order.id}
+            </td>
             <td>${moment(order.orderTime).format('LLL')}</td>
             <td>${getPaymentAddress(order.paymentAddress)}</td>
             <td>${getPaymentMethod(order.paymentMethod)}</td>
@@ -163,6 +165,55 @@ import { convertPriceToText } from './utils/price';
           </tr>
       `);
       $tb.append($ele);
+
+      $ele.find('.toggle-modal-order').click(() => {
+        const data = {
+          orderId: order.id
+        };
+        showLoading(() => {
+          $.ajax({
+            url: `${config.baseUrl}/api/order/getDetail.php?${qs.stringify(data)}`,
+            type: 'GET',
+            headers: {
+              Authorization: getToken()
+            },
+            success: (data) => {
+              hideLoading();
+              console.log(data);
+              const products = data;
+              const $tb = $('#modalOrderTable > tbody');
+              $tb.html('');
+              products.forEach(o => $tb.append($(`
+              <tr>
+                <td class="text-center">
+                  <a href="product.html?id=${o.id}" target="_blank">
+                    <img src="${o.thumbnail}" alt="Thumbnail" width="100">
+                  </a>
+                </td>
+                <td>
+                  <a href="product.html?id=${o.id}" target="_blank">
+                    ${o.name}
+                  </a>
+                </td>
+                <td class="text-right">${convertPriceToText(o.price)}</td>
+                <td> x ${o.quantity}</td>
+                <td class="text-right">${convertPriceToText(o.totalPrice)}</td>
+              </tr>`)));
+              $tb.append(`
+                <tr>
+                  <td></td>
+                  <th colspan="3">Tổng tiền đơn hàng</th>
+                  <th class="text-right">${convertPriceToText(order.totalPrice)}</th>
+                </tr>
+              `);
+
+              $('#modalOrderID').text(order.id);
+
+              $('#js-modal-order').modal('show');
+            }
+          }).fail(err => handleErrorJQuery(err));
+        });
+      });
     });
   };
 
