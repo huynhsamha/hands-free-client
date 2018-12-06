@@ -1,5 +1,5 @@
-import '../scss/cart.scss';
-import '../scss/responsive/cart.scss';
+import '../scss/profile.scss';
+import '../scss/responsive/profile.scss';
 import qs from 'qs';
 import moment from 'moment';
 import { getUser, getToken, updateUser, isLogined, isLoginedSync } from './utils/auth';
@@ -19,6 +19,33 @@ import { convertPriceToText } from './utils/price';
     window.location.pathname = '';
   }
 
+  // Avatar
+  const $avatar = $('#user-avatar');
+  const $inputAvatar = $('#input-user-avatar');
+
+  $('.form-avatar').attr('action', `${config.baseUrl}/api/upload/avatar.php`);
+
+  const readURL = function (input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $avatar.attr('src', e.target.result);
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  };
+
+  $avatar.click(() => {
+    $('#input-user-avatar').click();
+  });
+
+  $inputAvatar.on('change', function () {
+    readURL(this);
+  });
+
+
   const renderProfile = () => {
     user = getUser();
     $('#email').val(user.email);
@@ -26,6 +53,7 @@ import { convertPriceToText } from './utils/price';
     $('#lastName').val(user.lastName);
     $('#tel').val(user.tel);
     $('#address').val(user.address);
+    $avatar.attr('src', user.photoUrl);
   };
 
   renderProfile();

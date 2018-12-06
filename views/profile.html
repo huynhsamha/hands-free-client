@@ -29,63 +29,32 @@
 
               <!-- Section -->
               <div class="cart_title mb-4">Thông tin tài khoản</div>
-              <form>
-                <!-- Row -->
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="email" class="col-form-label">Địa chỉ Email:</label>
-                    <input type="email" class="form-control" id="email" disabled>
-                  </div>
-                  <div class="form-group col-md-3">
-                    <label for="firstName" class="col-form-label">Họ và tên đệm:</label>
-                    <input type="text" class="form-control" id="firstName">
-                  </div>
-                  <div class="form-group col-md-3">
-                    <label for="lastName" class="col-form-label">Tên:</label>
-                    <input type="text" class="form-control" id="lastName">
-                  </div>
+
+              <!-- Row 2 side -->
+              <div class="row">
+
+                <!-- Side left -->
+                <div class="col-md-3 text-center">
+
+                  ${require('../layouts/formUploadAvatar.html')}
+
                 </div>
-                <!-- Row -->
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="tel" class="col-form-label">Số điện thoại:</label>
-                    <input type="text" class="form-control" id="tel">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="address" class="col-form-label">Địa chỉ liên hệ:</label>
-                    <input type="text" class="form-control" id="address">
-                  </div>
+
+                <!-- Side right -->
+                <div class="col-md-9">
+
+                  ${require('../layouts/formProfileInfo.html')}
+
                 </div>
-                <div class="cart_buttons">
-                  <button type="button" class="button cart_button_checkout" id="btnUpdateInfo">Cập nhật</button>
-                </div>
-              </form>
+              </div>
 
               <!-- Section -->
-              <div class="cart_title mb-4">Thay đổi mật khẩu</div>
-              <form>
-                <!-- Row -->
-                <div class="form-row">
-                  <div class="form-group col-md-4">
-                    <label for="oldPassword" class="col-form-label">Mật khẩu cũ:</label>
-                    <input type="password" class="form-control" id="oldPassword">
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="newPassword" class="col-form-label">Mật khẩu mới:</label>
-                    <input type="password" class="form-control" id="newPassword">
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="confirmNewPassword" class="col-form-label">Xác nhận mật khẩu:</label>
-                    <input type="password" class="form-control" id="confirmNewPassword">
-                  </div>
-                </div>
-                <div class="cart_buttons">
-                  <button type="button" class="button cart_button_checkout" id="btnChangePassword">Thay đổi</button>
-                </div>
-              </form>
+              <div class="cart_title mt-3 mb-4">Thay đổi mật khẩu</div>
+
+              ${require('../layouts/formChangePassword.html')}
 
               <!-- Section -->
-              <div class="cart_title mb-4">Quản lý đơn hàng</div>
+              <div class="cart_title mt-3 mb-4">Quản lý đơn hàng</div>
               <table class="table" id="tbOrders">
                 <thead>
                   <tr>
@@ -98,12 +67,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <!-- <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr> -->
+                  <!-- render at profile.js -->
                 </tbody>
               </table>
               <div class="text-center mt-5" id="emptyOrders">
@@ -115,7 +79,7 @@
       </div>
     </div>
 
-    <!-- Order Detail -->
+    <!-- Order Detail Modal -->
 
     ${require('../layouts/orderDetail.html')}
 
