@@ -4,3 +4,7 @@ export function checkPassword(password) {
    */
   return password && /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
 }
+
+export function checkStaticUrlFromUploads(url) {
+  return url && /^uploads\/.*$/.test(url);
+}

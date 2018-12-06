@@ -6,9 +6,9 @@ import { getUser, getToken, updateUser, isLogined, isLoginedSync } from './utils
 
 import './_common';
 import { handleError, showLoading, hideLoading, handleErrorJQuery } from './utils/loading';
-import { success } from './utils/confirm';
+import { success, error } from './utils/confirm';
 import { config } from './config';
-import { checkPassword } from './utils/regex';
+import { checkPassword, checkStaticUrlFromUploads } from './utils/regex';
 import { convertPriceToText } from './utils/price';
 
 (() => {
@@ -22,8 +22,9 @@ import { convertPriceToText } from './utils/price';
   // Avatar
   const $avatar = $('#user-avatar');
   const $inputAvatar = $('#input-user-avatar');
+  let files;
 
-  $('.form-avatar').attr('action', `${config.baseUrl}/api/upload/avatar.php`);
+  // $('.form-avatar').attr('action', `${config.baseUrl}/api/upload/avatar.php`);
 
   const readURL = function (input) {
     if (input.files && input.files[0]) {
@@ -41,7 +42,9 @@ import { convertPriceToText } from './utils/price';
     $('#input-user-avatar').click();
   });
 
-  $inputAvatar.on('change', function () {
+  $inputAvatar.on('change', function (event) {
+    files = event.target.files;
+    console.log(files);
     readURL(this);
   });
 
@@ -53,8 +56,53 @@ import { convertPriceToText } from './utils/price';
     $('#lastName').val(user.lastName);
     $('#tel').val(user.tel);
     $('#address').val(user.address);
-    $avatar.attr('src', user.photoUrl);
+    let urlAvatar = user.photoUrl;
+    if (checkStaticUrlFromUploads(user.photoUrl)) {
+      urlAvatar = `${config.baseUrl}/${user.photoUrl}`;
+    }
+    $avatar.attr('src', urlAvatar);
   };
+
+  $('.form-avatar').on('submit', (event) => {
+    event.stopPropagation(); // Stop stuff happening
+    event.preventDefault(); // Totally stop stuff happening
+
+    if (!files) {
+      return error('Vui lòng chọn một ảnh khác để thay thế ảnh đại diện hiện tại.');
+    }
+
+    showLoading(() => {
+      // Create a formdata object and add the files
+      const data = new FormData();
+      $.each(files, (key, value) => {
+        console.log(key, value);
+        data.append('avatar', value);
+      });
+
+      console.log(data);
+
+      $.ajax({
+        url: `${config.baseUrl}/api/upload/avatar.php`,
+        type: 'POST',
+        data,
+        cache: false,
+        dataType: 'json',
+        headers: {
+          Authorization: getToken()
+        },
+        processData: false, // Don't process the files
+        contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+        success(data) {
+          console.log(data);
+          user.photoUrl = data.url;
+          updateUser(user);
+          hideLoading();
+          success('Ảnh đại diện đã được cập nhật.');
+        }
+      }).fail(err => handleErrorJQuery(err));
+    });
+  });
+
 
   renderProfile();
 
