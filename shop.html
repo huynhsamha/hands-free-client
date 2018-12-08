@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Shop</title>
+  <title>Tìm kiếm sản phẩm</title>
 
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,12 +26,140 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2/animate.css">
 <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
 
+<!-- jQuery confirm -->
+<link rel="stylesheet" href="plugins/jquery-confirm/jquery-confirm.min.css">
+
 
   <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/jquery-ui.css">
 
-<link href="css/shop.1c854597dfcbd65079dd.css?1c854597dfcbd65079dd" rel="stylesheet"></head>
+<link href="css/shop.17fb1384f5ce7280863f.css?17fb1384f5ce7280863f" rel="stylesheet"></head>
 
 <body>
+
+  <!-- Loading -->
+
+<div id="loading">
+  <div id="loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>
+
+
+<!-- Modal Login -->
+<div class="modal fade" id="js-modal-login" tabindex="-1" role="dialog" aria-labelledby="labelModalLogin" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="labelModalLogin">Đăng nhập</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="loginEmail" class="col-form-label">Địa chỉ Email:</label>
+            <input type="email" class="form-control" id="loginEmail">
+          </div>
+          <div class="form-group">
+            <label for="loginPassword" class="col-form-label">Mật khẩu:</label>
+            <input type="password" class="form-control" id="loginPassword">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-block btn-red" id="btn-modal-login">Đăng nhập</button>
+        <div class="mt-2"></div>
+        <div class="py-2"><a href="#" role="button" data-toggle="modal" data-target="#js-modal-forgot" data-dismiss="modal">Quên mật khẩu?</a></div>
+        <div class="py-2"><a href="#" role="button" data-toggle="modal" data-target="#js-modal-signup" data-dismiss="modal">Chưa có tai khoản?</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Register -->
+<div class="modal fade" id="js-modal-signup" tabindex="-1" role="dialog" aria-labelledby="labelModalSignUp" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="labelModalSignUp">Tạo tài khoản</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <!-- Row 1 -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="signUpEmail" class="col-form-label">Địa chỉ Email:</label>
+              <input type="email" class="form-control" id="signUpEmail">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="signUpFirstName" class="col-form-label">Họ và tên đệm:</label>
+              <input type="text" class="form-control" id="signUpFirstName">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="signUpLastName" class="col-form-label">Tên:</label>
+              <input type="text" class="form-control" id="signUpLastName">
+            </div>
+          </div>
+          <!-- Row 2 -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="signUpPassword" class="col-form-label">Mật khẩu:</label>
+              <input type="password" class="form-control" id="signUpPassword">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="signUpConfirm" class="col-form-label">Xác nhận mật khẩu:</label>
+              <input type="password" class="form-control" id="signUpConfirm">
+            </div>
+          </div>
+          <!-- Row 3 -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="signUpTel" class="col-form-label">Số điện thoại:</label>
+              <input type="text" class="form-control" id="signUpTel">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="signUpAddress" class="col-form-label">Địa chỉ:</label>
+              <input type="text" class="form-control" id="signUpAddress">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-block btn-red" id="btn-modal-signup">Đăng kí</button>
+        <div class="m-2"></div>
+        <div><a href="#" role="button" data-toggle="modal" data-target="#js-modal-login" data-dismiss="modal">Đã có tài khoản?</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Forgot password -->
+<div class="modal fade" id="js-modal-forgot" tabindex="-1" role="dialog" aria-labelledby="labelModalForgot" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="labelModalLogin">Quên Mật Khẩu</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="forgotEmail" class="col-form-label">Địa chỉ Email:</label>
+            <input type="email" class="form-control" id="forgotEmail">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-block btn-red" id="btn-modal-forgot">Gửi</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <div class="super_container">
 
@@ -47,13 +175,16 @@
         <div class="col d-flex flex-row">
           <div class="top_bar_contact_item">
             <div class="top_bar_icon">
-              <img src="images/phone.png" alt="">
+                <i class="fa fa-phone"></i>
+                <!-- <img src="images/phone.png" alt=""> -->
             </div>
             096 606 2468
           </div>
           <div class="top_bar_contact_item">
             <div class="top_bar_icon">
-              <img src="images/mail.png" alt=""></div>
+              <!-- <img src="images/mail.png" alt=""></div> -->
+              <i class="fa fa-envelope"></i>
+              </div>
               <a href="mailto:cskh@handsfree.com">cskh@handsfree.com</a>
           </div>
           <div class="top_bar_content ml-auto">
@@ -71,9 +202,13 @@
               </ul>
             </div>
             <div class="top_bar_user">
-              <div><a href="shop.html"></a></div>
-              <div><a href="shop.html">Tuyển dụng</a></div>
+              <!-- <div><a href="shop.html"></a></div> -->
+              <!-- <div><a href="shop.html">Tuyển dụng</a></div> -->
+              <div id="headerLogin"><a href="#" role="button" data-toggle="modal" data-target="#js-modal-login">Đăng nhập</a></div>
+              <div id="headerSignUp"><a href="#" role="button" data-toggle="modal" data-target="#js-modal-signup">Đăng kí</a></div>
+              <div id="headerProfile"><a href="profile.html">Trang của bạn</a></div>
               <div><a href="contact.html">Liên hệ</a></div>
+              <div id="headerLogout"><a href="#">Đăng xuất</a></div>
             </div>
           </div>
         </div>
@@ -117,7 +252,7 @@
                       </ul>
                     </div>
                   </div>
-                  <button type="submit" class="header_search_button trans_300" value="Submit">
+                  <button type="button" class="header_search_button trans_300" value="Submit" id="btn-search-header">
                     <img src="images/search.png" alt="">
                   </button>
                 </form>
@@ -407,7 +542,7 @@
   <div class="sidebar_section">
     <div class="sidebar_title">Từ khoá</div>
     <div class="form-group sidebar_keywords mt-4">
-      <input type="text" class="form-control form-control-sm" placeholder="Nhập từ khoá...">
+      <input id="input-keywords" type="text" class="form-control form-control-sm" placeholder="Nhập từ khoá...">
     </div>
   </div>
 
@@ -436,7 +571,7 @@
   </div>
 
   <!-- Colors -->
-  <div class="sidebar_section">
+  <!-- <div class="sidebar_section">
     <div class="sidebar_subtitle color_subtitle">Màu</div>
     <ul class="colors_list">
       <li class="color"><a href="#" style="background: #b19c83;"></a></li>
@@ -446,7 +581,7 @@
       <li class="color"><a href="#" style="background: #df3b3b;"></a></li>
       <li class="color"><a href="#" style="background: #ffffff; border: solid 1px #e1e1e1;"></a></li>
     </ul>
-  </div>
+  </div> -->
 
   <!-- Sortings -->
   <div class="sidebar_content">
@@ -459,7 +594,7 @@
   </div>
 
   <div class="sidebar_section">
-    <button class="btn btn-danger btn-sm btn-block mt-5">Tìm kiếm</button>
+    <button type="button" class="btn btn-red btn-block mt-5" id="btn-search" style="cursor: pointer">Tìm kiếm</button>
   </div>
 
   <!-- Models -->
@@ -497,7 +632,7 @@
           <ul>
             <li class="shop_sorting_button" data-isotope-option='{ "sortBy": "original-order" }'>Bán chạy nhất</li>
             <li class="shop_sorting_button" data-isotope-option='{ "sortBy": "price" }'>Giá tăng dần</li>
-            <li class="shop_sorting_button" data-isotope-option='{ "sortBy": "price", "sortAscending": false }'>Giá giảm dần</li>
+            <li class="shop_sorting_button" data-isotope-option='{ "sortBy": "negPrice" }'>Giá giảm dần</li>
             <li class="shop_sorting_button" data-isotope-option='{ "sortBy": "name" }'>Tên</li>
           </ul>
         </li>
@@ -509,17 +644,17 @@
   <!-- Product Grid View -->
   <div class="product_grid">
     <div class="product_grid_border"></div>
+    <div class="product_grid_items">
+      <!-- Product Item -->
 
-    <!-- Product Item -->
-
-    <!-- template at src/components/ShopSidebar.js -->
-
+      <!-- template at src/components/ShopSidebar.js -->
+    </div>
   </div>
 
   <!-- Shop Page Navigation -->
 
   <div class="shop_page_nav d-flex flex-row">
-    <div class="page_prev d-flex flex-column align-items-center justify-content-center">
+    <div class="page_prev d-flex flex-column align-items-center justify-content-center" id="page_prev">
       <i class="fas fa-chevron-left"></i>
     </div>
     <ul class="page_nav d-flex flex-row">
@@ -529,7 +664,7 @@
       <li><a href="#">...</a></li>
       <li><a href="#">21</a></li>
     </ul>
-    <div class="page_next d-flex flex-column align-items-center justify-content-center">
+    <div class="page_next d-flex flex-column align-items-center justify-content-center" id="page_next">
       <i class="fas fa-chevron-right"></i>
     </div>
   </div>
@@ -697,18 +832,19 @@
 
         <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
           <div class="copyright_content">
-            
+
             Copyright &copy;
             <script>document.write(new Date().getFullYear());</script> All rights reserved
-            
+
           </div>
           <div class="logos ml-sm-auto">
-            <ul class="logos_list">
+            <!-- <img src="images/payment.png" alt="Payment" width="200"> -->
+            <!-- <ul class="logos_list">
               <li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
               <li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
               <li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
               <li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
-            </ul>
+            </ul> -->
           </div>
         </div>
       </div>
@@ -733,10 +869,14 @@
 <script src="plugins/parallaxjs/parallax.min.js"></script>
 <script src="plugins/jquery-easing/easing.js"></script>
 
+<!-- jQuery confirm -->
+<link rel="stylesheet" href="plugins/jquery-confirm/jquery-confirm.min.css">
+<script src="plugins/jquery-confirm/jquery-confirm.min.js"></script>
+
 
   <script src="plugins/jquery-ui/jquery-ui.js"></script>
   <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
 
-<script type="text/javascript" src="js/runtime.bundle.js?1c854597dfcbd65079dd"></script><script type="text/javascript" src="js/vendors.bundle.js?1c854597dfcbd65079dd"></script><script type="text/javascript" src="js/shop.bundle.js?1c854597dfcbd65079dd"></script></body>
+<script type="text/javascript" src="js/runtime.bundle.js?17fb1384f5ce7280863f"></script><script type="text/javascript" src="js/vendors.bundle.js?17fb1384f5ce7280863f"></script><script type="text/javascript" src="js/shop.bundle.js?17fb1384f5ce7280863f"></script></body>
 
 </html>
