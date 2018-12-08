@@ -1,6 +1,8 @@
 # Hands-free Client
 Assignment web (HCMUT) - Client for Hands-free App
 
+Website: http://hands-free.epizy.com
+
 Server Repository: https://github.com/huynhsamha/hands-free-server
 
 ## Quickstart
