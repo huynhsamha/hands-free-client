@@ -3,7 +3,11 @@ Assignment web (HCMUT) - Client for Hands-free App
 
 Website: http://hands-free.epizy.com
 
+Admin Website: http://admin.hands-free.epizy.com
+
 Server Repository: https://github.com/huynhsamha/hands-free-server
+
+Admin Page Repository: https://github.com/DarrenNguyen159/hands-free-admin
 
 ## Quickstart
 
