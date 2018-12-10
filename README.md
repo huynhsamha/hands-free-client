@@ -13,6 +13,17 @@ Server Repository: https://github.com/huynhsamha/hands-free-server
 
 Admin Page Repository: https://github.com/DarrenNguyen159/hands-free-admin
 
+## Screenshots
+<img src="./screenshots/home.png">
+<img src="./screenshots/shop.png">
+<img src="./screenshots/product.png">
+<img src="./screenshots/cart.png">
+<img src="./screenshots/order.png">
+<img src="./screenshots/profile.png">
+<img src="./screenshots/order_detail.png">
+<img src="./screenshots/blog.png">
+<img src="./screenshots/contact.png">
+
 ## Quickstart
 
 ### Clone project
